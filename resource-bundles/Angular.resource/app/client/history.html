@@ -1,0 +1,77 @@
+<accordion>
+    <div style="margin-bottom:8px;">
+        <accordion-group is-open="isFirstOpen">
+            <accordion-heading>
+                <div style="padding-top:4px; padding-bottom: 6px;" ng-click="queryServices();">
+                    Service History <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isFirstOpen, 'glyphicon-chevron-right': !isFirstOpen}"></i>
+                </div>
+            </accordion-heading>
+            <span ng-show="!status.queriedServicesHistory">
+                <i class="fa fa-refresh fa-spin"></i> Loading...
+            </span>
+            <span ng-show="status.queriedServicesHistory && data.serviceshistory.length == 0">
+                <em>No services.</em>
+            </span>
+            <table class="table table-condensed" ng-show="status.queriedServicesHistory && data.serviceshistory.length > 0">
+                <thead>
+                    <tr>
+                        <th style="width:20%">Start</th>
+                        <th style="width:20%">End</th>
+                        <th style="width:5%" class="text-center" >Active</th>
+                        <th style="width:35%" class="text-center" >Service</th>
+                        <th style="width:20%" class="text-center" >Case Worker</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="service in data.serviceshistory" >
+                        <td ng-show="validDate(service.startdate)">{{service.startdate | date:'MMMM dd, yyyy' }}</td>
+                        <td ng-show="!validDate(service.startdate)"></td>
+                        <td ng-show="validDate(service.enddate)">{{service.enddate | date:'MMMM dd, yyyy' }}</td>
+                        <td ng-show="!validDate(service.enddate)"></td>
+                        <td ng-show="service.isactive" class="text-center">Yes</td>
+                        <td ng-show="!service.isactive" class="text-center">No</td>
+                        <td class="text-center">{{service.name}}</td>
+                        <td class="text-center">{{service.caseworker}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </accordion-group>
+    </div>
+    <div style="margin-bottom:8px;">
+        <accordion-group is-open="isOpen">
+            <accordion-heading>
+                <div style="padding-top:4px; padding-bottom: 6px;" ng-click="queryVisits();">
+                    Visit History <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': isOpen, 'glyphicon-chevron-right': !isOpen}"></i>
+                </div>
+            </accordion-heading>
+            <span ng-show="!status.queriedVisits">
+                <i class="fa fa-refresh fa-spin"></i> Loading...
+            </span>
+            <span ng-show="status.queriedVisits && data.visits.length == 0">
+                <em>No previous visits.</em>
+            </span>
+            <table class="table table-condensed" ng-show="status.queriedVisits && data.visits.length > 0">
+                <thead>
+                    <tr>
+                        <th style="width:10%">Date</th>
+                        <th style="width:10%" class="text-center" >Visitor</th>
+                        <th style="width:15%" class="text-center" ng-if="settings.boxes.length > 0">Box Type/Size</th>
+                        <th style="width:15%" class="text-center" ng-if="settings.general.trackCheckoutWeight">Checkout Weight</th>
+                        <th style="width:15%" class="text-center" ng-if="settings.general.trackPoints">Points Used</th>
+                        <th style="width:25%">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="visit in data.visits" >
+                        <td>{{visit.date | date:'MMMM dd, yyyy' }}</td>
+                        <td class="text-center">{{visit.visitor}}</td>
+                        <td class="text-center" ng-if="settings.boxes.length > 0">{{visit.boxType}}</td>
+                        <td class="text-center" ng-if="settings.general.trackCheckoutWeight">{{visit.checkoutWeight}}</td>
+                        <td class="text-center" ng-if="settings.general.trackPoints">{{visit.ptsUsed}}</td>
+                        <td>{{visit.notes}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </accordion-group>
+    </div>
+</accordion>

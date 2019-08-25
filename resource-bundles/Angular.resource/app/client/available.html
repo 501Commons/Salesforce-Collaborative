@@ -1,0 +1,117 @@
+<div class="panel panel-info">
+    <div class="panel-body">
+        <form name="visitForm">
+            <div class="row">
+                <div class="col-md-5" ng-if="data.services">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Services</div>
+                        <div class="panel-body" ng-show="data.household">
+                            <table ng-if="data.services" class="table table-condensed" style="margin-top:6px;">
+                                <tbody>
+                                    <tr ng-repeat="service in data.services" 
+                                        ng-form="servicesForm"
+                                        ng-show="service.locations.includes(data.serviceLocation)">
+
+                                        <td>
+                                            <input class="form-control input-sm" type="checkbox" 
+                                                ng-model="service.selected" name="selected"
+                                                style="width:50px" ></input>
+                                        </td>
+                                        <td style="word-wrap: break-word">{{service.name}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7" ng-if="data.commodities">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Commodities</div>
+                        <div class="panel-body" ng-show="data.household">
+                            <table ng-if="data.commodities" class="table table-condensed" style="margin-top:6px;">
+                                    <trs>
+                                        <th>Item</th>
+                                        <th class="text-center">Available</th>
+                                        <th class="text-center">Monthly Limit</th>
+                                        <th>Used Today</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="comm in data.commodities"
+                                        ng-class="{danger: !comm.remaining, warning: (comm.remaining > 0 && comm.remaining < comm.monthlyLimit)}"
+                                        ng-form="commForm"
+                                        ng-show="comm.locations.includes(data.serviceLocation)">
+
+                                        <td style="word-wrap: break-word">{{comm.name}}</td>
+                                        <td class="text-center">{{comm.remaining}}</td>
+                                        <td class="text-center">{{comm.monthlyLimit}}</td>
+                                        <td>
+                                            <div ng-class="{ 'input-group': true, 'input-group-sm': true, 'has-error': commForm.ptsUsed.$invalid }">
+                                                <input class="form-control input-sm" type="number" 
+                                                    ng-model="comm.ptsUsed" min="0" max="{{comm.remaining}}" name="ptsUsed"
+                                                    required="required" style="width:50px" ></input>
+                                                <span ng-show="commForm.ptsUsed.$error.required" class="help-block">Enter a number</span>
+                                                <span ng-show="commForm.ptsUsed.$error.min" class="help-block">Cannot be negative</span>
+                                                <span ng-show="commForm.ptsUsed.$error.max" class="help-block">Only {{comm.remaining}} available</span>
+                                                <!--<select class="form-control" ng-model="comm.ptsUsed" 
+                                                    ng-options="v for v in rangeFromZeroTo(comm.remaining)" style="height:30px;" ng-disabled="!comm.remaining"></select> -->
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-5" ng-if="data.referrals">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Referrals</div>
+                            <div class="panel-body" ng-show="data.household">
+                                <table ng-if="data.referrals" class="table table-condensed" style="margin-top:6px;">
+                                    <tbody>
+                                        <tr ng-repeat="referral in data.referrals" 
+                                            ng-form="referralsForm"
+                                            ng-show="referral.locations.includes(data.serviceLocation) && referral.column == 1">
+
+                                            <td>
+                                                <input class="form-control input-sm" type="checkbox" 
+                                                    ng-model="service.selected" name="selected"
+                                                    style="width:50px" ></input>
+                                            </td>
+                                            <td style="word-wrap: break-word">{{referral.name}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5" ng-if="data.referrals">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Referrals</div>
+                            <div class="panel-body" ng-show="data.household">
+                                <table ng-if="data.referrals" class="table table-condensed" style="margin-top:6px;">
+                                    <tbody>
+                                        <tr ng-repeat="referral in data.referrals" 
+                                            ng-form="referralsForm"
+                                            ng-show="referral.locations.includes(data.serviceLocation) && referral.column == 2">
+
+                                            <td>
+                                                <input class="form-control input-sm" type="checkbox" 
+                                                    ng-model="service.selected" name="selected"
+                                                    style="width:50px" ></input>
+                                            </td>
+                                            <td style="word-wrap: break-word">{{referral.name}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>    
+    </div>   
+</div>
+        

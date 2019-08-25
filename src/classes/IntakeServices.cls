@@ -514,7 +514,7 @@ public with sharing class IntakeServices {
     }
 
     @RemoteAction
-    public static Id logVisit( Id hhId, Id contactId, String boxType, Decimal checkoutWeight, Integer pointsUsed, Map<String, Integer> commodityUsage, String visitType, String visitDate, String visitNotes, List<String> services, List<String> referrals, String serviceLocation, String createdBy) {
+    public static Id logVisit( Id hhId, Id contactId, String boxType, Decimal checkoutWeight, Integer pointsUsed, Map<String, Integer> commodityUsage, String visitType, String visitDate, String visitNotes, List<String> services, List<String> referrals, String serviceLocation) {
 
         // get the HH detail
         Account[] hhs =
@@ -608,8 +608,7 @@ public with sharing class IntakeServices {
                         C501_End_Date__c = Date.parse(visitDate),
                         C501_IsActive__c = false,
                         C501_Trigger_Ignore_Change__c = true,
-                        C501_Location__c = serviceLocation,
-                        C501_Created_By__c = createdBy
+                        C501_Location__c = serviceLocation
                     );
 
                     insert sh;
@@ -634,8 +633,7 @@ public with sharing class IntakeServices {
                         C501_End_Date__c = Date.parse(visitDate),
                         C501_IsActive__c = false,
                         C501_Trigger_Ignore_Change__c = true,
-                        C501_Location__c = serviceLocation,
-                        C501_Created_By__c = createdBy
+                        C501_Location__c = serviceLocation
                     );
 
                     insert sh;
@@ -660,8 +658,7 @@ public with sharing class IntakeServices {
                         C501_End_Date__c = Date.parse(visitDate),
                         C501_IsActive__c = false,
                         C501_Trigger_Ignore_Change__c = true,
-                        C501_Location__c = serviceLocation,
-                        C501_Created_By__c = createdBy
+                        C501_Location__c = serviceLocation
                     );
 
                     insert sh;

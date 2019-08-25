@@ -64,7 +64,6 @@
         <members>C501_Service_Household__c.C501_Case_Worker__c</members>
         <members>C501_Service_Household__c.C501_Child_Support__c</members>
         <members>C501_Service_Household__c.C501_Childcare_Voucher__c</members>
-        <members>C501_Service_Household__c.C501_Created_By__c</members>
         <members>C501_Service_Household__c.C501_Current_Address_Move_In_Year__c</members>
         <members>C501_Service_Household__c.C501_EITC__c</members>
         <members>C501_Service_Household__c.C501_Earned_Income__c</members>

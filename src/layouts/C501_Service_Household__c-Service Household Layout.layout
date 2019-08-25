@@ -72,10 +72,6 @@
                 <behavior>Edit</behavior>
                 <field>C501_Case_Worker__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_Created_By__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
