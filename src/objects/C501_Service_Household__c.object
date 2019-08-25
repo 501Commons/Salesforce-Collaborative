@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>C501_Service_Household_Company_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>C501_Service_Household_Company_Layout</fullName>
+        <fields>Name</fields>
+        <fields>C501_Household__c</fields>
+        <label>C501 Service Household Compact Layout</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>C501_Affordable_Care_Act_Subsidy__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Affordable Care Act Subsidy</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Alimony_Other_Spousal_Support__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Alimony / Other Spousal Support</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Annual_Income__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Annual Income for the household - used to calculate Income Level</inlineHelpText>
+        <label>Annual Income</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>C501_BillingCity__c</fullName>
+        <externalId>false</externalId>
+        <label>BillingCity</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_BillingPostalCode__c</fullName>
+        <externalId>false</externalId>
+        <label>BillingPostalCode</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_BillingState__c</fullName>
+        <externalId>false</externalId>
+        <label>BillingState</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_BillingStreet__c</fullName>
+        <externalId>false</externalId>
+        <label>BillingStreet</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Case_Worker__c</fullName>
+        <externalId>false</externalId>
+        <label>Case Worker</label>
+        <length>128</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Child_Support__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Child Support</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Childcare_Voucher__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Childcare Voucher</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Created_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Created By</label>
+        <length>128</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Current_Address_Move_In_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Address Move In Year</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C501_EITC__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>EITC</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Earned_Income__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Earned Income</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C501_Federal_Poverty_Level__c</fullName>
+        <externalId>false</externalId>
+        <formula>C501_Annual_Income__c / (12140 + ((C501_Household_Size__c - 1) * 4320))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Federal Poverty Level</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>C501_HUD_VASH__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>HUD-VASH</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Household_Income_Sources__c</fullName>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Household Income Sources</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Income from Employment Only</fullName>
+                    <default>false</default>
+                    <label>Income from Employment Only</label>
+                </value>
+                <value>
+                    <fullName>Income from Employment and Other Income Source</fullName>
+                    <default>false</default>
+                    <label>Income from Employment and Other Income Source</label>
+                </value>
+                <value>
+                    <fullName>Income from Employment, Other Income Source, and Non-Cash Benefits</fullName>
+                    <default>false</default>
+                    <label>Income from Employment, Other Income Source, and Non-Cash Benefits</label>
+                </value>
+                <value>
+                    <fullName>Income from Employment and Non-Cash Benefits</fullName>
+                    <default>false</default>
+                    <label>Income from Employment and Non-Cash Benefits</label>
+                </value>
+                <value>
+                    <fullName>Other Income Source Only</fullName>
+                    <default>false</default>
+                    <label>Other Income Source Only</label>
+                </value>
+                <value>
+                    <fullName>Other Income Source and Non-Cash Benefits</fullName>
+                    <default>false</default>
+                    <label>Other Income Source and Non-Cash Benefits</label>
+                </value>
+                <value>
+                    <fullName>No Income</fullName>
+                    <default>false</default>
+                    <label>No Income</label>
+                </value>
+                <value>
+                    <fullName>Non-Cash Benefits Only</fullName>
+                    <default>false</default>
+                    <label>Non-Cash Benefits Only</label>
+                </value>
+                <value>
+                    <fullName>Unknown/Not Reported</fullName>
+                    <default>false</default>
+                    <label>Unknown/Not Reported</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C501_Household_Size__c</fullName>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of people in the household - including those who are not listed as Contacts. Used to calculate HH Income Level and in Module4 reporting.</inlineHelpText>
+        <label>Household Size</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Household_Type__c</fullName>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Household Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Single Person</fullName>
+                    <default>false</default>
+                    <label>Single Person</label>
+                </value>
+                <value>
+                    <fullName>Two Adults No Children</fullName>
+                    <default>false</default>
+                    <label>Two Adults No Children</label>
+                </value>
+                <value>
+                    <fullName>Single Parent Female</fullName>
+                    <default>false</default>
+                    <label>Single Parent Female</label>
+                </value>
+                <value>
+                    <fullName>Single Parent Male</fullName>
+                    <default>false</default>
+                    <label>Single Parent Male</label>
+                </value>
+                <value>
+                    <fullName>Two Parent Household</fullName>
+                    <default>false</default>
+                    <label>Two Parent Household</label>
+                </value>
+                <value>
+                    <fullName>Non-related Adults with Children</fullName>
+                    <default>false</default>
+                    <label>Non-related Adults with Children</label>
+                </value>
+                <value>
+                    <fullName>Multigenerational Household</fullName>
+                    <default>false</default>
+                    <label>Multigenerational Household</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Unknown/Not Reported</fullName>
+                    <default>false</default>
+                    <label>Unknown/Not Reported</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C501_Household__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Household</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Service Households</relationshipLabel>
+        <relationshipName>Service_Households</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>C501_Housing_Choice_Voucher__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Housing Choice Voucher</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Housing__c</fullName>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Housing</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Own</fullName>
+                    <default>false</default>
+                    <label>Own</label>
+                </value>
+                <value>
+                    <fullName>Rent</fullName>
+                    <default>false</default>
+                    <label>Rent</label>
+                </value>
+                <value>
+                    <fullName>Other permanent housing</fullName>
+                    <default>false</default>
+                    <label>Other permanent housing</label>
+                </value>
+                <value>
+                    <fullName>Homeless</fullName>
+                    <default>false</default>
+                    <label>Homeless</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Unknown/Not Reported</fullName>
+                    <default>false</default>
+                    <label>Unknown/Not Reported</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C501_Income_Unknown_Not_Reported__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Income Unknown / Not Reported</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Level__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level</label>
+        <referenceTo>npsp__Level__c</referenceTo>
+        <relationshipLabel>Service Household (Level)</relationshipLabel>
+        <relationshipName>Service_Household_Levels</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>C501_Location__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Location</label>
+        <length>80</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NonCash_Income_Unknown__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>NonCash Income Unknown / Not Reported</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Other_Income__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Other Income</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Other_Non_Cash_Income__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Other Non-Cash Income</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Other_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>C501_Outcomes__c</fullName>
+        <externalId>false</externalId>
+        <label>Outcomes</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Furnace Repair Received</fullName>
+                    <default>false</default>
+                    <label>Furnace Repair Received</label>
+                </value>
+                <value>
+                    <fullName>Furnace Replacement Received</fullName>
+                    <default>false</default>
+                    <label>Furnace Replacement Received</label>
+                </value>
+                <value>
+                    <fullName>Eviction Prevention Received</fullName>
+                    <default>false</default>
+                    <label>Eviction Prevention Received</label>
+                </value>
+                <value>
+                    <fullName>Disconnect Averted</fullName>
+                    <default>false</default>
+                    <label>Disconnect Averted</label>
+                </value>
+                <value>
+                    <fullName>Service Restored</fullName>
+                    <default>false</default>
+                    <label>Service Restored</label>
+                </value>
+                <value>
+                    <fullName>Enrolled</fullName>
+                    <default>false</default>
+                    <label>Enrolled</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+                <value>
+                    <fullName>Dropped</fullName>
+                    <default>false</default>
+                    <label>Dropped</label>
+                </value>
+                <value>
+                    <fullName>Waitlisted</fullName>
+                    <default>false</default>
+                    <label>Waitlisted</label>
+                </value>
+                <value>
+                    <fullName>Not Eligible</fullName>
+                    <default>false</default>
+                    <label>Not Eligible</label>
+                </value>
+                <value>
+                    <fullName>Permanent Housing On Own</fullName>
+                    <default>false</default>
+                    <label>Permanent Housing On Own</label>
+                </value>
+                <value>
+                    <fullName>Not Interested</fullName>
+                    <default>false</default>
+                    <label>Not Interested</label>
+                </value>
+                <value>
+                    <fullName>P Over 30</fullName>
+                    <default>false</default>
+                    <label>P Over 30</label>
+                </value>
+                <value>
+                    <fullName>P Over 60</fullName>
+                    <default>false</default>
+                    <label>P Over 60</label>
+                </value>
+                <value>
+                    <fullName>No Contact</fullName>
+                    <default>false</default>
+                    <label>No Contact</label>
+                </value>
+                <value>
+                    <fullName>Rental Assistance</fullName>
+                    <default>false</default>
+                    <label>Rental Assistance</label>
+                </value>
+                <value>
+                    <fullName>Left Area</fullName>
+                    <default>false</default>
+                    <label>Left Area</label>
+                </value>
+                <value>
+                    <fullName>Deceased</fullName>
+                    <default>false</default>
+                    <label>Deceased</label>
+                </value>
+                <value>
+                    <fullName>Jail/Prison</fullName>
+                    <default>false</default>
+                    <label>Jail/Prison</label>
+                </value>
+                <value>
+                    <fullName>Change in Household Makeup</fullName>
+                    <default>false</default>
+                    <label>Change in Household Makeup</label>
+                </value>
+                <value>
+                    <fullName>Transitional Housing Program</fullName>
+                    <default>false</default>
+                    <label>Transitional Housing Program</label>
+                </value>
+                <value>
+                    <fullName>Housing Lab</fullName>
+                    <default>false</default>
+                    <label>Housing Lab</label>
+                </value>
+                <value>
+                    <fullName>NP Over 60</fullName>
+                    <default>false</default>
+                    <label>NP Over 60</label>
+                </value>
+                <value>
+                    <fullName>Case Management</fullName>
+                    <default>false</default>
+                    <label>Case Management</label>
+                </value>
+                <value>
+                    <fullName>Institution</fullName>
+                    <default>false</default>
+                    <label>Institution</label>
+                </value>
+                <value>
+                    <fullName>NP Over 30</fullName>
+                    <default>false</default>
+                    <label>NP Over 30</label>
+                </value>
+                <value>
+                    <fullName>Referred</fullName>
+                    <default>false</default>
+                    <label>Referred</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>C501_Pension__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Pension</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Permanent_Supportive_Housing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Permanent Supportive Housing</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>C501_Previous_Level__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Previous Level</label>
+        <referenceTo>npsp__Level__c</referenceTo>
+        <relationshipLabel>Service Households (Previous Level)</relationshipLabel>
+        <relationshipName>Service_Household_PreviousLevels</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>C501_Private_Disability_Insurance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Private Disability Insurance</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Program__c</fullName>
+        <externalId>false</externalId>
+        <label>Program</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>C501_Intake_Programs</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C501_Public_Housing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Public Housing</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Retirement_Income_Social_Security__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Retirement Income - Social Security</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_SNAP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>SNAP</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Self_Employed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Self Employed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Service_Household_Unique_Count__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Household Unique Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Service_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Service Id</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Service__c</fullName>
+        <externalId>false</externalId>
+        <label>Service</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Adult Education</fullName>
+                    <default>false</default>
+                    <label>Adult Education</label>
+                </value>
+                <value>
+                    <fullName>Basic Food Applications</fullName>
+                    <default>false</default>
+                    <label>Basic Food Applications</label>
+                </value>
+                <value>
+                    <fullName>Basic Needs</fullName>
+                    <default>false</default>
+                    <label>Basic Needs</label>
+                </value>
+                <value>
+                    <fullName>Bus Pass (Daily)</fullName>
+                    <default>false</default>
+                    <label>Bus Pass (Daily)</label>
+                </value>
+                <value>
+                    <fullName>Childcare</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Childcare</label>
+                </value>
+                <value>
+                    <fullName>Coordinated Entry</fullName>
+                    <default>false</default>
+                    <label>Coordinated Entry</label>
+                </value>
+                <value>
+                    <fullName>Diapers</fullName>
+                    <default>false</default>
+                    <label>Diapers</label>
+                </value>
+                <value>
+                    <fullName>Domestic Violence Services</fullName>
+                    <default>false</default>
+                    <label>Domestic Violence Services</label>
+                </value>
+                <value>
+                    <fullName>DSHS</fullName>
+                    <default>false</default>
+                    <label>DSHS</label>
+                </value>
+                <value>
+                    <fullName>Dump Pass</fullName>
+                    <default>false</default>
+                    <label>Dump Pass</label>
+                </value>
+                <value>
+                    <fullName>Early Head Start</fullName>
+                    <default>false</default>
+                    <label>Early Head Start</label>
+                </value>
+                <value>
+                    <fullName>Early Learning</fullName>
+                    <default>false</default>
+                    <label>Early Learning</label>
+                </value>
+                <value>
+                    <fullName>ECEAP</fullName>
+                    <default>false</default>
+                    <label>ECEAP</label>
+                </value>
+                <value>
+                    <fullName>Emergency Child Care Voucher</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Emergency Child Care Voucher</label>
+                </value>
+                <value>
+                    <fullName>Emergency Food Box</fullName>
+                    <default>false</default>
+                    <label>Emergency Food Box</label>
+                </value>
+                <value>
+                    <fullName>Employment</fullName>
+                    <default>false</default>
+                    <label>Employment</label>
+                </value>
+                <value>
+                    <fullName>Energy Assistance</fullName>
+                    <default>false</default>
+                    <label>Energy Assistance</label>
+                </value>
+                <value>
+                    <fullName>Eviction Prevention Screening</fullName>
+                    <default>false</default>
+                    <label>Eviction Prevention Screening</label>
+                </value>
+                <value>
+                    <fullName>Ferry Pass</fullName>
+                    <default>false</default>
+                    <label>Ferry Pass</label>
+                </value>
+                <value>
+                    <fullName>Financial Literacy</fullName>
+                    <default>false</default>
+                    <label>Financial Literacy</label>
+                </value>
+                <value>
+                    <fullName>Food Resources</fullName>
+                    <default>false</default>
+                    <label>Food Resources</label>
+                </value>
+                <value>
+                    <fullName>Head Start</fullName>
+                    <default>false</default>
+                    <label>Head Start</label>
+                </value>
+                <value>
+                    <fullName>Head Start/ECEAP</fullName>
+                    <default>false</default>
+                    <label>Head Start/ECEAP</label>
+                </value>
+                <value>
+                    <fullName>Healthcare</fullName>
+                    <default>false</default>
+                    <label>Healthcare</label>
+                </value>
+                <value>
+                    <fullName>Health Plan Finder</fullName>
+                    <default>false</default>
+                    <label>Health Plan Finder</label>
+                </value>
+                <value>
+                    <fullName>Home Improvement</fullName>
+                    <default>false</default>
+                    <label>Home Improvement</label>
+                </value>
+                <value>
+                    <fullName>Homeless Verification Form Given to Client</fullName>
+                    <default>false</default>
+                    <label>Homeless Verification Form Given to Client</label>
+                </value>
+                <value>
+                    <fullName>Housing Assessment</fullName>
+                    <default>false</default>
+                    <label>Housing Assessment</label>
+                </value>
+                <value>
+                    <fullName>Housing Intake</fullName>
+                    <default>false</default>
+                    <label>Housing Intake</label>
+                </value>
+                <value>
+                    <fullName>Housing Pool</fullName>
+                    <default>false</default>
+                    <label>Housing Pool</label>
+                </value>
+                <value>
+                    <fullName>Kinship</fullName>
+                    <default>false</default>
+                    <label>Kinship</label>
+                </value>
+                <value>
+                    <fullName>Landlord Tenant</fullName>
+                    <default>false</default>
+                    <label>Landlord Tenant</label>
+                </value>
+                <value>
+                    <fullName>Landlord Tenant Education</fullName>
+                    <default>false</default>
+                    <label>Landlord Tenant Education</label>
+                </value>
+                <value>
+                    <fullName>LIHEAP</fullName>
+                    <default>false</default>
+                    <label>LIHEAP</label>
+                </value>
+                <value>
+                    <fullName>LIHEAP Denied</fullName>
+                    <default>false</default>
+                    <label>LIHEAP Denied</label>
+                </value>
+                <value>
+                    <fullName>Mental Health</fullName>
+                    <default>false</default>
+                    <label>Mental Health</label>
+                </value>
+                <value>
+                    <fullName>Notary</fullName>
+                    <default>false</default>
+                    <label>Notary</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Other Early Learning</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Other Early Learning</label>
+                </value>
+                <value>
+                    <fullName>Other Legal</fullName>
+                    <default>false</default>
+                    <label>Other Legal</label>
+                </value>
+                <value>
+                    <fullName>Other Utility</fullName>
+                    <default>false</default>
+                    <label>Other Utility</label>
+                </value>
+                <value>
+                    <fullName>PSE HELP</fullName>
+                    <default>false</default>
+                    <label>PSE HELP</label>
+                </value>
+                <value>
+                    <fullName>PSE HELP Denied</fullName>
+                    <default>false</default>
+                    <label>PSE HELP Denied</label>
+                </value>
+                <value>
+                    <fullName>Salvation Army Voucher</fullName>
+                    <default>false</default>
+                    <label>Salvation Army Voucher</label>
+                </value>
+                <value>
+                    <fullName>SEAS</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SEAS</label>
+                </value>
+                <value>
+                    <fullName>Shower Pass</fullName>
+                    <default>false</default>
+                    <label>Shower Pass</label>
+                </value>
+                <value>
+                    <fullName>Veterans Services</fullName>
+                    <default>false</default>
+                    <label>Veterans Services</label>
+                </value>
+                <value>
+                    <fullName>Youth Programs</fullName>
+                    <default>false</default>
+                    <label>Youth Programs</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C501_ShippingCity__c</fullName>
+        <externalId>false</externalId>
+        <label>ShippingCity</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_ShippingPostalCode__c</fullName>
+        <externalId>false</externalId>
+        <label>ShippingPostalCode</label>
+        <length>16</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_ShippingState__c</fullName>
+        <externalId>false</externalId>
+        <label>ShippingState</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_ShippingStreet__c</fullName>
+        <externalId>false</externalId>
+        <label>ShippingStreet</label>
+        <length>128</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Social_Security_Disability_Income__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Social Security Disability Income (SSDI)</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C501_Sub_Service__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub Service</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Furnace Repair</fullName>
+                    <default>false</default>
+                    <label>Furnace Repair</label>
+                </value>
+                <value>
+                    <fullName>Furnace Replace</fullName>
+                    <default>false</default>
+                    <label>Furnace Replace</label>
+                </value>
+                <value>
+                    <fullName>Eviction Prevention</fullName>
+                    <default>false</default>
+                    <label>Eviction Prevention</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C501_Supplemental_Security_Income__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Supplemental Security Income (SSI)</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_TANF__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>TANF</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Trigger_Ignore_Change__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Trigger Ignore Change</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Unemployment_Insurance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Unemployment Insurance</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_VA_Non_Service_Disability_Pension__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>VA Non-Service Disability Pension</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_VA_Service_Connected_Disability__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>VA Service-Connected Disability Comp</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_WIC__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>WIC</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Worker_s_Compensation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Module4</description>
+        <externalId>false</externalId>
+        <label>Worker’s Compensation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Years_at_Current_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Years at Current Address</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Service_Household_Unique_Count__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Household Unique Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Service Household</label>
+    <nameField>
+        <label>Service Household Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Service Households</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

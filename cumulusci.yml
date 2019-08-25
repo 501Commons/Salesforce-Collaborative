@@ -1,0 +1,27 @@
+minimum_cumulusci_version: '2.5.6'
+project:
+    name: Salesforce-Collaborative
+    package:
+        name:  Salesforce-Collaborative
+        namespace: sc
+        api_version: '46.0'
+    dependencies:
+        - github: 'https://github.com/SalesforceFoundation/Cumulus'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/Salesforce-Collaborative/tests
+            options:
+                outputdir: robot/Salesforce-Collaborative/results
+
+    robot_testdoc:
+        options:
+            path: robot/Salesforce-Collaborative/tests
+            output: robot/Salesforce-Collaborative/doc/Salesforce-Collaborative_tests.html
+
+flows:
+    config_qa:
+        1.1:
+            task: deploy_qa_config
