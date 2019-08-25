@@ -201,8 +201,6 @@ angular.module('appServices')
           });
         });
 
-        settings.user_email = '';
-
         return settings;
       }
     };

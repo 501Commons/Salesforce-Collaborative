@@ -92,14 +92,6 @@ angular.module('homeController')
     $scope.refresh();
     repeater = $interval(function() { $scope.refresh(); }, 60000);
     
-    $scope.user = {
-      email: $scope.settings.user_email,
-    };
-
-    $scope.login = function() {
-      $scope.settings.user_email = $scope.user.email;
-    }
-
   }]);
 
 angular.module('homeController')
