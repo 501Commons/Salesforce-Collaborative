@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Account</entityName>
+    <fieldName>C501_Family_Status__c</fieldName>
+    <masterLabel>CORE Family</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Phone</fieldNames>
+        <fieldNames>npe01__One2OneContact__c</fieldNames>
+        <picklistValueName>Intake</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>HH_Account</recordTypeName>
+</PathAssistant>

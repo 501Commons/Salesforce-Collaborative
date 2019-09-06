@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override updated by Lightning App Builder during activation.</comment>
+        <content>C501_Assessment_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fieldSets>
+        <fullName>C501_CCR_AFAR_Self_Assessment</fullName>
+        <description>CCR: All Families Are Ready; Use for Assessment Quick Create</description>
+        <displayedFields>
+            <field>C501_CCR_Supportive_People__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Supportive_Family_Relationships__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Safe_Home__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Equipped_to_Reach_Goals__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Opportunities_Employment_Goals__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Resources_to_Pursue_Goals__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Support_Child_Learning__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Child_Developing__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Early_Learning__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Meet_Basic_Needs__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Comfortably_Pay_Bills__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Saves_Money__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Affordable_Healthcare__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Good_Physical_Health__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Rarely_Overwhelmed__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_CCR_Depression_or_Hopelessness__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>AFAR Self Assessment</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>C501_HH_Domain_Needs_Assessment</fullName>
+        <description>Homeward House; Use for Assessment Quick Create</description>
+        <displayedFields>
+            <field>C501_HH_Health_Wellbeing__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_HH_Economic_Assets__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_HH_Early_Childhood__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_HH_Education_Employment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_HH_Social_Capital__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Domain Needs Assessment</label>
+    </fieldSets>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Collaborative, Family</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Assessments</relationshipLabel>
+        <relationshipName>Assessments</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Affordable_Healthcare__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I feel I am able to access affordable healthcare when needed&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I feel I am able to access affordable healthcare when needed&quot;</inlineHelpText>
+        <label>Affordable Healthcare</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Child_Developing__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I feel my child is developing appropriately&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I feel my child is developing appropriately&quot;</inlineHelpText>
+        <label>Child Developing Appropriately</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Comfortably_Pay_Bills__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;My family can comfortably pay our bills each month&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;My family can comfortably pay our bills each month&quot;</inlineHelpText>
+        <label>Comfortably Pay Bills</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Depression_or_Hopelessness__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;Feelings of depression or hopelessness do not affect my ability to function in everyday life&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;Feelings of depression or hopelessness do not affect my ability to function in everyday life&quot;</inlineHelpText>
+        <label>Depression or Hopelessness</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Early_Learning__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I feel my child is accessing quality early learning opportunities&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I feel my child is accessing quality early learning opportunities&quot;</inlineHelpText>
+        <label>Early Learning Opportunities</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Equipped_to_Reach_Goals__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I feel I have the training, experience, and/or education I need to reach my goals and aspirations&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I feel I have the training, experience, and/or education I need to reach my goals and aspirations&quot;</inlineHelpText>
+        <label>Equipped to Reach Goals</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Good_Physical_Health__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I feel I am in good physical health&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I feel I am in good physical health&quot;</inlineHelpText>
+        <label>Good Physical Health</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Meet_Basic_Needs__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I feel confident in my family’s ability to meet our basic needs (stable housing, paying bills, providing healthy food, clothing, transportation, etc.)&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I feel confident in my family’s ability to meet our basic needs (stable housing, paying bills, providing healthy food, clothing, transportation, etc.)&quot;</inlineHelpText>
+        <label>Meet Basic Needs</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Opportunities_Employment_Goals__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I feel I have access to opportunities to fulfill my employment goals&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I feel I have access to opportunities to fulfill my employment goals&quot;</inlineHelpText>
+        <label>Opportunities for Employment Goals</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Rarely_Overwhelmed__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I rarely experience feelings of extreme stress or feel overwhelmed&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I rarely experience feelings of extreme stress or feel overwhelmed&quot;</inlineHelpText>
+        <label>Rarely Overwhelmed</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Resources_to_Pursue_Goals__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I know where to find and how to access resources to pursue my educational and employment goals&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I know where to find and how to access resources to pursue my educational and employment goals&quot;</inlineHelpText>
+        <label>Resources to Pursue Goals</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Safe_Home__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I feel my family lives in a safe and positive home environment&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I feel my family lives in a safe and positive home environment&quot;</inlineHelpText>
+        <label>Safe Home</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Saves_Money__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;My family saves money at the end of each month&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;My family saves money at the end of each month&quot;</inlineHelpText>
+        <label>Saves Money</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Support_Child_Learning__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I feel confident in my ability to support my child’s learning and have the resources I need to do so&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I feel confident in my ability to support my child’s learning and have the resources I need to do so&quot;</inlineHelpText>
+        <label>Support Child&apos;s Learning</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Supportive_Family_Relationships__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I feel my family has strong and supporting relationships with each other&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I feel my family has strong and supporting relationships with each other&quot;</inlineHelpText>
+        <label>Supportive Family Relationships</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Supportive_People__c</fullName>
+        <description>CCR. Scale of 1-5: &quot;I feel I have people in my life who help and support me when I need it.&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR. Scale of 1-5: &quot;I feel I have people in my life who help and support me when I need it.&quot;</inlineHelpText>
+        <label>Supportive People</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Early_Childhood__c</fullName>
+        <description>HH. Scale 1-10: &quot;Domain: Early Childhood Care and Education&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>HH. Scale 1-10: &quot;Domain: Early Childhood Care and Education&quot;</inlineHelpText>
+        <label>Early Childhood</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Economic_Assets__c</fullName>
+        <description>HH. Scale 1-10: &quot;Domain: Economic Assets&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>HH. Scale 1-10: &quot;Domain: Economic Assets&quot;</inlineHelpText>
+        <label>Economic Assets</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Education_Employment__c</fullName>
+        <description>HH. Scale 1-10: &quot;Domain: Post -  Secondary Education and Employment Pathways&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>HH. Scale 1-10: &quot;Domain: Post -  Secondary Education and Employment Pathways&quot;</inlineHelpText>
+        <label>Education &amp; Employment</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Health_Wellbeing__c</fullName>
+        <description>HH. Scale 1-10: &quot;Domain: Health and Wellbeing&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>HH. Scale 1-10: &quot;Domain: Health and Wellbeing&quot;</inlineHelpText>
+        <label>Health &amp; Wellbeing</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Social_Capital__c</fullName>
+        <description>HH. Scale 1-10: &quot;Domain: Social Capital- Friends-Family-Community&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>HH. Scale 1-10: &quot;Domain: Social Capital- Friends-Family-Community&quot;</inlineHelpText>
+        <label>Social Capital</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_ISA_Health_Wellbeing__c</fullName>
+        <description>ISA. Free Text: &quot;Health &amp; Wellbeing&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ISA. Free Text: &quot;Health &amp; Wellbeing&quot;</inlineHelpText>
+        <label>Health &amp; Wellbeing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>C501_ISA_Literacy__c</fullName>
+        <description>ISA. Free Text: &quot;Literacy&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ISA. Free Text: &quot;Literacy&quot;</inlineHelpText>
+        <label>Literacy</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>C501_ISA_Math__c</fullName>
+        <description>ISA. Free Text: &quot;Math&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ISA. Free Text: &quot;Math&quot;</inlineHelpText>
+        <label>Math</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>C501_MLW_Daycare__c</fullName>
+        <description>MLW. Scale 1-5: &quot;Bridge: Daycare&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MLW. Scale 1-5: &quot;Bridge: Daycare&quot;</inlineHelpText>
+        <label>Daycare</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_MLW_Debts__c</fullName>
+        <description>MLW. Scale 1-5: &quot;Bridge: Debts&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MLW. Scale 1-5: &quot;Bridge: Debts&quot;</inlineHelpText>
+        <label>Debts</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_MLW_Earning_Levels__c</fullName>
+        <description>MLW. Scale 1-5: &quot;Bridge: Earning Levels&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MLW. Scale 1-5: &quot;Bridge: Earning Levels&quot;</inlineHelpText>
+        <label>Earning Levels</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_MLW_Education__c</fullName>
+        <description>MLW. Scale 1-5: &quot;Bridge: Education&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MLW. Scale 1-5: &quot;Bridge: Education&quot;</inlineHelpText>
+        <label>Education</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_MLW_Health__c</fullName>
+        <description>MLW. Scale 1-5: &quot;Bridge: Health&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MLW. Scale 1-5: &quot;Bridge: Health&quot;</inlineHelpText>
+        <label>Health</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_MLW_Housing__c</fullName>
+        <description>MLW. Scale 1-5: &quot;Bridge: Housing&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MLW. Scale 1-5: &quot;Bridge: Housing&quot;</inlineHelpText>
+        <label>Housing</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_MLW_Networks__c</fullName>
+        <description>MLW. Scale 1-5: &quot;Bridge: Networks&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MLW. Scale 1-5: &quot;Bridge: Networks&quot;</inlineHelpText>
+        <label>Networks</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_MLW_Saving__c</fullName>
+        <description>MLW. Scale 1-5: &quot;Bridge: Saving&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MLW. Scale 1-5: &quot;Bridge: Saving&quot;</inlineHelpText>
+        <label>Saving</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_MLW_Transport__c</fullName>
+        <description>MLW. Scale 1-5: &quot;Bridge: Transport&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MLW. Scale 1-5: &quot;Bridge: Transport&quot;</inlineHelpText>
+        <label>Transport</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Measure_1__c</fullName>
+        <description>Placeholder - NCCC. Scale 1-5: &quot;Measure 1&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Placeholder - NCCC. Scale 1-5: &quot;Measure 1&quot;</inlineHelpText>
+        <label>Measure 1</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Measure_2__c</fullName>
+        <description>Placeholder - NCCC. Scale 1-5: &quot;Measure 2&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Placeholder - NCCC. Scale 1-5: &quot;Measure 2&quot;</inlineHelpText>
+        <label>Measure 2</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Measure_3__c</fullName>
+        <description>Placeholder - NCCC. Scale 1-5: &quot;Measure 3&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Placeholder - NCCC. Scale 1-5: &quot;Measure 3&quot;</inlineHelpText>
+        <label>Measure 3</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Next_Assessment__c</fullName>
+        <defaultValue>90</defaultValue>
+        <description>Days until next assessment</description>
+        <externalId>false</externalId>
+        <label>Days Until Next Assessment</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Notify_When_Next_Assessment_Due__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Notify When Next Assessment Due</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Assessment</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Assessment Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Assessments</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>C501_Assessment_Default</fullName>
+        <active>true</active>
+        <description>Displays fields relevant to all CORE assessment fields</description>
+        <label>Assessment Default</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>C501_CCR_AFAR_Self_Assessment</fullName>
+        <active>true</active>
+        <description>Displays fields relevant to Connect Casino Road&apos;s AFAR Self Assessment</description>
+        <label>CCR: AFAR Self Assessment</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>C501_HH_Domain_Assessment</fullName>
+        <active>true</active>
+        <description>Displays fields relevant to Homeward House&apos;s Domain Assessment</description>
+        <label>HH: Domain Assessment</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>C501_ISA_General_Assessment</fullName>
+        <active>true</active>
+        <description>Displays fields relevant to Improving School Attendance&apos;s General Assessment</description>
+        <label>ISA: General Assessment</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>C501_MLW_Bridge_Scores</fullName>
+        <active>true</active>
+        <description>Displays fields relevant to Making Life Work&apos;s Bridge Scores</description>
+        <label>MLW: Bridge Scores</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>C501_NCCC_General_Assessment</fullName>
+        <active>true</active>
+        <description>Displays fields relevant to North Counties Community Collaborative&apos;s General Assessment</description>
+        <label>NCCC: General Assessment</label>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

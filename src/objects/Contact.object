@@ -1,5 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <compactLayouts>
+        <fullName>C501_CORE_Client_Contact</fullName>
+        <fields>Name</fields>
+        <fields>AccountId</fields>
+        <fields>Phone</fields>
+        <fields>Email</fields>
+        <label>CORE Client Contact</label>
+    </compactLayouts>
+    <fields>
+        <fullName>C501_Age__c</fullName>
+        <description>Calculates the Contact&apos;s age from their birthdate; if the birthdate field is blank, uses Birth Year (est) field</description>
+        <externalId>false</externalId>
+        <formula>IF ( NOT( ISBLANK( Birthdate ) ) ,
+  IF( DATE( 2000 , MONTH( Birthdate ) , DAY( Birthdate ) ) &lt;= DATE( 2000 , MONTH( TODAY() ) , DAY( TODAY() ) ),
+     YEAR (Today()) - YEAR ( Birthdate ),
+     YEAR (Today()) - YEAR ( Birthdate ) -1 ),
+  IF (NOT( ISBLANK( C501_Birth_Year_est__c)),
+    YEAR (Today()) - VALUE(C501_Birth_Year_est__c),       
+  null))
+
+
+/*
+IF( NOT( ISBLANK( Birthdate ) ) ,
+  IF( DATE( 2000 , MONTH( Birthdate ) , DAY( Birthdate ) ) &lt;= DATE( 2000 , MONTH( TODAY() ) , DAY( TODAY() ) ),
+     YEAR (Today()) - YEAR ( Birthdate ),
+     YEAR (Today()) - YEAR ( Birthdate ) -1 ),
+  null)
+  */</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula based on Birthdate, if available, otherwise uses Birth Year (est)</inlineHelpText>
+        <label>Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_American_Indian_or_Alaska_Native__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>UWSC - one of a number of racial identity options</description>
+        <externalId>false</externalId>
+        <label>American Indian or Alaska Native</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Asian__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>UWSC - one of a number of racial identity options</description>
+        <externalId>false</externalId>
+        <label>Asian</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Best_Contact_Time_Method__c</fullName>
+        <description>HH: Best time and manner to be contacted</description>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the best way to reach this client - time of day and method of contact</inlineHelpText>
+        <label>Best Contact Time &amp; Method</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>C501_Birth_Year_est__c</fullName>
+        <description>Estimated birth year - used to calculate contact&apos;s current age if full DoB is not available; NOTE: this is a text field; use VALUE() to convert it to a number in formulas, PB, etc</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If you don&apos;t have the client&apos;s birth date, estimate their birth year - this will be used to calculate their current age if their full birth date is not available</inlineHelpText>
+        <label>Birth Year (est)</label>
+        <length>4</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Black_or_African_American__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>UWSC - one of a number of racial identity options</description>
+        <externalId>false</externalId>
+        <label>Black or African American</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Hispanic_or_Latino__c</fullName>
+        <description>UWSC - racial / ethnic identity options; question: Identify as Hispanic or Latino?</description>
+        <externalId>false</externalId>
+        <label>Hispanic or Latino</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>C501_Y_N</valueSetName>
+        </valueSet>
+    </fields>
     <fields>
         <fullName>C501_IS_Age_Entry_Date__c</fullName>
         <description>Store this date so you can increment ages automatically even when you have no actual birthdate.</description>
@@ -213,5 +312,23 @@
         <trackFeedHistory>false</trackFeedHistory>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Native_Hawaiian_or_Pacific_Islander__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>UWSC - one of a number of racial identity options</description>
+        <externalId>false</externalId>
+        <label>Native Hawaiian or Pacific Islander</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_White__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>UWSC - one of a number of racial identity options</description>
+        <externalId>false</externalId>
+        <label>White</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
     </fields>
 </CustomObject>

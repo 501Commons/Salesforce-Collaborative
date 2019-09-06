@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Children are ready for school and take charge of their learning</fullName>
+        <default>false</default>
+        <label>Children are ready for school and take charge of their learning</label>
+    </customValue>
+    <customValue>
+        <fullName>Adult/s pursue post-secondary education and climb the career ladder</fullName>
+        <default>false</default>
+        <label>Adult/s pursue post-secondary education and climb the career ladder</label>
+    </customValue>
+    <customValue>
+        <fullName>Adult/s health and mental well-being are strengthened</fullName>
+        <default>false</default>
+        <label>Adult/s health and mental well-being are strengthened</label>
+    </customValue>
+    <customValue>
+        <fullName>Families are financially stable</fullName>
+        <default>false</default>
+        <label>Families are financially stable</label>
+    </customValue>
+    <customValue>
+        <fullName>Families are connected with economic, social and/or other supports</fullName>
+        <default>false</default>
+        <label>Families are connected with economic, social and/or other supports</label>
+    </customValue>
+    <masterLabel>Domains</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

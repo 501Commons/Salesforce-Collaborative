@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Store the email address used in flow fault emails</description>
+    <fields>
+        <fullName>C501_Org_Name__c</fullName>
+        <description>Holds the name of the Org (prod, sandbox name, etc) to be referenced in flow fault emails</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Holds the name of the Org (prod, sandbox name, etc) to be referenced in flow fault emails</inlineHelpText>
+        <label>Org Name</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email_Address__c</fullName>
+        <description>Holds the email address where flow fault emails should be directed</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Holds the email address where flow fault emails should be directed</inlineHelpText>
+        <label>Email Address</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Fault Email Address</label>
+    <pluralLabel>Fault Email Addresses</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

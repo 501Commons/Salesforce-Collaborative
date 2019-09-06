@@ -24,14 +24,27 @@
         <name>ApexTrigger</name>
     </types>
     <types>
+        <members>Account.C501_CORE_Family</members>
         <members>C501_Service_Household__c.C501_Service_Household_Company_Layout</members>
+        <members>Contact.C501_CORE_Client_Contact</members>
         <name>CompactLayout</name>
     </types>
     <types>
+        <members>C501_CORE</members>
         <members>Intake_Services</members>
         <name>CustomApplication</name>
     </types>
     <types>
+        <members>Account.C501_American_Indian_or_Alaska_Native__c</members>
+        <members>Account.C501_Asian__c</members>
+        <members>Account.C501_Black_or_African_American__c</members>
+        <members>Account.C501_CollabName__c</members>
+        <members>Account.C501_Family_Size__c</members>
+        <members>Account.C501_Family_Status__c</members>
+        <members>Account.C501_Family_Status__c</members>
+        <members>Account.C501_Federal_Poverty_Level__c</members>
+        <members>Account.C501_Female_Single_HH__c</members>
+        <members>Account.C501_Hispanic_or_Latino__c</members>
         <members>Account.C501_IS_Adults__c</members>
         <members>Account.C501_IS_Children__c</members>
         <members>Account.C501_IS_Commodity_Usage_JSON__c</members>
@@ -58,6 +71,93 @@
         <members>Account.C501_IS_Tag_Notes__c</members>
         <members>Account.C501_IS_Tags__c</members>
         <members>Account.C501_IS_Total_Visits__c</members>
+        <members>Account.C501_Native_Hawaiian_Pacific_Islander__c</members>
+        <members>Account.C501_Needs_Interpreter__c</members>
+        <members>Account.C501_Needs_Interpreter__c</members>
+        <members>Account.C501_Primary_Languages__c</members>
+        <members>Account.C501_Primary_Languages__c</members>
+        <members>Account.C501_White__c</members>
+        <members>Account.Collaborative__c</members>
+        <members>Assessment__c.Account__c</members>
+        <members>Assessment__c.Account__c</members>
+        <members>Assessment__c.C501_CCR_Affordable_Healthcare__c</members>
+        <members>Assessment__c.C501_CCR_Affordable_Healthcare__c</members>
+        <members>Assessment__c.C501_CCR_Child_Developing__c</members>
+        <members>Assessment__c.C501_CCR_Child_Developing__c</members>
+        <members>Assessment__c.C501_CCR_Comfortably_Pay_Bills__c</members>
+        <members>Assessment__c.C501_CCR_Comfortably_Pay_Bills__c</members>
+        <members>Assessment__c.C501_CCR_Depression_or_Hopelessness__c</members>
+        <members>Assessment__c.C501_CCR_Depression_or_Hopelessness__c</members>
+        <members>Assessment__c.C501_CCR_Early_Learning__c</members>
+        <members>Assessment__c.C501_CCR_Early_Learning__c</members>
+        <members>Assessment__c.C501_CCR_Equipped_to_Reach_Goals__c</members>
+        <members>Assessment__c.C501_CCR_Equipped_to_Reach_Goals__c</members>
+        <members>Assessment__c.C501_CCR_Good_Physical_Health__c</members>
+        <members>Assessment__c.C501_CCR_Good_Physical_Health__c</members>
+        <members>Assessment__c.C501_CCR_Meet_Basic_Needs__c</members>
+        <members>Assessment__c.C501_CCR_Meet_Basic_Needs__c</members>
+        <members>Assessment__c.C501_CCR_Opportunities_Employment_Goals__c</members>
+        <members>Assessment__c.C501_CCR_Opportunities_Employment_Goals__c</members>
+        <members>Assessment__c.C501_CCR_Rarely_Overwhelmed__c</members>
+        <members>Assessment__c.C501_CCR_Rarely_Overwhelmed__c</members>
+        <members>Assessment__c.C501_CCR_Resources_to_Pursue_Goals__c</members>
+        <members>Assessment__c.C501_CCR_Resources_to_Pursue_Goals__c</members>
+        <members>Assessment__c.C501_CCR_Safe_Home__c</members>
+        <members>Assessment__c.C501_CCR_Safe_Home__c</members>
+        <members>Assessment__c.C501_CCR_Saves_Money__c</members>
+        <members>Assessment__c.C501_CCR_Saves_Money__c</members>
+        <members>Assessment__c.C501_CCR_Support_Child_Learning__c</members>
+        <members>Assessment__c.C501_CCR_Support_Child_Learning__c</members>
+        <members>Assessment__c.C501_CCR_Supportive_Family_Relationships__c</members>
+        <members>Assessment__c.C501_CCR_Supportive_Family_Relationships__c</members>
+        <members>Assessment__c.C501_CCR_Supportive_People__c</members>
+        <members>Assessment__c.C501_CCR_Supportive_People__c</members>
+        <members>Assessment__c.C501_HH_Early_Childhood__c</members>
+        <members>Assessment__c.C501_HH_Early_Childhood__c</members>
+        <members>Assessment__c.C501_HH_Economic_Assets__c</members>
+        <members>Assessment__c.C501_HH_Economic_Assets__c</members>
+        <members>Assessment__c.C501_HH_Education_Employment__c</members>
+        <members>Assessment__c.C501_HH_Education_Employment__c</members>
+        <members>Assessment__c.C501_HH_Health_Wellbeing__c</members>
+        <members>Assessment__c.C501_HH_Health_Wellbeing__c</members>
+        <members>Assessment__c.C501_HH_Social_Capital__c</members>
+        <members>Assessment__c.C501_HH_Social_Capital__c</members>
+        <members>Assessment__c.C501_ISA_Health_Wellbeing__c</members>
+        <members>Assessment__c.C501_ISA_Health_Wellbeing__c</members>
+        <members>Assessment__c.C501_ISA_Literacy__c</members>
+        <members>Assessment__c.C501_ISA_Literacy__c</members>
+        <members>Assessment__c.C501_ISA_Math__c</members>
+        <members>Assessment__c.C501_ISA_Math__c</members>
+        <members>Assessment__c.C501_MLW_Daycare__c</members>
+        <members>Assessment__c.C501_MLW_Daycare__c</members>
+        <members>Assessment__c.C501_MLW_Debts__c</members>
+        <members>Assessment__c.C501_MLW_Debts__c</members>
+        <members>Assessment__c.C501_MLW_Earning_Levels__c</members>
+        <members>Assessment__c.C501_MLW_Earning_Levels__c</members>
+        <members>Assessment__c.C501_MLW_Education__c</members>
+        <members>Assessment__c.C501_MLW_Education__c</members>
+        <members>Assessment__c.C501_MLW_Health__c</members>
+        <members>Assessment__c.C501_MLW_Health__c</members>
+        <members>Assessment__c.C501_MLW_Housing__c</members>
+        <members>Assessment__c.C501_MLW_Housing__c</members>
+        <members>Assessment__c.C501_MLW_Networks__c</members>
+        <members>Assessment__c.C501_MLW_Networks__c</members>
+        <members>Assessment__c.C501_MLW_Saving__c</members>
+        <members>Assessment__c.C501_MLW_Saving__c</members>
+        <members>Assessment__c.C501_MLW_Transport__c</members>
+        <members>Assessment__c.C501_MLW_Transport__c</members>
+        <members>Assessment__c.C501_NCCC_Measure_1__c</members>
+        <members>Assessment__c.C501_NCCC_Measure_1__c</members>
+        <members>Assessment__c.C501_NCCC_Measure_2__c</members>
+        <members>Assessment__c.C501_NCCC_Measure_2__c</members>
+        <members>Assessment__c.C501_NCCC_Measure_3__c</members>
+        <members>Assessment__c.C501_NCCC_Measure_3__c</members>
+        <members>Assessment__c.Next_Assessment__c</members>
+        <members>Assessment__c.Next_Assessment__c</members>
+        <members>Assessment__c.Notify_When_Next_Assessment_Due__c</members>
+        <members>Assessment__c.Notify_When_Next_Assessment_Due__c</members>
+        <members>C501_Fault_Email_Address__mdt.C501_Org_Name__c</members>
+        <members>C501_Fault_Email_Address__mdt.Email_Address__c</members>
         <members>C501_Service_Household__c.C501_Affordable_Care_Act_Subsidy__c</members>
         <members>C501_Service_Household__c.C501_Alimony_Other_Spousal_Support__c</members>
         <members>C501_Service_Household__c.C501_Annual_Income__c</members>
@@ -142,6 +242,13 @@
         <members>Client_Visit__c.C501_IS_Visit_Date__c</members>
         <members>Client_Visit__c.C501_IS_Visit_Type__c</members>
         <members>Client_Visit__c.C501_IS_Visitor__c</members>
+        <members>Contact.C501_Age__c</members>
+        <members>Contact.C501_American_Indian_or_Alaska_Native__c</members>
+        <members>Contact.C501_Asian__c</members>
+        <members>Contact.C501_Best_Contact_Time_Method__c</members>
+        <members>Contact.C501_Birth_Year_est__c</members>
+        <members>Contact.C501_Black_or_African_American__c</members>
+        <members>Contact.C501_Hispanic_or_Latino__c</members>
         <members>Contact.C501_IS_Age_Entry_Date__c</members>
         <members>Contact.C501_IS_Age_Group__c</members>
         <members>Contact.C501_IS_Age__c</members>
@@ -150,9 +257,23 @@
         <members>Contact.C501_IS_External_Household_Id__c</members>
         <members>Contact.C501_IS_External_Id__c</members>
         <members>Contact.C501_IS_Gender__c</members>
+        <members>Contact.C501_IS_Gender__c</members>
         <members>Contact.C501_IS_Id_Number__c</members>
         <members>Contact.C501_IS_Id_Type__c</members>
         <members>Contact.C501_IS_Proof_of_Infant__c</members>
+        <members>Contact.C501_Native_Hawaiian_or_Pacific_Islander__c</members>
+        <members>Contact.C501_White__c</members>
+        <members>Goal__c.Account__c</members>
+        <members>Goal__c.Benchmark__c</members>
+        <members>Goal__c.Collective_Impact__c</members>
+        <members>Goal__c.Complete__c</members>
+        <members>Goal__c.Domain__c</members>
+        <members>Goal__c.Measurable_Goal__c</members>
+        <members>Goal__c.Measurable__c</members>
+        <members>Goal__c.Status__c</members>
+        <members>Goal__c.Steps__c</members>
+        <members>Goal__c.Term__c</members>
+        <members>Goal__c.Type__c</members>
         <members>Intake_Referrals__c.Column__c</members>
         <members>Intake_Referrals__c.Locations__c</members>
         <members>Intake_Referrals__c.Selected__c</members>
@@ -193,6 +314,27 @@
         <members>Intake_Services__c.Locations__c</members>
         <members>Intake_Services__c.Selected__c</members>
         <members>Intake_Services__c.Sort_Order__c</members>
+        <members>Intake__c.C501_Basic_Needs__c</members>
+        <members>Intake__c.C501_Basic_Needs__c</members>
+        <members>Intake__c.C501_Family__c</members>
+        <members>Intake__c.C501_Family__c</members>
+        <members>Intake__c.C501_Housing__c</members>
+        <members>Intake__c.C501_Housing__c</members>
+        <members>Intake__c.C501_Transport__c</members>
+        <members>Intake__c.C501_Transport__c</members>
+        <members>Measurable__c.Current_Value__c</members>
+        <members>Measurable__c.Starting_Value__c</members>
+        <members>Measurable__c.Target_Value__c</members>
+        <members>Measurement_Old__c.Value__c</members>
+        <members>Measurement__c.Assessment__c</members>
+        <members>Measurement__c.Measurable__c</members>
+        <members>Measurement__c.Value__c</members>
+        <members>Release__c.Account__c</members>
+        <members>Release__c.Expiration__c</members>
+        <members>Step__c.Account_Type__c</members>
+        <members>Step__c.Goal__c</members>
+        <members>Step__c.Owner__c</members>
+        <members>Step__c.Status__c</members>
         <name>CustomField</name>
     </types>
     <types>
@@ -200,43 +342,158 @@
         <name>CustomLabel</name>
     </types>
     <types>
+        <members>C501_Fault_Email_Address.Intakebh</members>
+        <members>C501_Fault_Email_Address.UwscMaster</members>
+        <members>C501_Fault_Email_Address.UwscProduction</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>Assessment__c</members>
+        <members>C501_Fault_Email_Address__mdt</members>
         <members>C501_Service_Household__c</members>
         <members>Client_Visit__c</members>
+        <members>Goal__c</members>
         <members>Intake_Referrals__c</members>
         <members>Intake_Services_Box_Settings__c</members>
         <members>Intake_Services_Checkin__c</members>
         <members>Intake_Services_Commodity__c</members>
         <members>Intake_Services_Settings__c</members>
         <members>Intake_Services__c</members>
+        <members>Intake__c</members>
+        <members>Measurable__c</members>
+        <members>Measurement__c</members>
+        <members>Release__c</members>
+        <members>Step__c</members>
         <name>CustomObject</name>
     </types>
     <types>
         <members>Client_Visit__c</members>
+        <members>Goal__c</members>
         <members>Intake_Services_App</members>
         <members>Intake_Services_Stats</members>
+        <members>Step__c</members>
         <name>CustomTab</name>
     </types>
     <types>
+        <members>Assessment__c.C501_CCR_AFAR_Self_Assessment</members>
+        <members>Assessment__c.C501_HH_Domain_Needs_Assessment</members>
+        <name>FieldSet</name>
+    </types>
+    <types>
+        <members>C501_Assessment_Record_Page</members>
+        <members>C501_CORE_Contact_Page</members>
+        <members>C501_CORE_Family_Page</members>
+        <members>CORE_UtilityBar</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>C501_Assessment_CCR_AFAR_Self_Assessment</members>
+        <members>C501_Assessment_CORE_Family_Screen_Flow</members>
+        <members>C501_Assessment_HH_Domain_Scores</members>
+        <members>C501_Assessment_ISA_General_Assessment</members>
+        <members>C501_Assessment_MLW_Bridge_Scores</members>
+        <members>C501_Assessment_NCCC_General_Assessment</members>
+        <members>C501_Contact_Process</members>
+        <members>C501_TEMPLATE_ScreenFlowForSpecificAssessment</members>
+        <members>Send_Flow_Fault_Email</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Benchmarks</members>
         <members>C501_Intake_Programs</members>
+        <members>C501_Y_N</members>
+        <members>C501_Y_N</members>
+        <members>Domains</members>
+        <members>Family_Status</members>
+        <members>Family_Status</members>
         <name>GlobalValueSet</name>
     </types>
     <types>
+        <members>Account-Family Lightning Layout</members>
+        <members>Assessment__c-Assessment Layout</members>
+        <members>Assessment__c-Assessment Layout</members>
+        <members>Assessment__c-CCR%3A AFAR Self Assessment</members>
+        <members>Assessment__c-CCR%3A AFAR Self Assessment</members>
+        <members>Assessment__c-HH%3A Domain Assessment</members>
+        <members>Assessment__c-HH%3A Domain Assessment</members>
+        <members>Assessment__c-ISA%3A General Assessment</members>
+        <members>Assessment__c-ISA%3A General Assessment</members>
+        <members>Assessment__c-MLW%3A Bridge Scores</members>
+        <members>Assessment__c-MLW%3A Bridge Scores</members>
+        <members>Assessment__c-NCCC%3A General Assessment</members>
+        <members>Assessment__c-NCCC%3A General Assessment</members>
+        <members>C501_Fault_Email_Address__mdt-Fault Email Address Layout</members>
         <members>C501_Service_Household__c-Service Household Layout</members>
         <members>Client_Visit__c-Client Visit Layout</members>
+        <members>Contact-CORE Client Contact</members>
+        <members>Goal__c-Collaborative Goal Layout</members>
+        <members>Goal__c-Family Goal Layout</members>
+        <members>Goal__c-Goal Layout</members>
+        <members>Intake__c-Intake Layout</members>
+        <members>Intake__c-Intake Layout</members>
+        <members>Measurable__c-Measurable Layout</members>
+        <members>Measurement_Old__c-Actual Measurement Layout</members>
+        <members>Measurement_Old__c-Goal Measurement Layout</members>
+        <members>Measurement_Old__c-Measurement Layout</members>
+        <members>Measurement__c-Measurement Layout</members>
+        <members>Release__c-Release Layout</members>
+        <members>Step__c-Step Layout</members>
         <name>Layout</name>
     </types>
     <types>
         <members>Account.C501_IS_Active_Households</members>
         <members>Account.C501_IS_All_Households</members>
+        <members>Account.Household_Accounts</members>
+        <members>Assessment__c.All</members>
+        <members>Assessment__c.All</members>
         <members>Client_Visit__c.All</members>
         <members>Client_Visit__c.All1</members>
         <members>Client_Visit__c.Past7</members>
         <members>Client_Visit__c.Visits_Today</members>
+        <members>Goal__c.All</members>
+        <members>Goal__c.Family_Goals</members>
+        <members>Intake__c.All</members>
+        <members>Intake__c.All</members>
+        <members>Measurable__c.All</members>
+        <members>Measurement_Old__c.All</members>
+        <members>Release__c.All</members>
+        <members>Step__c.All</members>
+        <members>Step__c.Collaborative_Steps</members>
+        <members>Step__c.Family_Steps</members>
         <name>ListView</name>
     </types>
     <types>
+        <members>C501_CORE_Family</members>
+        <name>PathAssistant</name>
+    </types>
+    <types>
+        <members>CORE Program Staff</members>
         <members>Intake Services Admin</members>
         <name>Profile</name>
+    </types>
+    <types>
+        <members>Account.C501_CCR_AFAR_Self_Assessment</members>
+        <members>Account.C501_CORE_Family_Update</members>
+        <members>Account.C501_CORE_New_Client_Contact</members>
+        <members>Account.C501_HH_Domain_Needs_Assessment</members>
+        <members>Contact.C501_CORE_Update_Client_Contact</members>
+        <members>NewContact</members>
+        <members>NewTask</members>
+        <members>New_Household_Account</members>
+        <members>SendEmail</members>
+        <name>QuickAction</name>
+    </types>
+    <types>
+        <members>Account.HH_Account</members>
+        <members>Assessment__c.C501_Assessment_Default</members>
+        <members>Assessment__c.C501_CCR_AFAR_Self_Assessment</members>
+        <members>Assessment__c.C501_HH_Domain_Assessment</members>
+        <members>Assessment__c.C501_ISA_General_Assessment</members>
+        <members>Assessment__c.C501_MLW_Bridge_Scores</members>
+        <members>Assessment__c.C501_NCCC_General_Assessment</members>
+        <members>Goal__c.Collaborative</members>
+        <members>Goal__c.Family</members>
+        <name>RecordType</name>
     </types>
     <types>
         <members>Angular</members>

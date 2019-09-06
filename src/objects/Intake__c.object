@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Holds data from client intake and assessment interviews</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>C501_Basic_Needs__c</fullName>
+        <description>Homeward House: &quot;Do you struggle financially to make ends meet?&quot;; Making Life Work: &quot;Do you need assistance with your basic needs, food, clothing, furniture etc.?&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>HH: &quot;Do you struggle financially to make ends meet?&quot;; MLW: &quot;Do you need assistance with your basic needs, food, clothing, furniture etc.?&quot;</inlineHelpText>
+        <label>Basic Needs</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C501_Family__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>lookup to HH Account record - not a M/D so that it can be reported on somewhat anonymously w/o access to the family&apos;s identifiable info</description>
+        <externalId>false</externalId>
+        <label>Family</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Intake form must be linked to a Household account</errorMessage>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Household Account</value>
+            </filterItems>
+            <infoMessage>Connect this intake form to the family&apos;s Household record</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Intakes</relationshipLabel>
+        <relationshipName>Intakes</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>C501_Housing__c</fullName>
+        <description>Homeward House: &quot;Do you need referrals to housing resources?&quot;; North Counties&apos; Community: &quot;I would like information and/or help with Rent&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>HH: &quot;Do you need referrals to housing resources?&quot;; NCC: &quot;I would like information and/or help with Rent&quot;</inlineHelpText>
+        <label>Housing</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>C501_Y_N</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C501_Transport__c</fullName>
+        <description>Homeward House: &quot;Do you need referrals to transportation resources?&quot;; North Counties&apos; Community: &quot;I would like information and/or help with Transportation&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>HH: &quot;Do you need referrals to transportation resources?&quot;; NCC: &quot;I would like information and/or help with Transportation&quot;</inlineHelpText>
+        <label>Transport</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>C501_Y_N</valueSetName>
+        </valueSet>
+    </fields>
+    <label>Intake</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{YYYY}-{MM}-{00000}</displayFormat>
+        <label>Intake Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Intakes</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+</CustomObject>
