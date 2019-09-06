@@ -1085,9 +1085,6 @@
         <layout>Measurable__c-Measurable Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Measurement_Old__c-Measurement Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Measurement__c-Measurement Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -1128,7 +1125,17 @@
     </pageAccesses>
     <recordTypeVisibilities>
         <default>false</default>
+        <recordType>Account.Collaborative</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>false</default>
         <recordType>Account.HH_Account</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <default>true</default>
+        <recordType>Account.Organization</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
