@@ -24,10 +24,14 @@
         <name>ApexTrigger</name>
     </types>
     <types>
+        <members>C501_Service_Household__c.C501_Service_Household_Company_Layout</members>
+        <name>CompactLayout</name>
+    </types>
+    <types>
         <members>Intake_Services</members>
         <name>CustomApplication</name>
     </types>
-    <types>    
+    <types>
         <members>Account.C501_IS_Adults__c</members>
         <members>Account.C501_IS_Children__c</members>
         <members>Account.C501_IS_Commodity_Usage_JSON__c</members>
@@ -138,10 +142,10 @@
         <members>Client_Visit__c.C501_IS_Visit_Date__c</members>
         <members>Client_Visit__c.C501_IS_Visit_Type__c</members>
         <members>Client_Visit__c.C501_IS_Visitor__c</members>
-        <members>Contact.C501_IS_Birthdate_Searchable__c</members>        
         <members>Contact.C501_IS_Age_Entry_Date__c</members>
         <members>Contact.C501_IS_Age_Group__c</members>
         <members>Contact.C501_IS_Age__c</members>
+        <members>Contact.C501_IS_Birthdate_Searchable__c</members>
         <members>Contact.C501_IS_External_Created_Date__c</members>
         <members>Contact.C501_IS_External_Household_Id__c</members>
         <members>Contact.C501_IS_External_Id__c</members>
@@ -220,10 +224,6 @@
         <members>C501_Service_Household__c-Service Household Layout</members>
         <members>Client_Visit__c-Client Visit Layout</members>
         <name>Layout</name>
-    </types>
-    <types>
-        <members>C501_Service_Household__c.C501_Service_Household_Company_Layout</members>
-        <name>CompactLayout</name>
     </types>
     <types>
         <members>Account.C501_IS_Active_Households</members>
