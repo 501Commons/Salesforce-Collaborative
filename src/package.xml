@@ -476,10 +476,7 @@
         <name>Layout</name>
     </types>
     <types>
-        <members>Account.C501_IS_Active_Households</members>
-        <members>Account.C501_IS_All_Households</members>
         <members>Account.Household_Accounts</members>
-        <members>Assessment__c.All</members>
         <members>Assessment__c.All</members>
         <members>Client_Visit__c.All</members>
         <members>Client_Visit__c.All1</members>
