@@ -158,7 +158,6 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>Private</externalSharingModel>
     <fields>
         <fullName>C501_Affordable_Care_Act_Subsidy__c</fullName>
         <defaultValue>false</defaultValue>

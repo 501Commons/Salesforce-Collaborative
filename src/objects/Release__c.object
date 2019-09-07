@@ -142,6 +142,13 @@
     </actionOverrides>
     <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>C501_Release</fullName>
+        <fields>Name</fields>
+        <fields>Expiration__c</fields>
+        <fields>Account__c</fields>
+        <label>Release</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Release of Information - ROIs</description>
     <enableActivities>true</enableActivities>
@@ -153,7 +160,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>Account__c</fullName>
         <externalId>false</externalId>

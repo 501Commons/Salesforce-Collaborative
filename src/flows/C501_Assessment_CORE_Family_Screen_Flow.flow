@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <decisions>
+        <description>Determine which subflow to run based on the name of the Collaborative working with the family.</description>
+        <name>C501_Which_Collab</name>
+        <label>Which Collab</label>
+        <locationX>312</locationX>
+        <locationY>348</locationY>
+        <defaultConnector>
+            <targetReference>C501_NoAssessments</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>C501_Connect_Casino_Road</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ThisAccountsCollabName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Connect Casino Road</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C501_CCR_AFAR_Self_Assessment</targetReference>
+            </connector>
+            <label>Connect Casino Road</label>
+        </rules>
+        <rules>
+            <name>C501_Homeward_House</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ThisAccountsCollabName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Homeward House</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C501_HH_Domain_Scores</targetReference>
+            </connector>
+            <label>Homeward House</label>
+        </rules>
+        <rules>
+            <name>C501_Improving_School_Attendance</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ThisAccountsCollabName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Improving School Attendance</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C501_ISA_General_Assessment</targetReference>
+            </connector>
+            <label>Improving School Attendance</label>
+        </rules>
+        <rules>
+            <name>C501_Making_Life_Work</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ThisAccountsCollabName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Making Life Work</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C501_MLW_Bridge_Scores</targetReference>
+            </connector>
+            <label>Making Life Work</label>
+        </rules>
+        <rules>
+            <name>C501_North_Counties_Community_Collaborative</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>ThisAccountsCollabName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>North Counties&apos; Community Collaborative</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>C501_NCCC_General_Assessment</targetReference>
+            </connector>
+            <label>North Counties Community Collaborative</label>
+        </rules>
+    </decisions>
+    <description>Guides user through inputting scores from the assessment specific to their client&apos;s Collab; As of 2019.09.03 it&apos;s launched from Family (Account) Lightning Record Page
+
+Significant Dependencies:
+* Requires AccountId as an input variable
+* Requires Collab identification to select the correct subflow; Collab is identified by matching a formula field on Account (C501_CollabName__c) to plain text for each Collab record&apos;s name
+* Subflows call Send Flow Fault Email flow if they error, which is dependent on C501_Fault_Email_Address__mdt to function correctly
+
+Future Updates to Consider:
+* Make this flow available as an override to the New button on Assessments related lists
+* Improve Collab identification to select the correct subflow - perhaps match on a custom MDT or a hidden field on the Collab record
+* Improve the Assessment Record Id lookup - do that lookup once in the main flow and pass the correct variable to the subflow</description>
+    <interviewLabel>Assessment: CORE Family Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Assessment: CORE Family Screen Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <description>Get field values for the account that started the flow; use them to determine which screen flow to launch</description>
+        <name>C501_Get_Account_Details</name>
+        <label>Get Account Details</label>
+        <locationX>50</locationX>
+        <locationY>192</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Start_Here</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>ThisAccountId</elementReference>
+            </value>
+        </filters>
+        <object>Account</object>
+        <outputAssignments>
+            <assignToReference>ThisAccountsCollabName</assignToReference>
+            <field>C501_CollabName__c</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>ThisAccountId</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <outputAssignments>
+            <assignToReference>C501_ThisAccountsName</assignToReference>
+            <field>Name</field>
+        </outputAssignments>
+        <sortField>Id</sortField>
+        <sortOrder>Asc</sortOrder>
+    </recordLookups>
+    <screens>
+        <description>Provide user with a link to the newly created assessment record and a reminder to upload a scan of the paper copy</description>
+        <name>C501_Assessment_Created</name>
+        <label>Assessment Created</label>
+        <locationX>905</locationX>
+        <locationY>367</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>C501_NewAssessmentCreated</name>
+            <fieldText>&lt;p&gt;Click &lt;a href=&quot;/lightning/r/Assessment__c/{!NewAssessmentRecordId}/view&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt; to view your new assessment record and upload a scan of the paper assessment.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <description>No assessments available for this family - probably doesn&apos;t have a Collab lookup</description>
+        <name>C501_NoAssessments</name>
+        <label>NoAssessments</label>
+        <locationX>319</locationX>
+        <locationY>537</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <fields>
+            <name>NoAssessmentsScreenHeader</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 18px; color: rgb(0, 0, 0);&quot;&gt;No Assessments Available&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>NoAssessmentsAvailable</name>
+            <fieldText>&lt;p&gt;There are no assessments available for the &lt;span style=&quot;color: rgb(62, 62, 60); background-color: rgb(255, 255, 255);&quot;&gt;{!C501_ThisAccountsName}.&lt;/span&gt; Please ensure they are linked to an active Collaboration and try again.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <description>some words</description>
+        <name>Start_Here</name>
+        <label>Start Here</label>
+        <locationX>50</locationX>
+        <locationY>346</locationY>
+        <allowBack>false</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>false</allowPause>
+        <connector>
+            <targetReference>C501_Which_Collab</targetReference>
+        </connector>
+        <fields>
+            <name>EnterAssessmentData</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 18px;&quot;&gt;Enter Assessment Data&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>C501_StartAssessmentScreen</name>
+            <fieldText>&lt;p&gt;Click &quot;Next&quot; to enter assessment scores for the {!C501_ThisAccountsName}.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <startElementReference>C501_Get_Account_Details</startElementReference>
+    <status>Active</status>
+    <subflows>
+        <description>Launch the Assessment: CCR AFAR Self Assessment flow to collect data for Connect Casino Road</description>
+        <name>C501_CCR_AFAR_Self_Assessment</name>
+        <label>CCR: AFAR Self Assessment</label>
+        <locationX>598</locationX>
+        <locationY>130</locationY>
+        <connector>
+            <targetReference>C501_Assessment_Created</targetReference>
+        </connector>
+        <flowName>C501_Assessment_CCR_AFAR_Self_Assessment</flowName>
+        <inputAssignments>
+            <name>C501_thisAssessmentsAccountId</name>
+            <value>
+                <elementReference>ThisAccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>NewAssessmentRecordId</assignToReference>
+            <name>C501_thisNewAssessmentId</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
+        <description>Launch the Assessment: HH Domain Scores flow to collect data for Homeward House</description>
+        <name>C501_HH_Domain_Scores</name>
+        <label>HH: Domain Scores</label>
+        <locationX>600</locationX>
+        <locationY>237</locationY>
+        <connector>
+            <targetReference>C501_Assessment_Created</targetReference>
+        </connector>
+        <flowName>C501_Assessment_HH_Domain_Scores</flowName>
+        <inputAssignments>
+            <name>C501_thisAssessmentsAccountId</name>
+            <value>
+                <elementReference>ThisAccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>NewAssessmentRecordId</assignToReference>
+            <name>C501_thisNewAssessmentId</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
+        <description>Launch the Assessment: ISA General Assessment flow to collect data for Improving School Attendance</description>
+        <name>C501_ISA_General_Assessment</name>
+        <label>ISA: General Assessment</label>
+        <locationX>600</locationX>
+        <locationY>350</locationY>
+        <connector>
+            <targetReference>C501_Assessment_Created</targetReference>
+        </connector>
+        <flowName>C501_Assessment_ISA_General_Assessment</flowName>
+        <inputAssignments>
+            <name>C501_thisAssessmentsAccountId</name>
+            <value>
+                <elementReference>ThisAccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>NewAssessmentRecordId</assignToReference>
+            <name>C501_thisNewAssessmentId</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
+        <description>Launch the Assessment: MLW Bridge Scores flow to collect data for Making Life Work</description>
+        <name>C501_MLW_Bridge_Scores</name>
+        <label>MLW: Bridge Scores</label>
+        <locationX>607</locationX>
+        <locationY>448</locationY>
+        <connector>
+            <targetReference>C501_Assessment_Created</targetReference>
+        </connector>
+        <flowName>C501_Assessment_MLW_Bridge_Scores</flowName>
+        <inputAssignments>
+            <name>C501_thisAssessmentsAccountId</name>
+            <value>
+                <elementReference>ThisAccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>NewAssessmentRecordId</assignToReference>
+            <name>C501_thisNewAssessmentId</name>
+        </outputAssignments>
+    </subflows>
+    <subflows>
+        <description>Launch the Assessment: NCCC General Assessment to collect data for North Counties Community Collaborative</description>
+        <name>C501_NCCC_General_Assessment</name>
+        <label>NCCC: General Assessment</label>
+        <locationX>610</locationX>
+        <locationY>554</locationY>
+        <connector>
+            <targetReference>C501_Assessment_Created</targetReference>
+        </connector>
+        <flowName>C501_Assessment_NCCC_General_Assessment</flowName>
+        <inputAssignments>
+            <name>C501_thisAssessmentsAccountId</name>
+            <value>
+                <elementReference>ThisAccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <outputAssignments>
+            <assignToReference>NewAssessmentRecordId</assignToReference>
+            <name>C501_thisNewAssessmentId</name>
+        </outputAssignments>
+    </subflows>
+    <variables>
+        <description>Holds the name of the Account from which the flow was launched</description>
+        <name>C501_ThisAccountsName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the Id of the Assessment created by and returned from whichever subflow ran</description>
+        <name>NewAssessmentRecordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>Holds ID of Account where the flow was launched</description>
+        <name>ThisAccountId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Stores the name of the account&apos;s collab; Used to determine which Assessments and Record Types are available</description>
+        <name>ThisAccountsCollabName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

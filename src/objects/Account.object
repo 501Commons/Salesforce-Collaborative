@@ -70,9 +70,9 @@
     <fields>
         <fullName>C501_Family_Status__c</fullName>
         <defaultValue>IF($RecordType.DeveloperName = &quot;HH_Account&quot;, &quot;Intake&quot;, null)</defaultValue>
-        <description>Used in CORE Family Kan Ban to help case workers identify families that need additional forms</description>
+        <description>Used in CORE Family Kan Ban</description>
         <externalId>false</externalId>
-        <inlineHelpText>Select the status of this family&apos;s forms in Salesforce</inlineHelpText>
+        <inlineHelpText>Select the family&apos;s program status</inlineHelpText>
         <label>Family Status</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>

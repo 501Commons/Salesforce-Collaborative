@@ -30,6 +30,7 @@
         <name>CompactLayout</name>
     </types>
     <types>
+        <members>C501_CORE</members>
         <members>Intake_Services</members>
         <name>CustomApplication</name>
     </types>
@@ -420,6 +421,18 @@
         <members>C501_CORE_Family_Page</members>
         <members>CORE_UtilityBar</members>
         <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>C501_Assessment_CCR_AFAR_Self_Assessment</members>
+        <members>C501_Assessment_CORE_Family_Screen_Flow</members>
+        <members>C501_Assessment_HH_Domain_Scores</members>
+        <members>C501_Assessment_ISA_General_Assessment</members>
+        <members>C501_Assessment_MLW_Bridge_Scores</members>
+        <members>C501_Assessment_NCCC_General_Assessment</members>
+        <members>C501_Contact_Process</members>
+        <members>C501_TEMPLATE_ScreenFlowForSpecificAssessment</members>
+        <members>Send_Flow_Fault_Email</members>
+        <name>Flow</name>
     </types>
     <types>
         <members>Benchmarks</members>
