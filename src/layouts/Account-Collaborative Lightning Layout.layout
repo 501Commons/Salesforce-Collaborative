@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <customButtons>npsp__Manage_Household</customButtons>
     <customButtons>npsp__Recalculate_Rollups</customButtons>
     <excludeButtons>AccountHierarchy</excludeButtons>
-    <excludeButtons>ChangeRecordType</excludeButtons>
+    <excludeButtons>CreateCallList</excludeButtons>
     <excludeButtons>CreateSurveyInvitation</excludeButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
-    <excludeButtons>Delete</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
     <excludeButtons>PartnerScorecard</excludeButtons>
     <excludeButtons>Share</excludeButtons>
@@ -31,11 +28,15 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>npo02__HouseholdPhone__c</field>
+                <field>Phone</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>npsp__Number_of_Household_Members__c</field>
+                <field>Fax</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Website</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -44,73 +45,14 @@
         <customLabel>true</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
-        <label>Family Info</label>
+        <label>Collaborative Info</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
-                <field>Collaborative__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Edit</behavior>
-                <field>C501_Family_Status__c</field>
+                <field>C501_Collaborative_Status__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns/>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Demographics</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_Hispanic_or_Latino__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_American_Indian_or_Alaska_Native__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_Asian__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_Black_or_African_American__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_Native_Hawaiian_Pacific_Islander__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_White__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_Primary_Languages__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_Needs_Interpreter__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_Female_Single_HH__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_Federal_Poverty_Level__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_Family_Size__c</field>
-            </layoutItems>
-        </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -157,7 +99,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>ParentId</field>
+                <field>OwnerId</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -167,7 +109,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>OwnerId</field>
+                <field>ParentId</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsLeftToRight</style>
@@ -182,17 +124,6 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
-    <miniLayout>
-        <fields>Name</fields>
-        <fields>ParentId</fields>
-        <fields>npe01__One2OneContact__c</fields>
-        <fields>BillingAddress</fields>
-        <relatedLists>
-            <fields>FULL_NAME</fields>
-            <fields>CONTACT.EMAIL</fields>
-            <relatedList>RelatedContactList</relatedList>
-        </relatedLists>
-    </miniLayout>
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
@@ -201,34 +132,36 @@
             <sortOrder>0</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>npsp__Manage_Household</actionName>
-            <actionType>CustomButton</actionType>
+            <actionName>Account.npsp__New_Affiliation</actionName>
+            <actionType>QuickAction</actionType>
             <sortOrder>1</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>npsp__NewContact</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>2</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>FeedItem.ContentPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>3</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>ChangeOwnerOne</actionName>
             <actionType>StandardButton</actionType>
+            <sortOrder>3</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>AccountHierarchy</actionName>
+            <actionType>StandardButton</actionType>
             <sortOrder>4</sortOrder>
         </platformActionListItems>
+        <platformActionListItems>
+            <actionName>ChangeRecordType</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>5</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Delete</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>6</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>npsp__Recalculate_Rollups</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>2</sortOrder>
+        </platformActionListItems>
     </platformActionList>
-    <quickActionList>
-        <quickActionListItems>
-            <quickActionName>npsp__NewContact</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
-            <quickActionName>FeedItem.ContentPost</quickActionName>
-        </quickActionListItems>
-    </quickActionList>
     <relatedContent>
         <relatedContentItems>
             <layoutItem>
@@ -238,20 +171,82 @@
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
-        <fields>FULL_NAME</fields>
-        <fields>CONTACT.EMAIL</fields>
-        <fields>CONTACT.PHONE1</fields>
-        <fields>CONTACT.BIRTHDATE</fields>
-        <fields>C501_Age__c</fields>
-        <fields>npsp__Primary_Contact__c</fields>
-        <relatedList>RelatedContactList</relatedList>
-        <sortField>FULL_NAME</sortField>
-        <sortOrder>Asc</sortOrder>
+        <fields>NAME</fields>
+        <fields>Contact_Link__c</fields>
+        <fields>npe5__Role__c</fields>
+        <fields>npe5__Status__c</fields>
+        <fields>npe5__StartDate__c</fields>
+        <fields>npe5__EndDate__c</fields>
+        <fields>npsp__Related_Opportunity_Contact_Role__c</fields>
+        <relatedList>npe5__Affiliation__c.npe5__Organization__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>OPPORTUNITY.NAME</fields>
+        <fields>OPPORTUNITY.STAGE_NAME</fields>
+        <fields>OPPORTUNITY.AMOUNT</fields>
+        <fields>OPPORTUNITY.CLOSE_DATE</fields>
+        <relatedList>RelatedOpportunityList</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Expiration__c</fields>
-        <relatedList>Release__c.Account__c</relatedList>
+        <fields>npe03__Date_Established__c</fields>
+        <fields>npe03__Last_Payment_Date__c</fields>
+        <fields>npe03__Next_Payment_Date__c</fields>
+        <fields>npe03__Installment_Amount__c</fields>
+        <fields>npe03__Total__c</fields>
+        <fields>npe03__Total_Paid_Installments__c</fields>
+        <relatedList>npe03__Recurring_Donation__c.npe03__Organization__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>npsp__Opportunity__c</fields>
+        <fields>npsp__Amount__c</fields>
+        <fields>npsp__Role__c</fields>
+        <relatedList>npsp__Account_Soft_Credit__c.npsp__Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>npsp__Formula_MailingAddress__c</fields>
+        <fields>npsp__Verified__c</fields>
+        <fields>npsp__Verification_Status__c</fields>
+        <relatedList>npsp__Address__c.npsp__Household_Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>npsp__Engagement_Plan_Template__c</fields>
+        <fields>CREATEDBY_USER</fields>
+        <fields>LAST_UPDATE</fields>
+        <fields>npsp__Status__c</fields>
+        <relatedList>npsp__Engagement_Plan__c.npsp__Account__c</relatedList>
+        <sortField>CREATEDBY_USER</sortField>
+        <sortOrder>Desc</sortOrder>
+    </relatedLists>
+    <relatedLists>
+        <fields>TASK.SUBJECT</fields>
+        <fields>TASK.WHO_NAME</fields>
+        <fields>TASK.WHAT_NAME</fields>
+        <fields>ACTIVITY.TASK</fields>
+        <fields>TASK.DUE_DATE</fields>
+        <fields>TASK.STATUS</fields>
+        <fields>TASK.PRIORITY</fields>
+        <fields>CORE.USERS.FULL_NAME</fields>
+        <relatedList>RelatedActivityList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>TASK.SUBJECT</fields>
+        <fields>TASK.WHO_NAME</fields>
+        <fields>TASK.WHAT_NAME</fields>
+        <fields>ACTIVITY.TASK</fields>
+        <fields>TASK.DUE_DATE</fields>
+        <fields>CORE.USERS.FULL_NAME</fields>
+        <fields>TASK.LAST_UPDATE</fields>
+        <relatedList>RelatedHistoryList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <relatedList>RelatedContentNoteList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <relatedList>RelatedFileList</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
@@ -263,41 +258,35 @@
         <relatedList>Goal__c.Account__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <relatedList>RelatedFileList</relatedList>
+        <fields>ACCOUNT.NAME</fields>
+        <fields>ACCOUNT.RECORDTYPE</fields>
+        <fields>ACCOUNT.TYPE</fields>
+        <fields>npe01__One2OneContact__c</fields>
+        <fields>ACCOUNT.ADDRESS1_CITY</fields>
+        <fields>ACCOUNT.PHONE1</fields>
+        <fields>npo02__TotalOppAmount__c</fields>
+        <relatedList>Account.Collaborative__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <relatedList>RelatedContentNoteList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <excludeButtons>New</excludeButtons>
         <fields>NAME</fields>
-        <fields>RECORDTYPE</fields>
-        <fields>Next_Assessment__c</fields>
-        <fields>Notify_When_Next_Assessment_Due__c</fields>
+        <fields>Expiration__c</fields>
+        <relatedList>Release__c.Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
         <fields>CREATED_DATE</fields>
+        <fields>Next_Assessment__c</fields>
         <relatedList>Assessment__c.Account__c</relatedList>
-        <sortField>CREATED_DATE</sortField>
-        <sortOrder>Desc</sortOrder>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>npsp__Address_Type__c</fields>
-        <fields>npsp__Formula_MailingAddress__c</fields>
-        <fields>npsp__Default_Address__c</fields>
-        <fields>LAST_UPDATE</fields>
-        <relatedList>npsp__Address__c.npsp__Household_Account__c</relatedList>
-        <sortField>npsp__Default_Address__c</sortField>
-        <sortOrder>Desc</sortOrder>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
-    <showHighlightsPanel>false</showHighlightsPanel>
+    <showHighlightsPanel>true</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h1U0000062w28</masterLabel>
-        <sizeX>4</sizeX>
+        <masterLabel>00h1U0000062w2Y</masterLabel>
+        <sizeX>1</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
     </summaryLayout>

@@ -54,6 +54,41 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>C501_Collaborative_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Collaborative Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Goals</fullName>
+                    <default>false</default>
+                    <label>Goals</label>
+                </value>
+                <value>
+                    <fullName>Assessment</fullName>
+                    <default>false</default>
+                    <label>Assessment</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>C501_Family_Size__c</fullName>
         <description>CCR, MLW: Estimated family size, used for determining federal poverty level</description>
         <externalId>false</externalId>
@@ -502,6 +537,36 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>C501_Partner_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Partner Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Assessment</fullName>
+                    <default>false</default>
+                    <label>Assessment</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>C501_Primary_Languages__c</fullName>
         <description>CCR, HH, ISA, MLW, NCC; All ask about family languages</description>
         <externalId>false</externalId>
@@ -546,32 +611,6 @@
         <type>Lookup</type>
     </fields>
     <listViews>
-        <fullName>C501_IS_Active_Households</fullName>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>ACCOUNT.ADDRESS1_STREET</columns>
-        <columns>ACCOUNT.ADDRESS1_CITY</columns>
-        <columns>C501_IS_First_Visit__c</columns>
-        <columns>C501_IS_Most_Recent_Visit__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>C501_IS_Inactive__c</field>
-            <operation>notEqual</operation>
-            <value>1</value>
-        </filters>
-        <label>Active Households (Intake Service)</label>
-    </listViews>
-    <listViews>
-        <fullName>C501_IS_All_Households</fullName>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>ACCOUNT.ADDRESS1_STREET</columns>
-        <columns>ACCOUNT.ADDRESS1_CITY</columns>
-        <columns>C501_IS_First_Visit__c</columns>
-        <columns>C501_IS_Most_Recent_Visit__c</columns>
-        <columns>C501_IS_Inactive__c</columns>
-        <filterScope>Everything</filterScope>
-        <label>All Households (Intake Services)</label>
-    </listViews>
-    <listViews>
         <fullName>Household_Accounts</fullName>
         <columns>ACCOUNT.NAME</columns>
         <columns>Collaborative__c</columns>
@@ -609,6 +648,25 @@
             </values>
             <values>
                 <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C501_Collaborative_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Goals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -731,6 +789,21 @@
             </values>
             <values>
                 <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C501_Partner_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -985,6 +1058,25 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>C501_Collaborative_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Goals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>C501_Family_Status__c</picklist>
             <values>
                 <fullName>Assessments</fullName>
@@ -1103,6 +1195,21 @@
             </values>
             <values>
                 <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C501_Partner_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1308,6 +1415,25 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>C501_Collaborative_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Goals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>C501_Family_Status__c</picklist>
             <values>
                 <fullName>Case Management</fullName>
@@ -1422,6 +1548,21 @@
             </values>
             <values>
                 <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C501_Partner_Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assessment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

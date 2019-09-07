@@ -46,11 +46,9 @@
         <type>Flexipage</type>
         <profile>Admin</profile>
     </profileActionOverrides>
-    <tabs>standard-home</tabs>
     <tabs>standard-Account</tabs>
-    <tabs>Goal__c</tabs>
-    <tabs>standard-Dashboard</tabs>
     <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>CORE_UtilityBar1</utilityBar>
 </CustomApplication>

@@ -40,6 +40,7 @@
         <members>Account.C501_Black_or_African_American__c</members>
         <members>Account.C501_CollabName__c</members>
         <members>Account.C501_CollabName__c</members>
+        <members>Account.C501_Collaborative_Status__c</members>
         <members>Account.C501_Family_Size__c</members>
         <members>Account.C501_Family_Status__c</members>
         <members>Account.C501_Family_Status__c</members>
@@ -77,6 +78,7 @@
         <members>Account.C501_Needs_Interpreter__c</members>
         <members>Account.C501_Needs_Interpreter__c</members>
         <members>Account.C501_Needs_Interpreter__c</members>
+        <members>Account.C501_Partner_Status__c</members>
         <members>Account.C501_Primary_Languages__c</members>
         <members>Account.C501_Primary_Languages__c</members>
         <members>Account.C501_Primary_Languages__c</members>
@@ -445,7 +447,9 @@
         <name>GlobalValueSet</name>
     </types>
     <types>
+        <members>Account-Collaborative Lightning Layout</members>
         <members>Account-Family Lightning Layout</members>
+        <members>Account-Partner Lightning Layout</members>
         <members>Assessment__c-Assessment Layout</members>
         <members>Assessment__c-Assessment Layout</members>
         <members>Assessment__c-CCR%3A AFAR Self Assessment</members>
@@ -493,6 +497,10 @@
     <types>
         <members>C501_CORE_Family</members>
         <name>PathAssistant</name>
+    </types>
+    <types>
+        <members>CORE_Permissions.permissionset</members>
+        <name>PermissionSet</name>
     </types>
     <types>
         <members>CORE Program Staff</members>

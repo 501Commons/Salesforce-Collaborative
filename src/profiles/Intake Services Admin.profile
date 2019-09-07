@@ -64,6 +64,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.C501_Collaborative_Status__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Account.C501_Family_Size__c</field>
         <readable>false</readable>
@@ -227,6 +232,11 @@
         <editable>false</editable>
         <field>Account.C501_Needs_Interpreter__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.C501_Partner_Status__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -1004,8 +1014,16 @@
         <readable>true</readable>
     </fieldPermissions>
     <layoutAssignments>
+        <layout>Account-Collaborative Lightning Layout</layout>
+        <recordType>Account.Collaborative</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Account-Family Lightning Layout</layout>
         <recordType>Account.HH_Account</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Partner Lightning Layout</layout>
+        <recordType>Account.Organization</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Assessment__c-Assessment Layout</layout>
