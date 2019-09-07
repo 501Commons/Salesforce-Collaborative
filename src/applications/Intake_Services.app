@@ -6,6 +6,8 @@
     </brand>
     <description>Intake Services Application</description>
     <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Intake Services</label>
     <navType>Standard</navType>
     <tabs>Intake_Services_App</tabs>

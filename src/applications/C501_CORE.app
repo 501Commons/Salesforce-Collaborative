@@ -15,6 +15,8 @@
     </brand>
     <description>Custom app for CORE staff</description>
     <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>CORE</label>
     <navType>Standard</navType>
     <profileActionOverrides>
