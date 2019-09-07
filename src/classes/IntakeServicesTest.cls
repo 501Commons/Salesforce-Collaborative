@@ -155,7 +155,8 @@ public with sharing class IntakeServicesTest {
 		C501_Service_Household__c serviceHousehold = new C501_Service_Household__c(
 			Name = household1.Id,
             C501_Service_Id__c = household1.Id, 
-			C501_Household__c = household1.Id
+			C501_Household__c = household1.Id,
+            C501_Location__c = 'Collaborative'
         );
 		insert serviceHousehold;
 
