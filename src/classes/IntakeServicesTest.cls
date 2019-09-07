@@ -77,6 +77,7 @@ public with sharing class IntakeServicesTest {
 
 	@isTest
 	private static void testCheckInsVisits() {
+
 		Account household1 = new Account(
             Name = 'Test Account',
 			C501_IS_Inactive__c = false

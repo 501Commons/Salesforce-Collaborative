@@ -96,7 +96,7 @@ public with sharing class IntakeServicesTriggerTest {
 		Client_Visit__c cv = new Client_Visit__c(
 			C501_IS_Household__c = hh.id,
 			C501_IS_Visit_Date__c = System.today(),
-			C501_IS_Service_Location__c = 'Collaborative');
+			C501_IS_Service_Location__c = 'Collaborative1');
 		insert cv;
 
 		cv = [ SELECT C501_IS_First_Visit_This_Year__c FROM Client_Visit__c WHERE Id = :cv.Id ];
@@ -105,7 +105,7 @@ public with sharing class IntakeServicesTriggerTest {
 		Client_Visit__c cv2 = new Client_Visit__c(
 			C501_IS_Household__c = hh.id,
 			C501_IS_Visit_Date__c = System.today(),
-			C501_IS_Service_Location__c = 'Collaborative');
+			C501_IS_Service_Location__c = 'Collaborative2');
 		insert cv2;
 
 		cv = [ SELECT C501_IS_First_Visit_This_Year__c FROM Client_Visit__c WHERE Id = :cv.Id ];
@@ -125,7 +125,7 @@ public with sharing class IntakeServicesTriggerTest {
 
 		Client_Visit__c cv = new Client_Visit__c(
 			C501_IS_Household__c = hh.id,
-			C501_IS_Service_Location__c = 'Collaborative');
+			C501_IS_Service_Location__c = 'Collaborative1');
 		insert cv;
 
 		cv = [ SELECT C501_IS_First_Visit_This_Year__c FROM Client_Visit__c WHERE Id = :cv.Id ];
@@ -133,7 +133,7 @@ public with sharing class IntakeServicesTriggerTest {
 
 		Client_Visit__c cv2 = new Client_Visit__c(
 			C501_IS_Household__c = hh.id,
-			C501_IS_Service_Location__c = 'Collaborative');
+			C501_IS_Service_Location__c = 'Collaborative2');
 		insert cv2;
 
 		cv = [ SELECT C501_IS_First_Visit_This_Year__c FROM Client_Visit__c WHERE Id = :cv.Id ];
