@@ -976,21 +976,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>Intake__c.C501_Basic_Needs__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Intake__c.C501_Housing__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Intake__c.C501_Transport__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Measurable__c.Current_Value__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -1073,8 +1058,6 @@
     <layoutAssignments>
         <layout>Goal__c-Goal Layout</layout>
     </layoutAssignments>
-    <layoutAssignments>
-        <layout>Intake__c-Intake Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Measurable__c-Measurable Layout</layout>
@@ -1095,15 +1078,6 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
         <object>Assessment__c</object>
-        <viewAllRecords>false</viewAllRecords>
-    </objectPermissions>
-    <objectPermissions>
-        <allowCreate>true</allowCreate>
-        <allowDelete>false</allowDelete>
-        <allowEdit>true</allowEdit>
-        <allowRead>true</allowRead>
-        <modifyAllRecords>false</modifyAllRecords>
-        <object>Intake__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <pageAccesses>

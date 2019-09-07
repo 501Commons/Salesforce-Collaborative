@@ -360,14 +360,6 @@
         <members>Intake_Services__c.Locations__c</members>
         <members>Intake_Services__c.Selected__c</members>
         <members>Intake_Services__c.Sort_Order__c</members>
-        <members>Intake__c.C501_Basic_Needs__c</members>
-        <members>Intake__c.C501_Basic_Needs__c</members>
-        <members>Intake__c.C501_Family__c</members>
-        <members>Intake__c.C501_Family__c</members>
-        <members>Intake__c.C501_Housing__c</members>
-        <members>Intake__c.C501_Housing__c</members>
-        <members>Intake__c.C501_Transport__c</members>
-        <members>Intake__c.C501_Transport__c</members>
         <members>Measurable__c.Current_Value__c</members>
         <members>Measurable__c.Starting_Value__c</members>
         <members>Measurable__c.Target_Value__c</members>
@@ -404,7 +396,6 @@
         <members>Intake_Services_Commodity__c</members>
         <members>Intake_Services_Settings__c</members>
         <members>Intake_Services__c</members>
-        <members>Intake__c</members>
         <members>Measurable__c</members>
         <members>Measurement__c</members>
         <members>Release__c</members>
@@ -474,8 +465,6 @@
         <members>Goal__c-Collaborative Goal Layout</members>
         <members>Goal__c-Family Goal Layout</members>
         <members>Goal__c-Goal Layout</members>
-        <members>Intake__c-Intake Layout</members>
-        <members>Intake__c-Intake Layout</members>
         <members>Measurable__c-Measurable Layout</members>
         <members>Measurement__c-Measurement Layout</members>
         <members>Release__c-Release Layout</members>
@@ -494,8 +483,6 @@
         <members>Client_Visit__c.Visits_Today</members>
         <members>Goal__c.All</members>
         <members>Goal__c.Family_Goals</members>
-        <members>Intake__c.All</members>
-        <members>Intake__c.All</members>
         <members>Measurable__c.All</members>
         <members>Release__c.All</members>
         <members>Step__c.All</members>
