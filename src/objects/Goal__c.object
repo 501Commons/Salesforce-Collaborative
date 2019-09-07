@@ -81,19 +81,6 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>Collective_Impact__c</fullName>
-        <externalId>false</externalId>
-        <label>Collective Impact</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>Elements</valueSetName>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>Complete__c</fullName>
         <externalId>false</externalId>
         <formula>0</formula>
@@ -294,25 +281,6 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>Collective_Impact__c</picklist>
-            <values>
-                <fullName>Collaborative action</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Evidence-based decision making</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Investment %26 sustainability</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Shared Community Vision</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>Domain__c</picklist>
             <values>
                 <fullName>Adult%2Fs health and mental well-being are strengthened</fullName>
@@ -402,25 +370,6 @@
             </values>
             <values>
                 <fullName>Systems Transformation</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Collective_Impact__c</picklist>
-            <values>
-                <fullName>Collaborative action</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Evidence-based decision making</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Investment %26 sustainability</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Shared Community Vision</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

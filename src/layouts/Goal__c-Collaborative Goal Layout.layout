@@ -17,10 +17,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>Collective_Impact__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
                 <field>Benchmark__c</field>
             </layoutItems>
             <layoutItems>

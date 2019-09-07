@@ -549,5 +549,5 @@
         <members>Angular</members>
         <name>StaticResource</name>
     </types>
-    <version>42.0</version>
+    <version>46.0</version>
 </Package>
