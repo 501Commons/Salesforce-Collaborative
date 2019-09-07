@@ -102,7 +102,10 @@ public with sharing class IntakeServicesTriggerTest {
 		cv = [ SELECT C501_IS_First_Visit_This_Year__c FROM Client_Visit__c WHERE Id = :cv.Id ];
 		System.assertEquals(true, cv.C501_IS_First_Visit_This_Year__c);
 
-		Client_Visit__c cv2 = new Client_Visit__c(C501_IS_Household__c = hh.id, C501_IS_Visit_Date__c = System.today());
+		Client_Visit__c cv2 = new Client_Visit__c(
+			C501_IS_Household__c = hh.id,
+			C501_IS_Visit_Date__c = System.today(),
+			C501_IS_Service_Location__c = 'Collaborative');
 		insert cv2;
 
 		cv = [ SELECT C501_IS_First_Visit_This_Year__c FROM Client_Visit__c WHERE Id = :cv.Id ];
@@ -128,7 +131,9 @@ public with sharing class IntakeServicesTriggerTest {
 		cv = [ SELECT C501_IS_First_Visit_This_Year__c FROM Client_Visit__c WHERE Id = :cv.Id ];
 		System.assertEquals(true, cv.C501_IS_First_Visit_This_Year__c);
 
-		Client_Visit__c cv2 = new Client_Visit__c(C501_IS_Household__c = hh.id);
+		Client_Visit__c cv2 = new Client_Visit__c(
+			C501_IS_Household__c = hh.id,
+			C501_IS_Service_Location__c = 'Collaborative');
 		insert cv2;
 
 		cv = [ SELECT C501_IS_First_Visit_This_Year__c FROM Client_Visit__c WHERE Id = :cv.Id ];
