@@ -1058,7 +1058,6 @@
     <layoutAssignments>
         <layout>Goal__c-Goal Layout</layout>
     </layoutAssignments>
-    </layoutAssignments>
     <layoutAssignments>
         <layout>Measurable__c-Measurable Layout</layout>
     </layoutAssignments>
