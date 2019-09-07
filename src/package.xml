@@ -30,7 +30,6 @@
         <name>CompactLayout</name>
     </types>
     <types>
-        <members>C501_CORE</members>
         <members>Intake_Services</members>
         <name>CustomApplication</name>
     </types>
