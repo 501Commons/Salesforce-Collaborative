@@ -5,7 +5,7 @@
             <h4>Search</h4>
         </div>
         <div class="panel-body">
-            <p>Please search thoroughly for client before creating a new client record.</p>
+            <p>Please search a contact from the current household.</p>
 
             <script type="text/ng-template" id="customTemplate.html">
               <a>
@@ -36,7 +36,9 @@
               <div class="form-group text-center">
                 <a ng-if="settings.general.checkInRequired" class="btn btn-primary" href="#/client/{{selected.id}}/{{selected.contactid}}" ng-disabled="!(selected.id)">Check In</a>
                 <a ng-if="!settings.general.checkInRequired" class="btn btn-primary" href="#/client/{{selected.id}}/{{selected.contactid}}" ng-disabled="!(selected.id)">Record Visit</a>
+                <!--
                 <a class="btn btn-success" href="#/new_client/">New Client</a>
+                -->
               </div>
             </form>
         </div>

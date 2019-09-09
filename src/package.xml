@@ -495,10 +495,12 @@
         <members>C501_CORE_Family</members>
         <name>PathAssistant</name>
     </types>
+    <!--
     <types>
         <members>CORE_Permissions.permissionset</members>
         <name>PermissionSet</name>
     </types>
+    -->
     <types>
         <members>CORE Program Staff</members>
         <members>Intake Services Admin</members>

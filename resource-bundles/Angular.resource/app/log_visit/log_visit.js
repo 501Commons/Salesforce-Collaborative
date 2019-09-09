@@ -15,7 +15,8 @@ angular.module('logVisitController')
       
       $scope.data = {};
       $scope.data.household = foundHousehold;
-      $scope.data.serviceLocation = serviceLocation;
+      //$scope.data.serviceLocation = serviceLocation;
+      $scope.data.serviceLocation = 'Homeward House';
 
       $scope.visitNotes = '';
       $scope.data.visitDate = new Date();
@@ -68,6 +69,8 @@ angular.module('logVisitController')
             referralsSelected.push(v.name);
           }
         });
+
+        referralsSelected.push('test');
 
         $scope.logging = true;
 

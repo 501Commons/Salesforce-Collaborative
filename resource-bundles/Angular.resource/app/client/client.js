@@ -38,7 +38,8 @@ angular.module('clientController')
   
       $scope.data = {};
       $scope.data.household = foundHousehold;
-      $scope.data.serviceLocation = serviceLocation;
+      //$scope.data.serviceLocation = serviceLocation;
+      $scope.data.serviceLocation = 'Homeward House';
 
       $scope.status = {};
       $scope.data.commodities = foundSettings.commodities;
@@ -239,16 +240,6 @@ angular.module('clientController')
 
       $scope.checkIn = function() {
 
-        if ($scope.data.visitType == 'Select Option') {
-          $alert({
-            title: 'Visit Reason field required!',
-            type: 'danger',
-            duration: 5
-          });
-
-          return;
-        }
-
         // gather the commodity usage for this visit        
         var comms = {};
         _.forEach( $scope.data.commodities, function(v) {
@@ -292,16 +283,6 @@ angular.module('clientController')
       };
 
       $scope.recordVisit = function() {
-
-        if ($scope.data.visitType == 'Select Option') {
-          $alert({
-            title: 'Visit Reason field required!',
-            type: 'danger',
-            duration: 5
-          });
-
-          return;
-        }
 
         // gather the commodity usage for this visit        
         var comms = {};
