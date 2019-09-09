@@ -225,6 +225,18 @@
         <fields>npo02__TotalOppAmount__c</fields>
         <relatedList>Account.Collaborative__c</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>C501_Partnership__c.C501_Partner__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>C501_Partnership__c.C501_Collaborative__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>C501_Partnership__c.C501_Family__c</relatedList>
+    </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>true</showHighlightsPanel>

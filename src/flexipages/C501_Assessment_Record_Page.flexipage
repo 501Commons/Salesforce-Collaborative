@@ -25,13 +25,6 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
-            <componentName>runtime_sales_activities:activityPanel</componentName>
-        </componentInstances>
-        <name>Facet-194de0b4-7a29-4c06-af6f-e61fa1058bda</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <componentInstances>
             <componentInstanceProperties>
                 <name>active</name>
                 <value>true</value>
@@ -43,17 +36,6 @@
             <componentInstanceProperties>
                 <name>title</name>
                 <value>Standard.Tab.detail</value>
-            </componentInstanceProperties>
-            <componentName>flexipage:tab</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>body</name>
-                <value>Facet-194de0b4-7a29-4c06-af6f-e61fa1058bda</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>title</name>
-                <value>Standard.Tab.activity</value>
             </componentInstanceProperties>
             <componentName>flexipage:tab</componentName>
         </componentInstances>

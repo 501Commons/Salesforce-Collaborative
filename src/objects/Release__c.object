@@ -128,11 +128,14 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Release_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <formFactor>Large</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -141,17 +144,18 @@
         <type>Default</type>
     </actionOverrides>
     <allowInChatterGroups>true</allowInChatterGroups>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>C501_Release</compactLayoutAssignment>
     <compactLayouts>
         <fullName>C501_Release</fullName>
         <fields>Name</fields>
-        <fields>Expiration__c</fields>
         <fields>Account__c</fields>
+        <fields>Expiration__c</fields>
+        <fields>CreatedById</fields>
         <label>Release</label>
     </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Release of Information - ROIs</description>
-    <enableActivities>true</enableActivities>
+    <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>

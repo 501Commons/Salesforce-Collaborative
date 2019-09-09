@@ -128,11 +128,14 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Goal_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <formFactor>Large</formFactor>
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
@@ -142,8 +145,16 @@
     </actionOverrides>
     <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>C501_CORE_Goal_CL</fullName>
+        <fields>Name</fields>
+        <fields>Account__c</fields>
+        <fields>Status__c</fields>
+        <fields>Domain__c</fields>
+        <label>CORE Goal CL</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>true</enableActivities>
+    <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
@@ -351,6 +362,7 @@
     <recordTypes>
         <fullName>Collaborative</fullName>
         <active>true</active>
+        <compactLayoutAssignment>C501_CORE_Goal_CL</compactLayoutAssignment>
         <label>Collaborative</label>
         <picklistValues>
             <picklist>Benchmark__c</picklist>
@@ -444,6 +456,7 @@
     <recordTypes>
         <fullName>Family</fullName>
         <active>true</active>
+        <compactLayoutAssignment>C501_CORE_Goal_CL</compactLayoutAssignment>
         <label>Family</label>
         <picklistValues>
             <picklist>Benchmark__c</picklist>
