@@ -627,6 +627,7 @@
     <recordTypes>
         <fullName>Collaborative</fullName>
         <active>true</active>
+        <compactLayoutAssignment>C501_CORE_Org_Layout</compactLayoutAssignment>
         <label>Collaborative</label>
         <picklistValues>
             <picklist>AccountSource</picklist>
@@ -1389,6 +1390,7 @@
     <recordTypes>
         <fullName>Organization</fullName>
         <active>true</active>
+        <compactLayoutAssignment>C501_CORE_Org_Layout</compactLayoutAssignment>
         <description>An Account representing an organization</description>
         <label>Partner</label>
         <picklistValues>

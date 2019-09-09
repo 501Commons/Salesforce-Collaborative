@@ -155,7 +155,6 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fieldSets>
         <fullName>C501_CCR_AFAR_Self_Assessment</fullName>
         <description>CCR: All Families Are Ready; Use for Assessment Quick Create</description>
