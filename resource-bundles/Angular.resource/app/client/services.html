@@ -1,0 +1,76 @@
+<div class="panel" ng-class="{ 'panel-default': !status.editingServices, 'panel-warning': status.editingServices }"
+    ng-controller="serviceListController" >
+
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-sm-6">
+                Household Services <span ng-if="!status.editingServices && data.serviceshistory.length > 0">({{data.serviceshistory.length}})</span>
+            </div>
+            <div class="col-sm-6 text-right">
+                <button class="btn btn-success btn-sm panel-button"
+                    ng-click="editServices();" ng-if="!status.editingServices"><i class="fa fa-pencil" style="line-height: 1.3em;"></i></button>
+
+                <button class="btn btn-success btn-sm panel-button"
+                    ng-click="saveServices()" ng-if="status.editingServices"
+                    ng-disabled="status.savingServices">Save</span><i ng-if="status.savingServices"
+                    class="fa fa-refresh fa-spin" style="margin-left:6px;"></i></button>
+
+                <button class="btn btn-sm panel-button"
+                    ng-click="cancelServices();" ng-if="status.editingServices"
+                    ng-disabled="status.savingServices"><span class="glyphicon glyphicon-remove" style="line-height: 1.3em;"></span></button>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed" style="margin-bottom:12px;table-layout: fixed; width: 100%">
+            <thead>
+                <tr>
+                    <th style="width:9%">Active</th>
+                    <th style="width:10%" ng-if="status.editingServices">Service</th>
+                    <th style="width:10%" ng-if="status.editingServices">Case Worker</th>
+                    <th style="width:10%">Start</th>
+                    <th style="width:10%">End</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="person in data.serviceList" >
+
+                    <td style="word-wrap: break-word" ng-if="!status.editingServices">{{person.serviceData.inhh}}</td>
+                    <td style="word-wrap: break-word" ng-if="!status.editingServices">{{person.serviceData.lastName}}</td>
+                    <td style="word-wrap: break-word" ng-if="!status.editingServices">{{person.serviceData.lastName}}</td>
+                    <td style="word-wrap: break-word" ng-if="!status.editingServices">
+                        {{checkBirthdate(person.serviceData.birthdate) | date:'M/dd/yyyy'}}</td>
+                    <td style="word-wrap: break-word" ng-if="!status.editingServices">
+                        {{checkBirthdate(person.serviceData.birthdate) | date:'M/dd/yyyy'}}</td>
+
+                    <td ng-if="status.editingServices">
+                        <select ng-model="person.serviceData.inhh" class="form-control input-sm"
+                            name="inhh" ng-options="i for i in ['Yes','No']">
+                            <option value="">-</option>
+                        </select>
+                    </td>
+                    <td ng-if="status.editingServices">
+                        <input ng-model="person.serviceDataEditable.lastName" type="text" class="form-control input-sm"
+                            name="lastname" ng-required>
+                    </td>
+                    <td ng-if="status.editingServices">
+                        <input ng-model="person.serviceDataEditable.lastName" type="text" class="form-control input-sm"
+                            name="lastname" ng-required>
+                    </td>
+                    <td ng-if="status.editingServices">
+                        <input class="form-control input-sm"
+                            type="date"
+                            ng-model="person.serviceDataEditable.birthdate"
+                            placeholder="M/dd/yyyy" min="1900-01-01" required />
+                    </td>
+                    <td ng-if="status.editingServices">
+                        <input class="form-control input-sm"
+                            type="date"
+                            ng-model="person.serviceDataEditable.birthdate"
+                            placeholder="M/dd/yyyy" min="1900-01-01" required />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

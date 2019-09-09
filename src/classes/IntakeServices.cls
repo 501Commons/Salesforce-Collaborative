@@ -234,6 +234,15 @@ public with sharing class IntakeServices {
         return getHouseholdDetail( hhId );
     }
 
+    @RemoteAction
+    public static Account saveHouseholdServices( Id hhId, list<Contact> services ) {
+
+//        if (!services.isEmpty())
+//            update services;
+
+        return getHouseholdDetail( hhId );
+    }
+
     static Decimal getMonthlyPoints( Account hh ) {
         Decimal pts = 0;
         if (hh != null) {

@@ -193,6 +193,28 @@ describe('services', function() {
     });
   });
 
+  describe('fbSaveHouseholdServices', function() {
+    var svc;
+    beforeEach(inject(function(fbSaveHouseholdServices) {
+      svc = fbSaveHouseholdServices;
+    }));
+
+    it('should save household services', function() {
+      var resultData;
+      var tstMembers = [{}, {}];
+      svc( 'some-household-id', tstMembers ).then( function(result) {
+        resultData = result;
+      });
+      /* wait for timeout so promise gets resolved */
+      jasmine.clock().tick(1);
+      expect(resultData).toBeDefined();
+      expect(resultData.totalVisits).toBeDefined();
+      expect(resultData.members).toBeDefined();
+      expect(resultData.members.length).toBe(2);
+      expect(resultData.members[0].name).toBe('Evan Callahan');
+    });
+  });
+
   describe('fbCheckIn', function() {
     var svc;
     beforeEach(inject(function(fbCheckIn) {

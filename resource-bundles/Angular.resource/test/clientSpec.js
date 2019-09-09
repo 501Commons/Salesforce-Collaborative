@@ -243,7 +243,40 @@ describe('client', function() {
     });
 
   });
-  
+
+  describe('serviceListController', function(){
+    var ctrl, scope, settings, household;
+
+    beforeEach(inject(function($controller, _$q_) {
+      scope = $rootScope.$new();
+      ctrl = $controller('serviceListController', {
+        $scope: scope, 
+        basePath: '',
+        fbSaveHouseholdServices: function() { 
+          var deferred = _$q_.defer();
+          deferred.resolve( householdData );
+          return deferred.promise;
+        }
+      });
+    }));
+
+    it('should edit and save services', function() {
+      expect(scope.status.editingServices).toBe(false);
+      scope.editingServices();
+      expect(scope.status.editingServices).toBe(true);
+      scope.saveServices();
+      expect(scope.status.savingServices).toBe(true);
+      $rootScope.$apply();
+      expect(scope.status.savingServices).toBe(false);
+      expect(scope.status.editingServices).toBe(false);
+    });
+
+    xit('should cancel member edits', function() {
+      
+    });
+
+  });
+
   describe('notesController', function(){
     var ctrl, scope;
 

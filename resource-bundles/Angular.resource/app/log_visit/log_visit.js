@@ -70,8 +70,6 @@ angular.module('logVisitController')
           }
         });
 
-        referralsSelected.push('test');
-
         $scope.logging = true;
 
         var dd = String($scope.data.visitDate.getDate()).padStart(2, '0');

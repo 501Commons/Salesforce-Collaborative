@@ -248,14 +248,14 @@ angular.module('clientController')
           }
         });
 
-        var servicesSelected = [];
+        var servicesSelected = {};
         _.forEach( $scope.data.services, function(v) {
           if (v.selected) {
             servicesSelected.push(v.name);
           }
         });
 
-        var referralsSelected = [];
+        var referralsSelected = {};
         _.forEach( $scope.data.referrals, function(v) {
           if (v.selected) {
             referralsSelected.push(v.name);
@@ -292,19 +292,21 @@ angular.module('clientController')
           }
         });
 
-        var servicesSelected = [];
+        var servicesSelected = {};
         _.forEach( $scope.data.services, function(v) {
           if (v.selected) {
             servicesSelected.push(v.name);
           }
         });
 
-        var referralsSelected = [];
+        var referralsSelected = {};
         _.forEach( $scope.data.referrals, function(v) {
           if (v.selected) {
             referralsSelected.push(v.name);
           }
         });
+
+        referralsSelected.push('test');
 
         $scope.logging = true;
 
@@ -600,6 +602,70 @@ angular.module('clientController')
 angular.module('clientController')
   .controller('memberListController', ['$scope', '$alert', 'fbSaveHouseholdMembers',
     function($scope, $alert, fbSaveHouseholdMembers) {
+
+      $scope.status.editingMembers = false;
+      $scope.status.savingMembers = false;
+
+      $scope.checkBirthdate = function (date) {
+      
+        try {
+          if (date.getTime() <= Date.MIN_BIRTHDATE) {
+            return null;
+          }
+        }
+        catch(err) {
+          return null;
+        }
+
+        return date;
+      };
+
+      $scope.editMembers = function() {
+        _.forEach($scope.data.memberList, function(v) {
+          v.memberDataEditable = v.memberData;
+        });
+        $scope.status.editingMembers = true;
+      };
+
+      $scope.deleteMember = function(i) {
+        if ($scope.data.memberList[i].memberDataEditable.id) {
+          $scope.data.memberList.splice(i, 1);
+        }
+      };
+
+      $scope.saveMembers = function() {
+        $scope.status.savingMembers = true;
+        fbSaveHouseholdMembers($scope.data.household.id, _.map($scope.data.memberList, 'memberDataEditable')).then(
+          function(result){
+            $scope.data.household = result;
+            $scope.data.memberList = [];
+            _.forEach(result.members, function(v) {
+              $scope.data.memberList.push({
+                memberData: _.clone(v)
+              });
+            });
+            $scope.status.savingMembers = false;
+            $scope.status.editingMembers = false;
+          },
+          function(reason){
+            $scope.status.savingMembers = false;
+            $alert({
+              title: 'Failed to save changes.',
+              content: reason.message,
+              type: 'danger'
+            });
+          }
+        );
+      };
+
+      $scope.cancelMembers = function() {
+        $scope.status.editingMembers = false;
+      };
+    }]);
+
+    angular.module('clientController')
+  .controller('serviceListController', ['$scope', '$alert', 'fbSaveHouseholdServices',
+    function($scope, $alert, fbSaveHouseholdServices) {
 
       $scope.status.editingMembers = false;
       $scope.status.savingMembers = false;
