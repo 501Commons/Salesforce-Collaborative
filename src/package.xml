@@ -1,37 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>IntakeServices</members>
-        <members>IntakeServicesHouseholdsTest</members>
-        <members>IntakeServicesSettings</members>
-        <members>IntakeServicesStats</members>
-        <members>IntakeServicesStatsTest</members>
-        <members>IntakeServicesTest</members>
-        <members>IntakeServicesTrigger</members>
-        <members>IntakeServicesTriggerTest</members>
-        <name>ApexClass</name>
-    </types>
-    <types>
-        <members>IntakeServicesApp</members>
-        <members>IntakeServicesStats</members>
         <members>JasmineTestRunner</members>
         <name>ApexPage</name>
     </types>
     <types>
-        <members>ClientHouseholdTrigger</members>
-        <members>ClientTrigger</members>
-        <members>VisitTrigger</members>
-        <name>ApexTrigger</name>
-    </types>
-    <types>
         <members>Account.C501_CORE_Family</members>
-        <members>C501_Service_Household__c.C501_Service_Household_Company_Layout</members>
         <members>Contact.C501_CORE_Client_Contact</members>
         <name>CompactLayout</name>
     </types>
     <types>
         <members>C501_CORE</members>
-        <members>Intake_Services</members>
         <name>CustomApplication</name>
     </types>
     <types>
@@ -48,32 +27,6 @@
         <members>Account.C501_Federal_Poverty_Level__c</members>
         <members>Account.C501_Female_Single_HH__c</members>
         <members>Account.C501_Hispanic_or_Latino__c</members>
-        <members>Account.C501_IS_Adults__c</members>
-        <members>Account.C501_IS_Children__c</members>
-        <members>Account.C501_IS_Commodity_Usage_JSON__c</members>
-        <members>Account.C501_IS_Current_Points_Remaining__c</members>
-        <members>Account.C501_IS_Current_Points_Used__c</members>
-        <members>Account.C501_IS_External_Created_Date__c</members>
-        <members>Account.C501_IS_External_Id__c</members>
-        <members>Account.C501_IS_First_Visit__c</members>
-        <members>Account.C501_IS_Homeless__c</members>
-        <members>Account.C501_IS_Inactive__c</members>
-        <members>Account.C501_IS_Infant_Card_Expires__c</members>
-        <members>Account.C501_IS_Infants__c</members>
-        <members>Account.C501_IS_Monthly_Points_Available__c</members>
-        <members>Account.C501_IS_Most_Recent_Visit__c</members>
-        <members>Account.C501_IS_Notes__c</members>
-        <members>Account.C501_IS_Out_Of_Area__c</members>
-        <members>Account.C501_IS_Pending_Commodity_Usage_JSON__c</members>
-        <members>Account.C501_IS_Pending_Notes__c</members>
-        <members>Account.C501_IS_Proof_of_Address_Date__c</members>
-        <members>Account.C501_IS_Proof_of_Address__c</members>
-        <members>Account.C501_IS_Seniors__c</members>
-        <members>Account.C501_IS_Source__c</members>
-        <members>Account.C501_IS_Staff_Notes__c</members>
-        <members>Account.C501_IS_Tag_Notes__c</members>
-        <members>Account.C501_IS_Tags__c</members>
-        <members>Account.C501_IS_Total_Visits__c</members>
         <members>Account.C501_Native_Hawaiian_Pacific_Islander__c</members>
         <members>Account.C501_Needs_Interpreter__c</members>
         <members>Account.C501_Needs_Interpreter__c</members>
@@ -206,90 +159,6 @@
         <members>C501_Fault_Email_Address__mdt.C501_Org_Name__c</members>
         <members>C501_Fault_Email_Address__mdt.Email_Address__c</members>
         <members>C501_Fault_Email_Address__mdt.Email_Address__c</members>
-        <members>C501_Service_Household__c.C501_Affordable_Care_Act_Subsidy__c</members>
-        <members>C501_Service_Household__c.C501_Alimony_Other_Spousal_Support__c</members>
-        <members>C501_Service_Household__c.C501_Annual_Income__c</members>
-        <members>C501_Service_Household__c.C501_BillingCity__c</members>
-        <members>C501_Service_Household__c.C501_BillingPostalCode__c</members>
-        <members>C501_Service_Household__c.C501_BillingState__c</members>
-        <members>C501_Service_Household__c.C501_BillingStreet__c</members>
-        <members>C501_Service_Household__c.C501_Case_Worker__c</members>
-        <members>C501_Service_Household__c.C501_Child_Support__c</members>
-        <members>C501_Service_Household__c.C501_Childcare_Voucher__c</members>
-        <members>C501_Service_Household__c.C501_Current_Address_Move_In_Year__c</members>
-        <members>C501_Service_Household__c.C501_EITC__c</members>
-        <members>C501_Service_Household__c.C501_Earned_Income__c</members>
-        <members>C501_Service_Household__c.C501_End_Date__c</members>
-        <members>C501_Service_Household__c.C501_Federal_Poverty_Level__c</members>
-        <members>C501_Service_Household__c.C501_HUD_VASH__c</members>
-        <members>C501_Service_Household__c.C501_Household_Income_Sources__c</members>
-        <members>C501_Service_Household__c.C501_Household_Size__c</members>
-        <members>C501_Service_Household__c.C501_Household_Type__c</members>
-        <members>C501_Service_Household__c.C501_Household__c</members>
-        <members>C501_Service_Household__c.C501_Housing_Choice_Voucher__c</members>
-        <members>C501_Service_Household__c.C501_Housing__c</members>
-        <members>C501_Service_Household__c.C501_Income_Unknown_Not_Reported__c</members>
-        <members>C501_Service_Household__c.C501_IsActive__c</members>
-        <members>C501_Service_Household__c.C501_Level__c</members>
-        <members>C501_Service_Household__c.C501_Location__c</members>
-        <members>C501_Service_Household__c.C501_NonCash_Income_Unknown__c</members>
-        <members>C501_Service_Household__c.C501_Other_Income__c</members>
-        <members>C501_Service_Household__c.C501_Other_Non_Cash_Income__c</members>
-        <members>C501_Service_Household__c.C501_Other_Phone__c</members>
-        <members>C501_Service_Household__c.C501_Outcomes__c</members>
-        <members>C501_Service_Household__c.C501_Pension__c</members>
-        <members>C501_Service_Household__c.C501_Permanent_Supportive_Housing__c</members>
-        <members>C501_Service_Household__c.C501_Phone__c</members>
-        <members>C501_Service_Household__c.C501_Previous_Level__c</members>
-        <members>C501_Service_Household__c.C501_Private_Disability_Insurance__c</members>
-        <members>C501_Service_Household__c.C501_Program__c</members>
-        <members>C501_Service_Household__c.C501_Public_Housing__c</members>
-        <members>C501_Service_Household__c.C501_Retirement_Income_Social_Security__c</members>
-        <members>C501_Service_Household__c.C501_SNAP__c</members>
-        <members>C501_Service_Household__c.C501_Self_Employed__c</members>
-        <members>C501_Service_Household__c.C501_Service_Household_Unique_Count__c</members>
-        <members>C501_Service_Household__c.C501_Service_Id__c</members>
-        <members>C501_Service_Household__c.C501_Service__c</members>
-        <members>C501_Service_Household__c.C501_ShippingCity__c</members>
-        <members>C501_Service_Household__c.C501_ShippingPostalCode__c</members>
-        <members>C501_Service_Household__c.C501_ShippingState__c</members>
-        <members>C501_Service_Household__c.C501_ShippingStreet__c</members>
-        <members>C501_Service_Household__c.C501_Social_Security_Disability_Income__c</members>
-        <members>C501_Service_Household__c.C501_Start_Date__c</members>
-        <members>C501_Service_Household__c.C501_Sub_Service__c</members>
-        <members>C501_Service_Household__c.C501_Supplemental_Security_Income__c</members>
-        <members>C501_Service_Household__c.C501_TANF__c</members>
-        <members>C501_Service_Household__c.C501_Trigger_Ignore_Change__c</members>
-        <members>C501_Service_Household__c.C501_Unemployment_Insurance__c</members>
-        <members>C501_Service_Household__c.C501_VA_Non_Service_Disability_Pension__c</members>
-        <members>C501_Service_Household__c.C501_VA_Service_Connected_Disability__c</members>
-        <members>C501_Service_Household__c.C501_WIC__c</members>
-        <members>C501_Service_Household__c.C501_Worker_s_Compensation__c</members>
-        <members>C501_Service_Household__c.C501_Years_at_Current_Address__c</members>
-        <members>Client_Visit__c.C501_IS_Adults__c</members>
-        <members>Client_Visit__c.C501_IS_Box_Type__c</members>
-        <members>Client_Visit__c.C501_IS_Checkout_Weight__c</members>
-        <members>Client_Visit__c.C501_IS_Children__c</members>
-        <members>Client_Visit__c.C501_IS_Commodity_Usage_JSON__c</members>
-        <members>Client_Visit__c.C501_IS_External_Created_Date__c</members>
-        <members>Client_Visit__c.C501_IS_External_Household_Id__c</members>
-        <members>Client_Visit__c.C501_IS_External_Id__c</members>
-        <members>Client_Visit__c.C501_IS_First_Visit_This_Year__c</members>
-        <members>Client_Visit__c.C501_IS_Homeless_Counter__c</members>
-        <members>Client_Visit__c.C501_IS_Homeless__c</members>
-        <members>Client_Visit__c.C501_IS_Household__c</members>
-        <members>Client_Visit__c.C501_IS_Infants__c</members>
-        <members>Client_Visit__c.C501_IS_More_Than_One_Person__c</members>
-        <members>Client_Visit__c.C501_IS_Notes__c</members>
-        <members>Client_Visit__c.C501_IS_Out_Of_Area_Counter__c</members>
-        <members>Client_Visit__c.C501_IS_Out_Of_Area__c</members>
-        <members>Client_Visit__c.C501_IS_Points_Used__c</members>
-        <members>Client_Visit__c.C501_IS_Seniors__c</members>
-        <members>Client_Visit__c.C501_IS_Service_Location__c</members>
-        <members>Client_Visit__c.C501_IS_Total_People__c</members>
-        <members>Client_Visit__c.C501_IS_Visit_Date__c</members>
-        <members>Client_Visit__c.C501_IS_Visit_Type__c</members>
-        <members>Client_Visit__c.C501_IS_Visitor__c</members>
         <members>Contact.C501_Age__c</members>
         <members>Contact.C501_American_Indian_or_Alaska_Native__c</members>
         <members>Contact.C501_Asian__c</members>
@@ -298,18 +167,6 @@
         <members>Contact.C501_Birth_Year_est__c</members>
         <members>Contact.C501_Black_or_African_American__c</members>
         <members>Contact.C501_Hispanic_or_Latino__c</members>
-        <members>Contact.C501_IS_Age_Entry_Date__c</members>
-        <members>Contact.C501_IS_Age_Group__c</members>
-        <members>Contact.C501_IS_Age__c</members>
-        <members>Contact.C501_IS_Birthdate_Searchable__c</members>
-        <members>Contact.C501_IS_External_Created_Date__c</members>
-        <members>Contact.C501_IS_External_Household_Id__c</members>
-        <members>Contact.C501_IS_External_Id__c</members>
-        <members>Contact.C501_IS_Gender__c</members>
-        <members>Contact.C501_IS_Gender__c</members>
-        <members>Contact.C501_IS_Id_Number__c</members>
-        <members>Contact.C501_IS_Id_Type__c</members>
-        <members>Contact.C501_IS_Proof_of_Infant__c</members>
         <members>Contact.C501_Native_Hawaiian_or_Pacific_Islander__c</members>
         <members>Contact.C501_White__c</members>
         <members>Goal__c.Account__c</members>
@@ -322,46 +179,6 @@
         <members>Goal__c.Steps__c</members>
         <members>Goal__c.Term__c</members>
         <members>Goal__c.Type__c</members>
-        <members>Intake_Referrals__c.Column__c</members>
-        <members>Intake_Referrals__c.Locations__c</members>
-        <members>Intake_Referrals__c.Selected__c</members>
-        <members>Intake_Referrals__c.Sort_Order__c</members>
-        <members>Intake_Services_Box_Settings__c.Minimum_Family_Size__c</members>
-        <members>Intake_Services_Checkin__c.Box_Size__c</members>
-        <members>Intake_Services_Checkin__c.C501_IS_Commodity_Usage_JSON__c</members>
-        <members>Intake_Services_Checkin__c.C501_IS_Notes__c</members>
-        <members>Intake_Services_Checkin__c.C501_IS_Service_Location__c</members>
-        <members>Intake_Services_Checkin__c.C501_IS_Visit_Type__c</members>
-        <members>Intake_Services_Checkin__c.C501_IS_Visitor__c</members>
-        <members>Intake_Services_Checkin__c.C501_With_Staff__c</members>
-        <members>Intake_Services_Checkin__c.Check_In_Time_With_Staff__c</members>
-        <members>Intake_Services_Checkin__c.Check_In_Time__c</members>
-        <members>Intake_Services_Checkin__c.Points_Remaining__c</members>
-        <members>Intake_Services_Commodity__c.Allow_Overage__c</members>
-        <members>Intake_Services_Commodity__c.Locations__c</members>
-        <members>Intake_Services_Commodity__c.Monthly_Limit__c</members>
-        <members>Intake_Services_Commodity__c.Sort_Order__c</members>
-        <members>Intake_Services_Settings__c.Allow_Box_Size_Override__c</members>
-        <members>Intake_Services_Settings__c.Allow_Overage__c</members>
-        <members>Intake_Services_Settings__c.C501_IS_Tags__c</members>
-        <members>Intake_Services_Settings__c.Check_in_Required__c</members>
-        <members>Intake_Services_Settings__c.Monthly_Base_Points__c</members>
-        <members>Intake_Services_Settings__c.Monthly_Points_Per_Adult__c</members>
-        <members>Intake_Services_Settings__c.Monthly_Points_Per_Child__c</members>
-        <members>Intake_Services_Settings__c.Proof_of_Address_Required__c</members>
-        <members>Intake_Services_Settings__c.Proof_of_Address_Update_Interval__c</members>
-        <members>Intake_Services_Settings__c.Proof_of_Infant_Required__c</members>
-        <members>Intake_Services_Settings__c.Require_Unique_Address__c</members>
-        <members>Intake_Services_Settings__c.Show_Id__c</members>
-        <members>Intake_Services_Settings__c.Track_Checkout_Weight__c</members>
-        <members>Intake_Services_Settings__c.Track_Points__c</members>
-        <members>Intake_Services_Settings__c.Visit_Frequency_Limit__c</members>
-        <members>Intake_Services_Settings__c.Welcome_Alert__c</members>
-        <members>Intake_Services_Settings__c.Welcome_Message__c</members>
-        <members>Intake_Services__c.Column__c</members>
-        <members>Intake_Services__c.Locations__c</members>
-        <members>Intake_Services__c.Selected__c</members>
-        <members>Intake_Services__c.Sort_Order__c</members>
         <members>Measurable__c.Current_Value__c</members>
         <members>Measurable__c.Starting_Value__c</members>
         <members>Measurable__c.Target_Value__c</members>
@@ -377,10 +194,6 @@
         <name>CustomField</name>
     </types>
     <types>
-        <members>Intake_Services_Box_Type</members>
-        <name>CustomLabel</name>
-    </types>
-    <types>
         <members>C501_Fault_Email_Address.Intakebh</members>
         <members>C501_Fault_Email_Address.UwscMaster</members>
         <members>C501_Fault_Email_Address.UwscProduction</members>
@@ -389,15 +202,7 @@
     <types>
         <members>Assessment__c</members>
         <members>C501_Fault_Email_Address__mdt</members>
-        <members>C501_Service_Household__c</members>
-        <members>Client_Visit__c</members>
         <members>Goal__c</members>
-        <members>Intake_Referrals__c</members>
-        <members>Intake_Services_Box_Settings__c</members>
-        <members>Intake_Services_Checkin__c</members>
-        <members>Intake_Services_Commodity__c</members>
-        <members>Intake_Services_Settings__c</members>
-        <members>Intake_Services__c</members>
         <members>Measurable__c</members>
         <members>Measurement__c</members>
         <members>Release__c</members>
@@ -405,10 +210,7 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Client_Visit__c</members>
         <members>Goal__c</members>
-        <members>Intake_Services_App</members>
-        <members>Intake_Services_Stats</members>
         <members>Step__c</members>
         <name>CustomTab</name>
     </types>
@@ -438,7 +240,6 @@
     </types>
     <types>
         <members>Benchmarks</members>
-        <members>C501_Intake_Programs</members>
         <members>C501_Y_N</members>
         <members>C501_Y_N</members>
         <members>Domains</members>
@@ -463,8 +264,6 @@
         <members>Assessment__c-NCCC%3A General Assessment</members>
         <members>Assessment__c-NCCC%3A General Assessment</members>
         <members>C501_Fault_Email_Address__mdt-Fault Email Address Layout</members>
-        <members>C501_Service_Household__c-Service Household Layout</members>
-        <members>Client_Visit__c-Client Visit Layout</members>
         <members>Contact-CORE Client Contact</members>
         <members>Goal__c-Collaborative Goal Layout</members>
         <members>Goal__c-Family Goal Layout</members>
@@ -478,10 +277,6 @@
     <types>
         <members>Account.Household_Accounts</members>
         <members>Assessment__c.All</members>
-        <members>Client_Visit__c.All</members>
-        <members>Client_Visit__c.All1</members>
-        <members>Client_Visit__c.Past7</members>
-        <members>Client_Visit__c.Visits_Today</members>
         <members>Goal__c.All</members>
         <members>Goal__c.Family_Goals</members>
         <members>Measurable__c.All</members>
@@ -497,7 +292,6 @@
     </types>
     <types>
         <members>CORE Program Staff</members>
-        <members>Intake Services Admin</members>
         <name>Profile</name>
     </types>
     <types>
