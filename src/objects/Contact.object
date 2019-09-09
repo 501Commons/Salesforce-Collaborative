@@ -197,6 +197,7 @@ IF( NOT( ISBLANK( Birthdate ) ) ,
     </fields>
     <fields>
         <fullName>C501_IS_Gender__c</fullName>
+        <description>This field is configured in NPSP Settings &gt; Relationships &gt; Relationships as the Gender field. Do not delete this field unless you remove the reference or select another Gender field there.</description>
         <externalId>false</externalId>
         <label>Gender</label>
         <required>false</required>
