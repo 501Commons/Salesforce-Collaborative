@@ -204,24 +204,22 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>Measurable_Goal__c</fullName>
-        <externalId>false</externalId>
-        <label>Measurable Goal</label>
-        <length>128</length>
-        <required>true</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Measurable__c</fullName>
+        <fullName>Starting_Assessment__c</fullName>
         <deleteConstraint>Restrict</deleteConstraint>
         <externalId>false</externalId>
-        <label>Measurable</label>
-        <referenceTo>Measurable__c</referenceTo>
-        <relationshipLabel>Goals</relationshipLabel>
-        <relationshipName>Goals</relationshipName>
+        <label>Starting Assessment</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Assessment__c.Type__c</field>
+                <operation>equals</operation>
+                <value>Starting</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Assessment__c</referenceTo>
+        <relationshipLabel>Goals (Starting Assessment)</relationshipLabel>
+        <relationshipName>Goals1</relationshipName>
         <required>true</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -276,6 +274,28 @@
         <trackTrending>false</trackTrending>
         <type>Html</type>
         <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Target_Assessment__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Target Assessment</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Assessment__c.Type__c</field>
+                <operation>equals</operation>
+                <value>Target</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Assessment__c</referenceTo>
+        <relationshipLabel>Goals</relationshipLabel>
+        <relationshipName>Goals</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Term__c</fullName>

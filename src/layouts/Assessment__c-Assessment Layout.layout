@@ -24,6 +24,10 @@
                 <behavior>Edit</behavior>
                 <field>Notify_When_Next_Assessment_Due__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>Type__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
@@ -290,6 +294,14 @@
         <fields>Measurable__c.NAME</fields>
         <fields>Value__c</fields>
         <relatedList>Measurement__c.Assessment__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>Goal__c.Target_Assessment__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>Goal__c.Starting_Assessment__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>

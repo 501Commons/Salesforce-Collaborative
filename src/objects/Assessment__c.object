@@ -811,6 +811,36 @@
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
     </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Starting</fullName>
+                    <default>false</default>
+                    <label>Starting</label>
+                </value>
+                <value>
+                    <fullName>Target</fullName>
+                    <default>false</default>
+                    <label>Target</label>
+                </value>
+                <value>
+                    <fullName>Actual</fullName>
+                    <default>false</default>
+                    <label>Actual</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
     <label>Assessment</label>
     <listViews>
         <fullName>All</fullName>
@@ -829,36 +859,126 @@
         <active>true</active>
         <description>Displays fields relevant to all CORE assessment fields</description>
         <label>Assessment Default</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Actual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>C501_CCR_AFAR_Self_Assessment</fullName>
         <active>true</active>
         <description>Displays fields relevant to Connect Casino Road&apos;s AFAR Self Assessment</description>
         <label>CCR: AFAR Self Assessment</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Actual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>C501_HH_Domain_Assessment</fullName>
         <active>true</active>
         <description>Displays fields relevant to Homeward House&apos;s Domain Assessment</description>
         <label>HH: Domain Assessment</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Actual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>C501_ISA_General_Assessment</fullName>
         <active>true</active>
         <description>Displays fields relevant to Improving School Attendance&apos;s General Assessment</description>
         <label>ISA: General Assessment</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Actual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>C501_MLW_Bridge_Scores</fullName>
         <active>true</active>
         <description>Displays fields relevant to Making Life Work&apos;s Bridge Scores</description>
         <label>MLW: Bridge Scores</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Actual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <recordTypes>
         <fullName>C501_NCCC_General_Assessment</fullName>
         <active>true</active>
         <description>Displays fields relevant to North Counties Community Collaborative&apos;s General Assessment</description>
         <label>NCCC: General Assessment</label>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Actual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Starting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Target</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
     </recordTypes>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>

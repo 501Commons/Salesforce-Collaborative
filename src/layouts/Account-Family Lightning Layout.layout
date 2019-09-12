@@ -252,8 +252,6 @@
         <fields>Status__c</fields>
         <fields>Domain__c</fields>
         <fields>Term__c</fields>
-        <fields>Measurable__c</fields>
-        <fields>Measurable_Goal__c</fields>
         <relatedList>Goal__c.Account__c</relatedList>
     </relatedLists>
     <relatedLists>
