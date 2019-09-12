@@ -33,6 +33,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.C501_Exit_Successfully__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Account.C501_Family_Size__c</field>
         <readable>true</readable>
@@ -65,6 +70,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.C501_Needs_Interpreter__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.C501_Number_of_Goals_Completed__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Account.C501_Number_of_Goals_Incomplete__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

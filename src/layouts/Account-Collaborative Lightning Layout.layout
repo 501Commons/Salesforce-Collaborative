@@ -24,6 +24,18 @@
                 <behavior>Edit</behavior>
                 <field>npe01__One2OneContact__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>C501_Number_of_Goals_Completed__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>C501_Number_of_Goals_Incomplete__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>C501_Exit_Successfully__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

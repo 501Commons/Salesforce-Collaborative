@@ -19,6 +19,7 @@
         <members>Account.C501_Black_or_African_American__c</members>
         <members>Account.C501_CollabName__c</members>
         <members>Account.C501_Collaborative_Status__c</members>
+        <members>Account.C501_Exit_Successfully__c</members>
         <members>Account.C501_Family_Size__c</members>
         <members>Account.C501_Family_Status__c</members>
         <members>Account.C501_Federal_Poverty_Level__c</members>
@@ -26,13 +27,12 @@
         <members>Account.C501_Hispanic_or_Latino__c</members>
         <members>Account.C501_Native_Hawaiian_Pacific_Islander__c</members>
         <members>Account.C501_Needs_Interpreter__c</members>
+        <members>Account.C501_Number_of_Goals_Completed__c</members>
+        <members>Account.C501_Number_of_Goals_Incomplete__c</members>
         <members>Account.C501_Partner_Status__c</members>
         <members>Account.C501_Primary_Languages__c</members>
         <members>Account.C501_White__c</members>
         <members>Account.Collaborative__c</members>
-        <members>Account.C501_Number_of_Goals_Completed__c</members>
-        <members>Account.C501_Number_of_Goals_Incomplete__c</members>
-        <members>Account.C501_Exit_Successfully__c</members>
         <members>Assessment__c.Account__c</members>
         <members>Assessment__c.C501_CCR_Affordable_Healthcare__c</members>
         <members>Assessment__c.C501_CCR_Child_Developing__c</members>

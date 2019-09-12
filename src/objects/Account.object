@@ -89,6 +89,15 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>C501_Exit_Successfully__c</fullName>
+        <externalId>false</externalId>
+        <formula>AND(C501_Number_of_Goals_Completed__c &gt; 0, C501_Number_of_Goals_Incomplete__c &lt;= 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Exit Successfully</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>C501_Family_Size__c</fullName>
         <description>CCR, MLW: Estimated family size, used for determining federal poverty level</description>
         <externalId>false</externalId>
@@ -182,6 +191,34 @@
             <restricted>true</restricted>
             <valueSetName>C501_Y_N</valueSetName>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>C501_Number_of_Goals_Completed__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Goals Completed</label>
+        <summaryFilterItems>
+            <field>Goal__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Goal__c.Account__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>C501_Number_of_Goals_Incomplete__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Goals Incomplete</label>
+        <summaryFilterItems>
+            <field>Goal__c.Status__c</field>
+            <operation>notEqual</operation>
+            <value>Canceled, Completed</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Goal__c.Account__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
     </fields>
     <fields>
         <fullName>C501_Partner_Status__c</fullName>
