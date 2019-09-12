@@ -18,146 +18,61 @@
         <members>Account.C501_Asian__c</members>
         <members>Account.C501_Black_or_African_American__c</members>
         <members>Account.C501_CollabName__c</members>
-        <members>Account.C501_CollabName__c</members>
         <members>Account.C501_Collaborative_Status__c</members>
         <members>Account.C501_Family_Size__c</members>
-        <members>Account.C501_Family_Status__c</members>
-        <members>Account.C501_Family_Status__c</members>
         <members>Account.C501_Family_Status__c</members>
         <members>Account.C501_Federal_Poverty_Level__c</members>
         <members>Account.C501_Female_Single_HH__c</members>
         <members>Account.C501_Hispanic_or_Latino__c</members>
         <members>Account.C501_Native_Hawaiian_Pacific_Islander__c</members>
         <members>Account.C501_Needs_Interpreter__c</members>
-        <members>Account.C501_Needs_Interpreter__c</members>
-        <members>Account.C501_Needs_Interpreter__c</members>
         <members>Account.C501_Partner_Status__c</members>
-        <members>Account.C501_Primary_Languages__c</members>
-        <members>Account.C501_Primary_Languages__c</members>
         <members>Account.C501_Primary_Languages__c</members>
         <members>Account.C501_White__c</members>
         <members>Account.Collaborative__c</members>
-        <members>Account.Collaborative__c</members>
-        <members>Assessment__c.Account__c</members>
-        <members>Assessment__c.Account__c</members>
+        <members>Account.C501_Number_of_Goals_Completed__c</members>
+        <members>Account.C501_Number_of_Goals_Incomplete__c</members>
+        <members>Account.C501_Exit_Successfully__c</members>
         <members>Assessment__c.Account__c</members>
         <members>Assessment__c.C501_CCR_Affordable_Healthcare__c</members>
-        <members>Assessment__c.C501_CCR_Affordable_Healthcare__c</members>
-        <members>Assessment__c.C501_CCR_Affordable_Healthcare__c</members>
-        <members>Assessment__c.C501_CCR_Child_Developing__c</members>
-        <members>Assessment__c.C501_CCR_Child_Developing__c</members>
         <members>Assessment__c.C501_CCR_Child_Developing__c</members>
         <members>Assessment__c.C501_CCR_Comfortably_Pay_Bills__c</members>
-        <members>Assessment__c.C501_CCR_Comfortably_Pay_Bills__c</members>
-        <members>Assessment__c.C501_CCR_Comfortably_Pay_Bills__c</members>
-        <members>Assessment__c.C501_CCR_Depression_or_Hopelessness__c</members>
-        <members>Assessment__c.C501_CCR_Depression_or_Hopelessness__c</members>
         <members>Assessment__c.C501_CCR_Depression_or_Hopelessness__c</members>
         <members>Assessment__c.C501_CCR_Early_Learning__c</members>
-        <members>Assessment__c.C501_CCR_Early_Learning__c</members>
-        <members>Assessment__c.C501_CCR_Early_Learning__c</members>
-        <members>Assessment__c.C501_CCR_Equipped_to_Reach_Goals__c</members>
-        <members>Assessment__c.C501_CCR_Equipped_to_Reach_Goals__c</members>
         <members>Assessment__c.C501_CCR_Equipped_to_Reach_Goals__c</members>
         <members>Assessment__c.C501_CCR_Good_Physical_Health__c</members>
-        <members>Assessment__c.C501_CCR_Good_Physical_Health__c</members>
-        <members>Assessment__c.C501_CCR_Good_Physical_Health__c</members>
-        <members>Assessment__c.C501_CCR_Meet_Basic_Needs__c</members>
-        <members>Assessment__c.C501_CCR_Meet_Basic_Needs__c</members>
         <members>Assessment__c.C501_CCR_Meet_Basic_Needs__c</members>
         <members>Assessment__c.C501_CCR_Opportunities_Employment_Goals__c</members>
-        <members>Assessment__c.C501_CCR_Opportunities_Employment_Goals__c</members>
-        <members>Assessment__c.C501_CCR_Opportunities_Employment_Goals__c</members>
-        <members>Assessment__c.C501_CCR_Rarely_Overwhelmed__c</members>
-        <members>Assessment__c.C501_CCR_Rarely_Overwhelmed__c</members>
         <members>Assessment__c.C501_CCR_Rarely_Overwhelmed__c</members>
         <members>Assessment__c.C501_CCR_Resources_to_Pursue_Goals__c</members>
-        <members>Assessment__c.C501_CCR_Resources_to_Pursue_Goals__c</members>
-        <members>Assessment__c.C501_CCR_Resources_to_Pursue_Goals__c</members>
-        <members>Assessment__c.C501_CCR_Safe_Home__c</members>
-        <members>Assessment__c.C501_CCR_Safe_Home__c</members>
         <members>Assessment__c.C501_CCR_Safe_Home__c</members>
         <members>Assessment__c.C501_CCR_Saves_Money__c</members>
-        <members>Assessment__c.C501_CCR_Saves_Money__c</members>
-        <members>Assessment__c.C501_CCR_Saves_Money__c</members>
-        <members>Assessment__c.C501_CCR_Support_Child_Learning__c</members>
-        <members>Assessment__c.C501_CCR_Support_Child_Learning__c</members>
         <members>Assessment__c.C501_CCR_Support_Child_Learning__c</members>
         <members>Assessment__c.C501_CCR_Supportive_Family_Relationships__c</members>
-        <members>Assessment__c.C501_CCR_Supportive_Family_Relationships__c</members>
-        <members>Assessment__c.C501_CCR_Supportive_Family_Relationships__c</members>
-        <members>Assessment__c.C501_CCR_Supportive_People__c</members>
-        <members>Assessment__c.C501_CCR_Supportive_People__c</members>
         <members>Assessment__c.C501_CCR_Supportive_People__c</members>
         <members>Assessment__c.C501_HH_Early_Childhood__c</members>
-        <members>Assessment__c.C501_HH_Early_Childhood__c</members>
-        <members>Assessment__c.C501_HH_Early_Childhood__c</members>
-        <members>Assessment__c.C501_HH_Economic_Assets__c</members>
-        <members>Assessment__c.C501_HH_Economic_Assets__c</members>
         <members>Assessment__c.C501_HH_Economic_Assets__c</members>
         <members>Assessment__c.C501_HH_Education_Employment__c</members>
-        <members>Assessment__c.C501_HH_Education_Employment__c</members>
-        <members>Assessment__c.C501_HH_Education_Employment__c</members>
-        <members>Assessment__c.C501_HH_Health_Wellbeing__c</members>
-        <members>Assessment__c.C501_HH_Health_Wellbeing__c</members>
         <members>Assessment__c.C501_HH_Health_Wellbeing__c</members>
         <members>Assessment__c.C501_HH_Social_Capital__c</members>
-        <members>Assessment__c.C501_HH_Social_Capital__c</members>
-        <members>Assessment__c.C501_HH_Social_Capital__c</members>
-        <members>Assessment__c.C501_ISA_Health_Wellbeing__c</members>
-        <members>Assessment__c.C501_ISA_Health_Wellbeing__c</members>
         <members>Assessment__c.C501_ISA_Health_Wellbeing__c</members>
         <members>Assessment__c.C501_ISA_Literacy__c</members>
-        <members>Assessment__c.C501_ISA_Literacy__c</members>
-        <members>Assessment__c.C501_ISA_Literacy__c</members>
-        <members>Assessment__c.C501_ISA_Math__c</members>
-        <members>Assessment__c.C501_ISA_Math__c</members>
         <members>Assessment__c.C501_ISA_Math__c</members>
         <members>Assessment__c.C501_MLW_Daycare__c</members>
-        <members>Assessment__c.C501_MLW_Daycare__c</members>
-        <members>Assessment__c.C501_MLW_Daycare__c</members>
-        <members>Assessment__c.C501_MLW_Debts__c</members>
-        <members>Assessment__c.C501_MLW_Debts__c</members>
         <members>Assessment__c.C501_MLW_Debts__c</members>
         <members>Assessment__c.C501_MLW_Earning_Levels__c</members>
-        <members>Assessment__c.C501_MLW_Earning_Levels__c</members>
-        <members>Assessment__c.C501_MLW_Earning_Levels__c</members>
-        <members>Assessment__c.C501_MLW_Education__c</members>
-        <members>Assessment__c.C501_MLW_Education__c</members>
         <members>Assessment__c.C501_MLW_Education__c</members>
         <members>Assessment__c.C501_MLW_Health__c</members>
-        <members>Assessment__c.C501_MLW_Health__c</members>
-        <members>Assessment__c.C501_MLW_Health__c</members>
-        <members>Assessment__c.C501_MLW_Housing__c</members>
-        <members>Assessment__c.C501_MLW_Housing__c</members>
         <members>Assessment__c.C501_MLW_Housing__c</members>
         <members>Assessment__c.C501_MLW_Networks__c</members>
-        <members>Assessment__c.C501_MLW_Networks__c</members>
-        <members>Assessment__c.C501_MLW_Networks__c</members>
-        <members>Assessment__c.C501_MLW_Saving__c</members>
-        <members>Assessment__c.C501_MLW_Saving__c</members>
         <members>Assessment__c.C501_MLW_Saving__c</members>
         <members>Assessment__c.C501_MLW_Transport__c</members>
-        <members>Assessment__c.C501_MLW_Transport__c</members>
-        <members>Assessment__c.C501_MLW_Transport__c</members>
-        <members>Assessment__c.C501_NCCC_Measure_1__c</members>
-        <members>Assessment__c.C501_NCCC_Measure_1__c</members>
         <members>Assessment__c.C501_NCCC_Measure_1__c</members>
         <members>Assessment__c.C501_NCCC_Measure_2__c</members>
-        <members>Assessment__c.C501_NCCC_Measure_2__c</members>
-        <members>Assessment__c.C501_NCCC_Measure_2__c</members>
-        <members>Assessment__c.C501_NCCC_Measure_3__c</members>
-        <members>Assessment__c.C501_NCCC_Measure_3__c</members>
         <members>Assessment__c.C501_NCCC_Measure_3__c</members>
         <members>Assessment__c.Next_Assessment__c</members>
-        <members>Assessment__c.Next_Assessment__c</members>
-        <members>Assessment__c.Next_Assessment__c</members>
-        <members>Assessment__c.Notify_When_Next_Assessment_Due__c</members>
-        <members>Assessment__c.Notify_When_Next_Assessment_Due__c</members>
         <members>Assessment__c.Notify_When_Next_Assessment_Due__c</members>
         <members>C501_Fault_Email_Address__mdt.C501_Org_Name__c</members>
-        <members>C501_Fault_Email_Address__mdt.C501_Org_Name__c</members>
-        <members>C501_Fault_Email_Address__mdt.Email_Address__c</members>
         <members>C501_Fault_Email_Address__mdt.Email_Address__c</members>
         <members>Contact.C501_Age__c</members>
         <members>Contact.C501_American_Indian_or_Alaska_Native__c</members>
@@ -242,16 +157,10 @@
         <members>Account-Family Lightning Layout</members>
         <members>Account-Partner Lightning Layout</members>
         <members>Assessment__c-Assessment Layout</members>
-        <members>Assessment__c-Assessment Layout</members>
-        <members>Assessment__c-CCR%3A AFAR Self Assessment</members>
         <members>Assessment__c-CCR%3A AFAR Self Assessment</members>
         <members>Assessment__c-HH%3A Domain Assessment</members>
-        <members>Assessment__c-HH%3A Domain Assessment</members>
-        <members>Assessment__c-ISA%3A General Assessment</members>
         <members>Assessment__c-ISA%3A General Assessment</members>
         <members>Assessment__c-MLW%3A Bridge Scores</members>
-        <members>Assessment__c-MLW%3A Bridge Scores</members>
-        <members>Assessment__c-NCCC%3A General Assessment</members>
         <members>Assessment__c-NCCC%3A General Assessment</members>
         <members>C501_Fault_Email_Address__mdt-Fault Email Address Layout</members>
         <members>Contact-CORE Client Contact</members>
@@ -296,19 +205,12 @@
     <types>
         <members>Account.Collaborative</members>
         <members>Account.HH_Account</members>
-        <members>Account.HH_Account</members>
         <members>Account.Organization</members>
         <members>Assessment__c.C501_Assessment_Default</members>
-        <members>Assessment__c.C501_Assessment_Default</members>
-        <members>Assessment__c.C501_CCR_AFAR_Self_Assessment</members>
         <members>Assessment__c.C501_CCR_AFAR_Self_Assessment</members>
         <members>Assessment__c.C501_HH_Domain_Assessment</members>
-        <members>Assessment__c.C501_HH_Domain_Assessment</members>
-        <members>Assessment__c.C501_ISA_General_Assessment</members>
         <members>Assessment__c.C501_ISA_General_Assessment</members>
         <members>Assessment__c.C501_MLW_Bridge_Scores</members>
-        <members>Assessment__c.C501_MLW_Bridge_Scores</members>
-        <members>Assessment__c.C501_NCCC_General_Assessment</members>
         <members>Assessment__c.C501_NCCC_General_Assessment</members>
         <members>Goal__c.Collaborative</members>
         <members>Goal__c.Family</members>
