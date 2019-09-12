@@ -291,12 +291,6 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Measurable__c.NAME</fields>
-        <fields>Value__c</fields>
-        <relatedList>Measurement__c.Assessment__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
         <relatedList>Goal__c.Target_Assessment__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
