@@ -178,8 +178,8 @@
         <members>Goal__c.Steps__c</members>
         <members>Goal__c.Term__c</members>
         <members>Goal__c.Type__c</members>
-        <members>Measurable__c.Measurable__c</members>
         <members>Measurable__c.Current_Value__c</members>
+        <members>Measurable__c.Measurable__c</members>
         <members>Measurable__c.Starting_Value__c</members>
         <members>Measurable__c.Target_Value__c</members>
         <members>Measurement__c.Assessment__c</members>
@@ -330,6 +330,10 @@
     <types>
         <members>Angular</members>
         <name>StaticResource</name>
+    </types>
+    <types>
+        <members>Measurable__c.Update Measurable</members>
+        <name>WorkflowRule</name>
     </types>
     <version>46.0</version>
 </Package>
