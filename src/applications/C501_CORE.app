@@ -101,6 +101,7 @@
         <profile>Admin</profile>
     </profileActionOverrides>
     <tabs>standard-Account</tabs>
+    <tabs>Intake_Services_App</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
     <uiType>Lightning</uiType>

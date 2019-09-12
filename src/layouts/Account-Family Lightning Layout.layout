@@ -5,7 +5,8 @@
     <excludeButtons>ChangeRecordType</excludeButtons>
     <excludeButtons>CreateCallList</excludeButtons>
     <excludeButtons>CreateSurveyInvitation</excludeButtons>
-    <excludeButtons>DataDotComAccountInsights</excludeButtons>
+    <excludeButtons>DataDotComClean</excludeButtons>
+    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
     <excludeButtons>Delete</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
     <excludeButtons>PartnerScorecard</excludeButtons>
@@ -204,13 +205,13 @@
             <sortOrder>1</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Share</actionName>
-            <actionType>StandardButton</actionType>
+            <actionName>Account.C501_CORE_New_Client_Contact</actionName>
+            <actionType>QuickAction</actionType>
             <sortOrder>2</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>npsp__NewContact</actionName>
-            <actionType>QuickAction</actionType>
+            <actionName>Share</actionName>
+            <actionType>StandardButton</actionType>
             <sortOrder>3</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
@@ -289,11 +290,14 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>C501_Partnership__c.C501_Partner__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
+        <fields>C501_Partner__c</fields>
+        <fields>C501_Start_Date__c</fields>
+        <fields>C501_End_Date__c</fields>
+        <fields>C501_Brief_Description__c</fields>
+        <fields>C501_Partnership_Status__c</fields>
         <relatedList>C501_Partnership__c.C501_Family__c</relatedList>
+        <sortField>C501_Start_Date__c</sortField>
+        <sortOrder>Asc</sortOrder>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

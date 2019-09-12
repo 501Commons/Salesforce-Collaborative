@@ -341,7 +341,7 @@
         <componentInstances>
             <componentInstanceProperties>
                 <name>createQuickActionName</name>
-                <value>NewContact</value>
+                <value>CORE_New_Client_Contact</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>lookupFieldName</name>

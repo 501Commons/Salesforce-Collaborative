@@ -212,16 +212,17 @@
         <relatedList>Account.Collaborative__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <excludeButtons>MassChangeOwner</excludeButtons>
         <fields>NAME</fields>
+        <fields>RECORDTYPE</fields>
+        <fields>C501_Start_Date__c</fields>
+        <fields>C501_End_Date__c</fields>
+        <fields>C501_Partnership_Status__c</fields>
+        <fields>C501_Family__c</fields>
+        <fields>C501_Collaborative__c</fields>
         <relatedList>C501_Partnership__c.C501_Partner__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>C501_Partnership__c.C501_Collaborative__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>C501_Partnership__c.C501_Family__c</relatedList>
+        <sortField>RECORDTYPE</sortField>
+        <sortOrder>Asc</sortOrder>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
