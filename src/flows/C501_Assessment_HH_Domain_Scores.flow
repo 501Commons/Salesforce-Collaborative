@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <description>Collects data specific to Homeward House&apos;s Domain Scores Assessment; moved flow fault lookup to subflow</description>
+    <dynamicChoiceSets>
+        <name>Type_Picklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Type__c</picklistField>
+        <picklistObject>Assessment__c</picklistObject>
+    </dynamicChoiceSets>
     <formulas>
         <description>Create the Assessment&apos;s Name</description>
         <name>C501_buildThisAssessmentName</name>
@@ -80,6 +88,12 @@
                 <elementReference>C501_thisAssessmentsRecordTypeId</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>Type__c</field>
+            <value>
+                <elementReference>Type</elementReference>
+            </value>
+        </inputAssignments>
         <object>Assessment__c</object>
     </recordCreates>
     <recordLookups>
@@ -133,6 +147,14 @@
             <name>C501_Assessment_Instructions</name>
             <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(62, 62, 60);&quot;&gt;Please enter the family&apos;s scores in each domain, on a scale of 1-10&lt;/span&gt;.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Type</name>
+            <choiceReferences>Type_Picklist</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Type</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
         </fields>
         <fields>
             <name>C501_HH_Health_Wellbeing</name>

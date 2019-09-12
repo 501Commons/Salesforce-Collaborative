@@ -79,7 +79,7 @@
         <inputAssignments>
             <field>Type__c</field>
             <value>
-                <elementReference>Type_Picklist</elementReference>
+                <elementReference>Type</elementReference>
             </value>
         </inputAssignments>
         <object>Assessment__c</object>

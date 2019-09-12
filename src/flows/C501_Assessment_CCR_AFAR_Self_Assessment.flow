@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <description>Collects data specific to Connect Casino Road&apos;s All Families Are Ready Self Assessment; moved flow fault lookup to subflow</description>
+    <dynamicChoiceSets>
+        <name>Type_Picklist</name>
+        <dataType>Picklist</dataType>
+        <displayField xsi:nil="true"/>
+        <object xsi:nil="true"/>
+        <picklistField>Type__c</picklistField>
+        <picklistObject>Assessment__c</picklistObject>
+    </dynamicChoiceSets>
     <formulas>
         <description>Create the Assessment&apos;s Name</description>
         <name>C501_buildThisAssessmentName</name>
@@ -149,7 +157,7 @@
         <inputAssignments>
             <field>Type__c</field>
             <value>
-                <stringValue>Actual</stringValue>
+                <elementReference>Type</elementReference>
             </value>
         </inputAssignments>
         <object>Assessment__c</object>
@@ -205,6 +213,14 @@
             <name>C501_AFAR_Self_Assessment_Instructions</name>
             <fieldText>&lt;p&gt;Please enter scores from the family&apos;s Self Assessment, on a scale of 1-5&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Type</name>
+            <choiceReferences>Type_Picklist</choiceReferences>
+            <dataType>String</dataType>
+            <fieldText>Type</fieldText>
+            <fieldType>DropdownBox</fieldType>
+            <isRequired>true</isRequired>
         </fields>
         <fields>
             <name>C501_CCR_Supportive_People</name>
