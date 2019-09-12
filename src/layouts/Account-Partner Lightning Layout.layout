@@ -3,8 +3,7 @@
     <customButtons>npsp__Recalculate_Rollups</customButtons>
     <excludeButtons>CreateCallList</excludeButtons>
     <excludeButtons>CreateSurveyInvitation</excludeButtons>
-    <excludeButtons>DataDotComAccountInsights</excludeButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
+    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
     <excludeButtons>PartnerScorecard</excludeButtons>
     <excludeButtons>Share</excludeButtons>
@@ -23,18 +22,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>npe01__One2OneContact__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>C501_Number_of_Goals_Completed__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>C501_Number_of_Goals_Incomplete__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>C501_Exit_Successfully__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
