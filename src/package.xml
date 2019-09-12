@@ -171,7 +171,6 @@
         <members>Contact.C501_White__c</members>
         <members>Goal__c.Account__c</members>
         <members>Goal__c.Benchmark__c</members>
-        <members>Goal__c.Complete__c</members>
         <members>Goal__c.Domain__c</members>
         <members>Goal__c.Measurable_Goal__c</members>
         <members>Goal__c.Measurable__c</members>

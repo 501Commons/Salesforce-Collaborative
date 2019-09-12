@@ -110,7 +110,6 @@
         <fields>NAME</fields>
         <fields>Account__c</fields>
         <fields>Benchmark__c</fields>
-        <fields>Complete__c</fields>
         <fields>Status__c</fields>
         <relatedList>Goal__c.Measurable__c</relatedList>
         <sortField>Account__c</sortField>

@@ -195,7 +195,7 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Complete__c</fields>
+        <fields>Status__c</fields>
         <fields>Domain__c</fields>
         <fields>Term__c</fields>
         <fields>Measurable__c</fields>
