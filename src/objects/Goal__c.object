@@ -330,7 +330,6 @@
         <columns>NAME</columns>
         <columns>Account__c</columns>
         <columns>Term__c</columns>
-        <columns>Status__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Type__c</field>
@@ -413,7 +412,7 @@
             </values>
             <values>
                 <fullName>In Progress</fullName>
-                <default>true</default>
+                <default>false</default>
             </values>
             <values>
                 <fullName>On Hold</fullName>
@@ -421,7 +420,7 @@
             </values>
             <values>
                 <fullName>Planned</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
         </picklistValues>
         <picklistValues>
@@ -507,7 +506,7 @@
             </values>
             <values>
                 <fullName>In Progress</fullName>
-                <default>true</default>
+                <default>false</default>
             </values>
             <values>
                 <fullName>On Hold</fullName>
@@ -515,7 +514,7 @@
             </values>
             <values>
                 <fullName>Planned</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
         </picklistValues>
         <picklistValues>
