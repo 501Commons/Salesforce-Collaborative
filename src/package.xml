@@ -172,7 +172,6 @@
         <members>Goal__c.Account__c</members>
         <members>Goal__c.Benchmark__c</members>
         <members>Goal__c.Domain__c</members>
-        <members>Goal__c.Starting_Assessment__c</members>
         <members>Goal__c.Status__c</members>
         <members>Goal__c.Steps__c</members>
         <members>Goal__c.Target_Assessment__c</members>
@@ -196,8 +195,6 @@
         <members>Assessment__c</members>
         <members>C501_Fault_Email_Address__mdt</members>
         <members>Goal__c</members>
-        <members>Measurable__c</members>
-        <members>Measurement__c</members>
         <members>Release__c</members>
         <members>Step__c</members>
         <name>CustomObject</name>
@@ -261,8 +258,6 @@
         <members>Goal__c-Collaborative Goal Layout</members>
         <members>Goal__c-Family Goal Layout</members>
         <members>Goal__c-Goal Layout</members>
-        <members>Measurable__c-Measurable Layout</members>
-        <members>Measurement__c-Measurement Layout</members>
         <members>Release__c-Release Layout</members>
         <members>Step__c-Step Layout</members>
         <name>Layout</name>
@@ -272,7 +267,6 @@
         <members>Assessment__c.All</members>
         <members>Goal__c.All</members>
         <members>Goal__c.Family_Goals</members>
-        <members>Measurable__c.All</members>
         <members>Release__c.All</members>
         <members>Step__c.All</members>
         <members>Step__c.Collaborative_Steps</members>

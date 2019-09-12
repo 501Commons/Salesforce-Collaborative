@@ -146,6 +146,12 @@
                 <elementReference>C501_thisAssessmentsRecordTypeId</elementReference>
             </value>
         </inputAssignments>
+        <inputAssignments>
+            <field>Type__c</field>
+            <value>
+                <stringValue>Actual</stringValue>
+            </value>
+        </inputAssignments>
         <object>Assessment__c</object>
     </recordCreates>
     <recordLookups>

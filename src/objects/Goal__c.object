@@ -204,28 +204,6 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>Starting_Assessment__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Starting Assessment</label>
-        <lookupFilter>
-            <active>true</active>
-            <filterItems>
-                <field>Assessment__c.Type__c</field>
-                <operation>equals</operation>
-                <value>Starting</value>
-            </filterItems>
-            <isOptional>false</isOptional>
-        </lookupFilter>
-        <referenceTo>Assessment__c</referenceTo>
-        <relationshipLabel>Goals (Starting Assessment)</relationshipLabel>
-        <relationshipName>Goals1</relationshipName>
-        <required>true</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>Status__c</fullName>
         <externalId>false</externalId>
         <label>Status</label>
