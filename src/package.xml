@@ -216,9 +216,5 @@
         <members>Goal__c.Family</members>
         <name>RecordType</name>
     </types>
-    <types>
-        <members>Angular</members>
-        <name>StaticResource</name>
-    </types>
     <version>46.0</version>
 </Package>
