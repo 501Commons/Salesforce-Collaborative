@@ -154,20 +154,6 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>C501_Hispanic_or_Latino__c</fullName>
-        <description>UWSC - racial / ethnic identity options; question: Identify as Hispanic or Latino?</description>
-        <externalId>false</externalId>
-        <label>Hispanic or Latino</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>C501_Y_N</valueSetName>
-        </valueSet>
-    </fields>
-    <fields>
         <fullName>C501_Native_Hawaiian_Pacific_Islander__c</fullName>
         <defaultValue>false</defaultValue>
         <description>MLW/UWSC; Part of a group - What races are included in this family?</description>
@@ -388,17 +374,6 @@
         </picklistValues>
         <picklistValues>
             <picklist>C501_Female_Single_HH__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Hispanic_or_Latino__c</picklist>
             <values>
                 <fullName>No</fullName>
                 <default>false</default>
@@ -746,17 +721,6 @@
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>C501_Hispanic_or_Latino__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>C501_Needs_Interpreter__c</picklist>
             <values>
                 <fullName>No</fullName>
@@ -1032,17 +996,6 @@
         </picklistValues>
         <picklistValues>
             <picklist>C501_Female_Single_HH__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Hispanic_or_Latino__c</picklist>
             <values>
                 <fullName>No</fullName>
                 <default>false</default>

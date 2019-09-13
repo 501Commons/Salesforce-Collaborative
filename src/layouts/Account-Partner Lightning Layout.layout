@@ -47,7 +47,7 @@
         <label>Partner Info</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Required</behavior>
+                <behavior>Readonly</behavior>
                 <field>Collaborative__c</field>
             </layoutItems>
             <layoutItems>
