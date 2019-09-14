@@ -256,7 +256,7 @@
         <showHeader>true</showHeader>
     </screens>
     <startElementReference>MLW_Bridge_Scores</startElementReference>
-    <status>Active</status>
+    <status>Obsolete</status>
     <subflows>
         <description>send email if the flow goes belly up</description>
         <name>C501_Send_Fault_Email</name>

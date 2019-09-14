@@ -192,7 +192,7 @@
         <description>Release Of Information Expiration Date</description>
         <externalId>false</externalId>
         <label>Expiration</label>
-        <required>true</required>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>

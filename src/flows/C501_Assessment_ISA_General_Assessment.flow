@@ -169,7 +169,7 @@
         <showHeader>true</showHeader>
     </screens>
     <startElementReference>C501_ISA_General_Assessment</startElementReference>
-    <status>Active</status>
+    <status>Obsolete</status>
     <subflows>
         <description>send email if the flow goes belly up</description>
         <name>C501_Send_Fault_Email</name>

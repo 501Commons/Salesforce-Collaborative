@@ -283,6 +283,11 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>true</editable>
+        <field>Assessment__c.Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>false</editable>
         <field>Contact.C501_Age__c</field>
         <readable>true</readable>
@@ -355,6 +360,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Goal__c.Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Release__c.Expiration__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
