@@ -4,8 +4,7 @@
     <excludeButtons>AccountHierarchy</excludeButtons>
     <excludeButtons>CreateCallList</excludeButtons>
     <excludeButtons>CreateSurveyInvitation</excludeButtons>
-    <excludeButtons>DataDotComAccountInsights</excludeButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
+    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
     <excludeButtons>PartnerScorecard</excludeButtons>
     <excludeButtons>Share</excludeButtons>
@@ -24,10 +23,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>npe01__One2OneContact__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>C501_Eligibility_Mass_Action_Config__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -54,19 +49,10 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>C501_Collaborative_Status__c</field>
+                <field>Collaborative_Status__c</field>
             </layoutItems>
         </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>C501_Number_of_Goals_Incomplete__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>C501_Number_of_Goals_Completed__c</field>
-            </layoutItems>
-        </layoutColumns>
+        <layoutColumns/>
         <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
@@ -141,16 +127,6 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>Delete</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>6</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>EnableAsPartner</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>7</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>Edit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>0</sortOrder>
@@ -180,6 +156,11 @@
             <actionType>StandardButton</actionType>
             <sortOrder>5</sortOrder>
         </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Delete</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>6</sortOrder>
+        </platformActionListItems>
     </platformActionList>
     <relatedContent>
         <relatedContentItems>
@@ -189,13 +170,6 @@
             </layoutItem>
         </relatedContentItems>
     </relatedContent>
-    <relatedLists>
-        <fields>FULL_NAME</fields>
-        <fields>CONTACT.TITLE</fields>
-        <fields>CONTACT.EMAIL</fields>
-        <fields>CONTACT.PHONE1</fields>
-        <relatedList>RelatedContactList</relatedList>
-    </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
         <fields>Contact_Link__c</fields>
@@ -207,11 +181,66 @@
         <relatedList>npe5__Affiliation__c.npe5__Organization__c</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>OPPORTUNITY.NAME</fields>
+        <fields>OPPORTUNITY.STAGE_NAME</fields>
+        <fields>OPPORTUNITY.AMOUNT</fields>
+        <fields>OPPORTUNITY.CLOSE_DATE</fields>
+        <relatedList>RelatedOpportunityList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>npe03__Date_Established__c</fields>
+        <fields>npe03__Last_Payment_Date__c</fields>
+        <fields>npe03__Next_Payment_Date__c</fields>
+        <fields>npe03__Installment_Amount__c</fields>
+        <fields>npe03__Total__c</fields>
+        <fields>npe03__Total_Paid_Installments__c</fields>
+        <relatedList>npe03__Recurring_Donation__c.npe03__Organization__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>npsp__Opportunity__c</fields>
+        <fields>npsp__Amount__c</fields>
+        <fields>npsp__Role__c</fields>
+        <relatedList>npsp__Account_Soft_Credit__c.npsp__Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
         <fields>NAME</fields>
         <fields>npsp__Formula_MailingAddress__c</fields>
         <fields>npsp__Verified__c</fields>
         <fields>npsp__Verification_Status__c</fields>
         <relatedList>npsp__Address__c.npsp__Household_Account__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>npsp__Engagement_Plan_Template__c</fields>
+        <fields>CREATEDBY_USER</fields>
+        <fields>LAST_UPDATE</fields>
+        <fields>npsp__Status__c</fields>
+        <relatedList>npsp__Engagement_Plan__c.npsp__Account__c</relatedList>
+        <sortField>CREATEDBY_USER</sortField>
+        <sortOrder>Desc</sortOrder>
+    </relatedLists>
+    <relatedLists>
+        <fields>TASK.SUBJECT</fields>
+        <fields>TASK.WHO_NAME</fields>
+        <fields>TASK.WHAT_NAME</fields>
+        <fields>ACTIVITY.TASK</fields>
+        <fields>TASK.DUE_DATE</fields>
+        <fields>TASK.STATUS</fields>
+        <fields>TASK.PRIORITY</fields>
+        <fields>CORE.USERS.FULL_NAME</fields>
+        <relatedList>RelatedActivityList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>TASK.SUBJECT</fields>
+        <fields>TASK.WHO_NAME</fields>
+        <fields>TASK.WHAT_NAME</fields>
+        <fields>ACTIVITY.TASK</fields>
+        <fields>TASK.DUE_DATE</fields>
+        <fields>CORE.USERS.FULL_NAME</fields>
+        <fields>TASK.LAST_UPDATE</fields>
+        <relatedList>RelatedHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedContentNoteList</relatedList>
@@ -221,13 +250,15 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <relatedList>Assessment__c.Account__c</relatedList>
+        <relatedList>Element__c.Collaborative__c</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Status__c</fields>
+        <fields>Complete__c</fields>
         <fields>Domain__c</fields>
         <fields>Term__c</fields>
+        <fields>Measurable__c</fields>
+        <fields>Measurable_Goal__c</fields>
         <relatedList>Goal__c.Account__c</relatedList>
     </relatedLists>
     <relatedLists>
@@ -247,19 +278,19 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>C501_Partner__c</fields>
-        <fields>C501_Start_Date__c</fields>
-        <fields>C501_End_Date__c</fields>
-        <fields>C501_Brief_Description__c</fields>
-        <fields>C501_Partnership_Status__c</fields>
-        <relatedList>C501_Partnership__c.C501_Collaborative__c</relatedList>
-        <sortField>C501_Start_Date__c</sortField>
-        <sortOrder>Asc</sortOrder>
+        <fields>CREATED_DATE</fields>
+        <fields>Next_Assessment__c</fields>
+        <relatedList>Assessment__c.Account__c</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>NAME</fields>
-        <fields>User__c</fields>
-        <relatedList>C501_Collaborative_User__c.Collaborative__c</relatedList>
+        <fields>ACCOUNT.NAME</fields>
+        <fields>ACCOUNT.RECORDTYPE</fields>
+        <fields>ACCOUNT.TYPE</fields>
+        <fields>npe01__One2OneContact__c</fields>
+        <fields>ACCOUNT.ADDRESS1_CITY</fields>
+        <fields>ACCOUNT.PHONE1</fields>
+        <fields>npo02__TotalOppAmount__c</fields>
+        <relatedList>Account.Parent__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
@@ -268,7 +299,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h1U0000062w2Y</masterLabel>
+        <masterLabel>00h0j000000RQ2F</masterLabel>
         <sizeX>1</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

@@ -32,12 +32,20 @@
                 <field>Domain__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Steps__c</field>
+                <behavior>Readonly</behavior>
+                <field>Complete__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>Measurable__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>Measurable_Goal__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Target_Assessment__c</field>
+                <field>Steps__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns/>

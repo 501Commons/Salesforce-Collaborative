@@ -129,7 +129,7 @@
     <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Release_Record_Page</content>
+        <content>C501_Release_Record_Page</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -148,14 +148,13 @@
     <compactLayouts>
         <fullName>C501_Release</fullName>
         <fields>Name</fields>
-        <fields>Account__c</fields>
         <fields>Expiration__c</fields>
-        <fields>CreatedById</fields>
+        <fields>Account__c</fields>
         <label>Release</label>
     </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Release of Information - ROIs</description>
-    <enableActivities>false</enableActivities>
+    <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
@@ -189,33 +188,11 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>Contact__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Contact</label>
-        <lookupFilter>
-            <active>true</active>
-            <filterItems>
-                <field>$Source.Account__c</field>
-                <operation>equals</operation>
-                <valueField>Contact.AccountId</valueField>
-            </filterItems>
-            <isOptional>false</isOptional>
-        </lookupFilter>
-        <referenceTo>Contact</referenceTo>
-        <relationshipLabel>Releases</relationshipLabel>
-        <relationshipName>Releases</relationshipName>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>Expiration__c</fullName>
         <description>Release Of Information Expiration Date</description>
         <externalId>false</externalId>
         <label>Expiration</label>
-        <required>false</required>
+        <required>true</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Date</type>

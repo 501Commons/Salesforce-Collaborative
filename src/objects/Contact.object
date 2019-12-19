@@ -306,15 +306,6 @@ IF( NOT( ISBLANK( Birthdate ) ) ,
         <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>C501_Latino_or_Hispanic__c</fullName>
-        <defaultValue>false</defaultValue>
-        <description>Change Hispanic/Latino to checkboxes instead of picklist to be same as other demographic fields</description>
-        <externalId>false</externalId>
-        <label>Latino or Hispanic</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
         <fullName>C501_Native_Hawaiian_or_Pacific_Islander__c</fullName>
         <defaultValue>false</defaultValue>
         <description>UWSC - one of a number of racial identity options</description>
@@ -354,19 +345,16 @@ IF( NOT( ISBLANK( Birthdate ) ) ,
                     <label>Female</label>
                 </value>
                 <value>
-                    <fullName>Other</fullName>
+                    <fullName>Non-Binary</fullName>
                     <default>false</default>
-                    <label>Other</label>
+                    <label>Non-Binary</label>
+                </value>
+                <value>
+                    <fullName>Custom</fullName>
+                    <default>false</default>
+                    <label>Custom</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
-    </fields>
-    <fields>
-        <fullName>Set_As_Account_Primary_Contact__c</fullName>
-        <defaultValue>false</defaultValue>
-        <externalId>false</externalId>
-        <label>Set As Account Primary Contact</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <type>Checkbox</type>
     </fields>
 </CustomObject>

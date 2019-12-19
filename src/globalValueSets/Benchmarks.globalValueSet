@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Exploring</fullName>
+        <default>true</default>
+        <label>Exploring</label>
+    </customValue>
+    <customValue>
+        <fullName>Emerging</fullName>
+        <default>false</default>
+        <label>Emerging</label>
+    </customValue>
+    <customValue>
+        <fullName>Sustaining</fullName>
+        <default>false</default>
+        <label>Sustaining</label>
+    </customValue>
+    <customValue>
+        <fullName>Systems Change</fullName>
+        <default>false</default>
+        <label>Systems Change</label>
+    </customValue>
+    <customValue>
+        <fullName>Proof Point</fullName>
+        <default>false</default>
+        <label>Proof Point</label>
+    </customValue>
+    <customValue>
+        <fullName>Systems Transformation</fullName>
+        <default>false</default>
+        <label>Systems Transformation</label>
+    </customValue>
+    <masterLabel>Benchmarks</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
