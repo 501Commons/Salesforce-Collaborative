@@ -42,6 +42,17 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>C501_Best_Contact_Time_Method__c</fullName>
+        <externalId>false</externalId>
+        <formula>npe01__One2OneContact__r.C501_Best_Contact_Time_Method__c</formula>
+        <inlineHelpText>Primary Contact&apos;s best time and method to contact.</inlineHelpText>
+        <label>Best Contact Time/Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>C501_Black_or_African_American__c</fullName>
         <defaultValue>false</defaultValue>
         <description>MLW; Part of a group - What races are included in this family?</description>
@@ -50,6 +61,19 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_CORE_Family_Income__c</fullName>
+        <description>HH&apos;s Annual Income</description>
+        <externalId>false</externalId>
+        <inlineHelpText>HH&apos;s Annual Income</inlineHelpText>
+        <label>Family Income</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
     </fields>
     <fields>
         <fullName>C501_CollabName__c</fullName>
@@ -131,6 +155,16 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>C501_Eligibility_last_evaluated__c</fullName>
+        <description>Date/Time stamp of last run of Mass Action to evaluate eligibility.</description>
+        <externalId>false</externalId>
+        <label>Eligibility last evaluated</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
         <fullName>C501_Exit_Successfully__c</fullName>
         <externalId>false</externalId>
         <formula>AND(C501_Number_of_Goals_Completed__c &gt; 0, C501_Number_of_Goals_Incomplete__c &lt;= 0)</formula>
@@ -188,6 +222,16 @@
         <externalId>false</externalId>
         <inlineHelpText>Check the box if this family is headed by a single female</inlineHelpText>
         <label>Female Single HH</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Is_Eligible__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Does family meet eligibility requirements out determined by the collaboration? Field populated by Mass Action Scheduler and Flow.</description>
+        <externalId>false</externalId>
+        <label>Is Eligible</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
@@ -348,6 +392,53 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Exit_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Exit Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Completed Goals</fullName>
+                    <default>false</default>
+                    <label>Completed Goals</label>
+                </value>
+                <value>
+                    <fullName>Didn&apos;t Complete Goals</fullName>
+                    <default>false</default>
+                    <label>Didn&apos;t Complete Goals</label>
+                </value>
+                <value>
+                    <fullName>Family Dropped</fullName>
+                    <default>false</default>
+                    <label>Family Dropped</label>
+                </value>
+                <value>
+                    <fullName>Other (refer to notes)</fullName>
+                    <default>false</default>
+                    <label>Other (refer to notes)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FPL_Updated__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What criteria last updated FPL. &lt;DATE&gt; | &lt;FPL SETTING NAME&gt; | &lt;REGION&gt;</inlineHelpText>
+        <label>FPL Updated</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Priority__c</fullName>
         <externalId>false</externalId>
         <label>Priority</label>
@@ -475,6 +566,25 @@
             </values>
             <values>
                 <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Exit_Reason__c</picklist>
+            <values>
+                <fullName>Completed Goals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Didn%27t Complete Goals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family Dropped</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28refer to notes%29</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -813,6 +923,25 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>Exit_Reason__c</picklist>
+            <values>
+                <fullName>Completed Goals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Didn%27t Complete Goals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family Dropped</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28refer to notes%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>Industry</picklist>
             <values>
                 <fullName>Agriculture</fullName>
@@ -1087,6 +1216,25 @@
             </values>
             <values>
                 <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Exit_Reason__c</picklist>
+            <values>
+                <fullName>Completed Goals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Didn%27t Complete Goals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family Dropped</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28refer to notes%29</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

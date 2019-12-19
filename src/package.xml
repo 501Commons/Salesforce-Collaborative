@@ -17,7 +17,9 @@
     <types>
         <members>Account.C501_American_Indian_or_Alaska_Native__c</members>
         <members>Account.C501_Asian__c</members>
+        <members>Account.C501_Best_Contact_Time_Method__c</members>
         <members>Account.C501_Black_or_African_American__c</members>
+        <members>Account.C501_CORE_Family_Income__c</members>
         <members>Account.C501_CollabName__c</members>
         <members>Account.C501_Collab_Abbrev__c</members>
         <members>Account.C501_Collaborative_Status__c</members>
@@ -39,7 +41,11 @@
         <members>Account.C501_Referral_Date__c</members>
         <members>Account.C501_White__c</members>
         <members>Account.Collaborative__c</members>
+        <members>Account.Exit_Reason__c</members>
+        <members>Account.FPL_Updated__c</members>
         <members>Account.Priority__c</members>
+        <members>Account.C501_Is_Eligible__c</members>
+        <members>Account.C501_Eligibility_last_evaluated__c</members>
         <members>Assessment__c.Account__c</members>
         <members>Assessment__c.C501_CCR_Affordable_Healthcare__c</members>
         <members>Assessment__c.C501_CCR_Child_Developing__c</members>
@@ -143,6 +149,7 @@
         <members>C501_CORE_Family_Page</members>
         <members>CORE_UtilityBar</members>
         <members>CORE_UtilityBar1</members>
+        <members>Goal_Record_Page</members>
         <members>Partnership_Record_Page</members>
         <members>Release_Record_Page</members>
         <name>FlexiPage</name>
@@ -208,6 +215,7 @@
     </types>
     <types>
         <members>CORE Program Staff</members>
+        <members>CORE Admin</members>
         <name>Profile</name>
     </types>
     <types>
