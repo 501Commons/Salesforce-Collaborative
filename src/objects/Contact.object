@@ -40,7 +40,7 @@ IF( NOT( ISBLANK( Birthdate ) ) ,
     <fields>
         <fullName>C501_American_Indian_or_Alaska_Native__c</fullName>
         <defaultValue>false</defaultValue>
-        <description>UWSC - one of a number of racial identity options</description>
+        <description>CoreId/Module4 - will be used to select a value from the Race picklist</description>
         <externalId>false</externalId>
         <label>American Indian or Alaska Native</label>
         <trackFeedHistory>false</trackFeedHistory>
@@ -49,7 +49,7 @@ IF( NOT( ISBLANK( Birthdate ) ) ,
     <fields>
         <fullName>C501_Asian__c</fullName>
         <defaultValue>false</defaultValue>
-        <description>UWSC - one of a number of racial identity options</description>
+        <description>CoreId/Module4 - will be used to select a value from the Race picklist</description>
         <externalId>false</externalId>
         <label>Asian</label>
         <trackFeedHistory>false</trackFeedHistory>
@@ -80,7 +80,7 @@ IF( NOT( ISBLANK( Birthdate ) ) ,
     <fields>
         <fullName>C501_Black_or_African_American__c</fullName>
         <defaultValue>false</defaultValue>
-        <description>UWSC - one of a number of racial identity options</description>
+        <description>CoreId/Module4 - will be used to select a value from the Race picklist</description>
         <externalId>false</externalId>
         <label>Black or African American</label>
         <trackFeedHistory>false</trackFeedHistory>
@@ -326,7 +326,7 @@ IF( NOT( ISBLANK( Birthdate ) ) ,
     <fields>
         <fullName>C501_White__c</fullName>
         <defaultValue>false</defaultValue>
-        <description>UWSC - one of a number of racial identity options</description>
+        <description>CoreId/Module4 - will be used to select a value from the Race picklist</description>
         <externalId>false</externalId>
         <label>White</label>
         <trackFeedHistory>false</trackFeedHistory>
@@ -334,9 +334,8 @@ IF( NOT( ISBLANK( Birthdate ) ) ,
     </fields>
     <fields>
         <fullName>Gender__c</fullName>
-        <description>This field is configured in NPSP Settings &gt; Relationships &gt; Relationships as the Gender field. Do not delete this field unless you remove the reference or select another Gender field there.</description>
         <externalId>false</externalId>
-        <label>Gender (dep)</label>
+        <label>Gender</label>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <type>Picklist</type>
@@ -357,6 +356,26 @@ IF( NOT( ISBLANK( Birthdate ) ) ,
                     <fullName>Other</fullName>
                     <default>false</default>
                     <label>Other</label>
+                </value>
+                <value>
+                    <fullName>No Response</fullName>
+                    <default>false</default>
+                    <label>No Response</label>
+                </value>
+                <value>
+                    <fullName>Queer</fullName>
+                    <default>false</default>
+                    <label>Queer</label>
+                </value>
+                <value>
+                    <fullName>Trans</fullName>
+                    <default>false</default>
+                    <label>Trans</label>
+                </value>
+                <value>
+                    <fullName>Prefer not to disclose</fullName>
+                    <default>false</default>
+                    <label>Prefer not to disclose</label>
                 </value>
             </valueSetDefinition>
         </valueSet>

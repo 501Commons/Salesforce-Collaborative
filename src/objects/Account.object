@@ -1074,7 +1074,6 @@ AND( C501_Child_Aged_0_8__c,
         <fullName>Household_Accounts</fullName>
         <columns>ACCOUNT.NAME</columns>
         <columns>npe01__One2OneContact__c</columns>
-        <columns>Priority__c</columns>
         <columns>C501_Primary_Languages__c</columns>
         <columns>C501_Family_Status__c</columns>
         <filterScope>Everything</filterScope>
