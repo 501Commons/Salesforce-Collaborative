@@ -103,6 +103,7 @@
         <members>Contact.Set_As_Account_Primary_Contact__c</members>
         <members>Goal__c.Account__c</members>
         <members>Goal__c.Benchmark__c</members>
+        <members>Goal__c.C501_Contact__c</members>
         <members>Goal__c.Domain__c</members>
         <members>Goal__c.Status__c</members>
         <members>Goal__c.Steps__c</members>
@@ -110,6 +111,7 @@
         <members>Goal__c.Term__c</members>
         <members>Goal__c.Type__c</members>
         <members>Release__c.Account__c</members>
+        <members>Release__c.Contact__c</members>
         <members>Release__c.Expiration__c</members>
         <members>Step__c.Account_Type__c</members>
         <members>Step__c.Goal__c</members>
