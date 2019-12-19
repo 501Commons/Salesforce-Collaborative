@@ -236,12 +236,16 @@
     <types>
         <members>Assessment__c.C501_CCR_AFAR_Self_Assessment</members>
         <members>Assessment__c.C501_HH_Domain_Needs_Assessment</members>
+        <members>Assessment__c.C501_ISA_Assessment</members>
+        <members>Assessment__c.C501_MLW_Bridge_Scores</members>
+        <members>Assessment__c.C501_NCCC_Assessment</members>
         <name>FieldSet</name>
     </types>
     <types>
         <members>C501_Assessment_Record_Page</members>
         <members>C501_CORE_Contact_Page</members>
         <members>C501_CORE_Family_Page</members>
+        <members>C501_CORE_Org_Record_Page</members>
         <members>C501_Goal_Record_Page</members>
         <members>CORE_UtilityBar</members>
         <members>CORE_UtilityBar1</members>
@@ -267,9 +271,7 @@
         <name>GlobalValueSet</name>
     </types>
     <types>
-        <members>Account-Admin Family Lightning Layout</members>
         <members>Account-Collaborative Lightning Layout</members>
-        <members>Account-Family Lightning Layout</members>
         <members>Account-Partner Lightning Layout</members>
         <members>Assessment__c-Assessment Layout</members>
         <members>Assessment__c-CCR%3A AFAR Self Assessment</members>
@@ -319,10 +321,8 @@
         <members>Account.C501_CORE_Family_Update</members>
         <members>Account.C501_CORE_New_Client_Contact</members>
         <members>Account.C501_CORE_New_Family_Contact</members>
-        <members>Account.C501_Check_Eligibility</members>
         <members>Account.C501_HH_Domain_Needs_Assessment</members>
         <members>Account.C501_HH_Eligibility</members>
-        <members>Account.C501_Request_Delete</members>
         <members>CORE_New_Client_Contact</members>
         <members>Contact.C501_CORE_Update_Client_Contact</members>
         <name>QuickAction</name>

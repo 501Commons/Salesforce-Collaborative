@@ -53,15 +53,6 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.HH_Account</recordType>
         <type>Flexipage</type>
-        <profile>CORE Staff (TB Deleted)</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>C501_CORE_Family_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.HH_Account</recordType>
-        <type>Flexipage</type>
         <profile>Admin</profile>
     </profileActionOverrides>
     <profileActionOverrides>
@@ -71,25 +62,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Collaborative</recordType>
         <type>Flexipage</type>
-        <profile>CORE Staff (TB Deleted)</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>C501_CORE_Org_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Collaborative</recordType>
-        <type>Flexipage</type>
         <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>C501_CORE_Org_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Organization</recordType>
-        <type>Flexipage</type>
-        <profile>CORE Staff (TB Deleted)</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>

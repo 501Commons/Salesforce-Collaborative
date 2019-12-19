@@ -897,10 +897,6 @@
         <recordType>Account.Collaborative</recordType>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Account-Family Lightning Layout</layout>
-        <recordType>Account.HH_Account</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Account-Partner Lightning Layout</layout>
         <recordType>Account.Organization</recordType>
     </layoutAssignments>
