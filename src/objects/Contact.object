@@ -104,4 +104,12 @@ IF( NOT( ISBLANK( Birthdate ) ) ,
         <trackFeedHistory>false</trackFeedHistory>
         <type>Checkbox</type>
     </fields>
+    <fields>
+        <fullName>Set_As_Account_Primary_Contact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Set As Account Primary Contact</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
 </CustomObject>

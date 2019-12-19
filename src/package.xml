@@ -6,6 +6,7 @@
     </types>
     <types>
         <members>Account.C501_CORE_Family</members>
+        <members>Account.C501_CORE_Org_Layout</members>
         <members>Contact.C501_CORE_Client_Contact</members>
         <name>CompactLayout</name>
     </types>
@@ -18,7 +19,9 @@
         <members>Account.C501_Asian__c</members>
         <members>Account.C501_Black_or_African_American__c</members>
         <members>Account.C501_CollabName__c</members>
+        <members>Account.C501_Collab_Abbrev__c</members>
         <members>Account.C501_Collaborative_Status__c</members>
+        <members>Account.C501_Eligibility_Mass_Action_Config__c</members>
         <members>Account.C501_Exit_Successfully__c</members>
         <members>Account.C501_Family_Size__c</members>
         <members>Account.C501_Family_Status__c</members>
@@ -30,7 +33,11 @@
         <members>Account.C501_Number_of_Goals_Completed__c</members>
         <members>Account.C501_Number_of_Goals_Incomplete__c</members>
         <members>Account.C501_Partner_Status__c</members>
+        <members>Account.C501_Primary_Email__c</members>
         <members>Account.C501_Primary_Languages__c</members>
+        <members>Account.C501_Primary_Phone__c</members>
+        <members>Account.Priority__c</members>
+        <members>Account.C501_Referral_Date__c</members>
         <members>Account.C501_White__c</members>
         <members>Account.Collaborative__c</members>
         <members>Assessment__c.Account__c</members>
@@ -74,6 +81,9 @@
         <members>Assessment__c.Notify_When_Next_Assessment_Due__c</members>
         <members>C501_Fault_Email_Address__mdt.C501_Org_Name__c</members>
         <members>C501_Fault_Email_Address__mdt.Email_Address__c</members>
+        <members>C501_Partnership__c.C501_Partner__c</members>
+        <members>C501_Collaborative_User__c.Collaborative__c</members>
+        <members>Contact.C501_Latino_or_Hispanic__c</members>
         <members>Contact.C501_Age__c</members>
         <members>Contact.C501_American_Indian_or_Alaska_Native__c</members>
         <members>Contact.C501_Asian__c</members>
@@ -84,6 +94,7 @@
         <members>Contact.C501_Hispanic_or_Latino__c</members>
         <members>Contact.C501_Native_Hawaiian_or_Pacific_Islander__c</members>
         <members>Contact.C501_White__c</members>
+        <members>Contact.Set_As_Account_Primary_Contact__c</members>
         <members>Goal__c.Account__c</members>
         <members>Goal__c.Benchmark__c</members>
         <members>Goal__c.Domain__c</members>
@@ -107,8 +118,14 @@
         <name>CustomMetadata</name>
     </types>
     <types>
+        <members>C501_Collabs</members>
+        <name>GlobalValueSet</name>
+    </types>
+    <types>
         <members>Assessment__c</members>
+        <members>C501_Collaborative_User__c</members>
         <members>C501_Fault_Email_Address__mdt</members>
+        <members>C501_Partnership__c</members>
         <members>Goal__c</members>
         <members>Release__c</members>
         <members>Step__c</members>
@@ -129,6 +146,9 @@
         <members>C501_CORE_Contact_Page</members>
         <members>C501_CORE_Family_Page</members>
         <members>CORE_UtilityBar</members>
+        <members>CORE_UtilityBar1</members>
+        <members>Release_Record_Page</members>
+        <members>Partnership_Record_Page</members>
         <name>FlexiPage</name>
     </types>
     <types>

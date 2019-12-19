@@ -12,6 +12,15 @@
         <fields>OwnerId</fields>
         <label>CORE Family</label>
     </compactLayouts>
+    <compactLayouts>
+        <fullName>C501_CORE_Org_Layout</fullName>
+        <fields>Name</fields>
+        <fields>npe01__One2OneContact__c</fields>
+        <fields>Phone</fields>
+        <fields>BillingAddress</fields>
+        <fields>OwnerId</fields>
+        <label>CORE Org Layout</label>
+    </compactLayouts>
     <fields>
         <fullName>C501_American_Indian_or_Alaska_Native__c</fullName>
         <defaultValue>false</defaultValue>
@@ -58,6 +67,20 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>C501_Collab_Abbrev__c</fullName>
+        <description>Hidden field - not on page layouts; used in Assessments flow to identify which assessment to bring up for a given family; CCR: Connect Casino Road; HH: Homeward House; ISA: Improving School Attendance; MLW: Making Life Work; NCCC: North Counties&apos; Community Collaborative</description>
+        <externalId>false</externalId>
+        <label>Collab Abbrev</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>C501_Collabs</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>C501_Collaborative_Status__c</fullName>
         <externalId>false</externalId>
         <label>Collaborative Status</label>
@@ -91,6 +114,21 @@
                 </value>
             </valueSetDefinition>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>C501_Eligibility_Mass_Action_Config__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Mass Action Configuration to manually run when evaluating eligibility.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Mass Action Configuration to manually run when evaluating eligibility.</inlineHelpText>
+        <label>Eligibility Mass Action Config</label>
+        <referenceTo>dca_mass_action__Mass_Action_Configuration__c</referenceTo>
+        <relationshipLabel>Accounts</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>C501_Exit_Successfully__c</fullName>
@@ -234,6 +272,17 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>C501_Primary_Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>npe01__One2OneContact__r.Email</formula>
+        <inlineHelpText>Primary Contact Email</inlineHelpText>
+        <label>Primary Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>C501_Primary_Languages__c</fullName>
         <description>CCR, HH, ISA, MLW, NCC; All ask about family languages</description>
         <externalId>false</externalId>
@@ -244,6 +293,16 @@
         <trackHistory>false</trackHistory>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Referral_Date__c</fullName>
+        <description>HH Referral: &quot;Today&apos;s Date&quot;; ISA Referral: &quot;Date&quot;</description>
+        <externalId>false</externalId>
+        <label>Referral Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>C501_White__c</fullName>
@@ -317,6 +376,29 @@
             </values>
             <values>
                 <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C501_Collab_Abbrev__c</picklist>
+            <values>
+                <fullName>CCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ISA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MLW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NCCC</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -624,6 +706,29 @@
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>C501_Collab_Abbrev__c</picklist>
+            <values>
+                <fullName>CCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ISA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MLW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NCCC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>C501_Collaborative_Status__c</picklist>
             <values>
                 <fullName>Active</fullName>
@@ -883,6 +988,29 @@
             </values>
             <values>
                 <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>C501_Collab_Abbrev__c</picklist>
+            <values>
+                <fullName>CCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HH</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ISA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MLW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NCCC</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

@@ -7,9 +7,11 @@ project:
         api_version: '46.0'
     dependencies:
         - github: 'https://github.com/SalesforceFoundation/Cumulus'
+        - github: 'https://github.com/douglascayers-org/sfdx-mass-action-scheduler'
+        - github: 'https://github.com/501Commons/Salesforce-Mass-Merge'
+        - github: 'https://github.com/501Commons/Salesforce-Service-Management'
         - github: 'https://github.com/501Commons/Salesforce-Collaborative-CaseManagement'
         - github: 'https://github.com/501Commons/Salesforce-Collaborative-Code'
-        - github: 'https://github.com/501Commons/Salesforce-Service-Management'
     source_format: sfdx
 
 tasks:
