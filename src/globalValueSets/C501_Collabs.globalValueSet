@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CCR</fullName>
+        <default>false</default>
+        <label>CCR</label>
+    </customValue>
+    <customValue>
+        <fullName>HH</fullName>
+        <default>false</default>
+        <label>HH</label>
+    </customValue>
+    <customValue>
+        <fullName>ISA</fullName>
+        <default>false</default>
+        <label>ISA</label>
+    </customValue>
+    <customValue>
+        <fullName>MLW</fullName>
+        <default>false</default>
+        <label>MLW</label>
+    </customValue>
+    <customValue>
+        <fullName>NCCC</fullName>
+        <default>false</default>
+        <label>NCCC</label>
+    </customValue>
+    <description>List of Collab abbreviations - used in Assessments flow to identify which assessment to bring up for a given family; CCR: Connect Casino Road; HH: Homeward House; ISA: Improving School Attendance; MLW: Making Life Work; NCCC: North Counties&apos; Community Collaborative</description>
+    <masterLabel>Collabs</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

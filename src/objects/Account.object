@@ -295,6 +295,17 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>C501_Primary_Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>npe01__One2OneContact__r.Phone</formula>
+        <inlineHelpText>Primary Contact phone.</inlineHelpText>
+        <label>Primary Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>C501_Referral_Date__c</fullName>
         <description>HH Referral: &quot;Today&apos;s Date&quot;; ISA Referral: &quot;Date&quot;</description>
         <externalId>false</externalId>
@@ -335,6 +346,18 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <listViews>
         <fullName>Household_Accounts</fullName>

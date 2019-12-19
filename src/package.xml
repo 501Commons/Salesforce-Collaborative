@@ -36,10 +36,10 @@
         <members>Account.C501_Primary_Email__c</members>
         <members>Account.C501_Primary_Languages__c</members>
         <members>Account.C501_Primary_Phone__c</members>
-        <members>Account.Priority__c</members>
         <members>Account.C501_Referral_Date__c</members>
         <members>Account.C501_White__c</members>
         <members>Account.Collaborative__c</members>
+        <members>Account.Priority__c</members>
         <members>Assessment__c.Account__c</members>
         <members>Assessment__c.C501_CCR_Affordable_Healthcare__c</members>
         <members>Assessment__c.C501_CCR_Child_Developing__c</members>
@@ -79,11 +79,10 @@
         <members>Assessment__c.C501_NCCC_Measure_3__c</members>
         <members>Assessment__c.Next_Assessment__c</members>
         <members>Assessment__c.Notify_When_Next_Assessment_Due__c</members>
+        <members>C501_Collaborative_User__c.Collaborative__c</members>
         <members>C501_Fault_Email_Address__mdt.C501_Org_Name__c</members>
         <members>C501_Fault_Email_Address__mdt.Email_Address__c</members>
         <members>C501_Partnership__c.C501_Partner__c</members>
-        <members>C501_Collaborative_User__c.Collaborative__c</members>
-        <members>Contact.C501_Latino_or_Hispanic__c</members>
         <members>Contact.C501_Age__c</members>
         <members>Contact.C501_American_Indian_or_Alaska_Native__c</members>
         <members>Contact.C501_Asian__c</members>
@@ -92,6 +91,7 @@
         <members>Contact.C501_Birth_Year_est__c</members>
         <members>Contact.C501_Black_or_African_American__c</members>
         <members>Contact.C501_Hispanic_or_Latino__c</members>
+        <members>Contact.C501_Latino_or_Hispanic__c</members>
         <members>Contact.C501_Native_Hawaiian_or_Pacific_Islander__c</members>
         <members>Contact.C501_White__c</members>
         <members>Contact.Set_As_Account_Primary_Contact__c</members>
@@ -116,10 +116,6 @@
         <members>C501_Fault_Email_Address.UwscMaster</members>
         <members>C501_Fault_Email_Address.UwscProduction</members>
         <name>CustomMetadata</name>
-    </types>
-    <types>
-        <members>C501_Collabs</members>
-        <name>GlobalValueSet</name>
     </types>
     <types>
         <members>Assessment__c</members>
@@ -147,8 +143,8 @@
         <members>C501_CORE_Family_Page</members>
         <members>CORE_UtilityBar</members>
         <members>CORE_UtilityBar1</members>
-        <members>Release_Record_Page</members>
         <members>Partnership_Record_Page</members>
+        <members>Release_Record_Page</members>
         <name>FlexiPage</name>
     </types>
     <types>
@@ -162,6 +158,10 @@
         <members>C501_TEMPLATE_ScreenFlowForSpecificAssessment</members>
         <members>Send_Flow_Fault_Email</members>
         <name>Flow</name>
+    </types>
+    <types>
+        <members>C501_Collabs</members>
+        <name>GlobalValueSet</name>
     </types>
     <types>
         <members>Benchmarks</members>
