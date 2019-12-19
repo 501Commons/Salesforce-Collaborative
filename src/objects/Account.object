@@ -22,6 +22,17 @@
         <label>CORE Org Layout</label>
     </compactLayouts>
     <fields>
+        <fullName>C501_Account_Owner_Email__c</fullName>
+        <description>Email address of Account Owner. Used in quick actions to send related emails.</description>
+        <externalId>false</externalId>
+        <formula>Owner.Email</formula>
+        <label>Account Owner Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>C501_American_Indian_or_Alaska_Native__c</fullName>
         <defaultValue>false</defaultValue>
         <description>MLW/UWSC; Part of a group - What races are included in this family?</description>
@@ -63,6 +74,28 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>C501_CCR_Immigrant_or_Refugee__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>CCR Eligibility: &quot;Identify as an immigrant or refugee&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR Eligibility: &quot;Identify as an immigrant or refugee&quot;</inlineHelpText>
+        <label>Immigrant or Refugee</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_CCR_Near_Casino_Road__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>CCR Eligibility: &quot;Live in the Casino Road area&quot; - preferably within 1/2 a mile</description>
+        <externalId>false</externalId>
+        <inlineHelpText>CCR Eligibility: &quot;Live in the Casino Road area&quot; - preferably within 1/2 a mile</inlineHelpText>
+        <label>Near Casino Road</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>C501_CORE_Family_Income__c</fullName>
         <description>HH&apos;s Annual Income</description>
         <externalId>false</externalId>
@@ -74,6 +107,16 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>C501_Child_Aged_0_8__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>HH Eligibility: &quot;Child named in referral is aged 0-8&quot;; ISA Eligibility: &quot;The child is ages 0-8 years old and is one of the following:&quot;</description>
+        <externalId>false</externalId>
+        <label>Child Aged 0-8</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>C501_CollabName__c</fullName>
@@ -227,11 +270,594 @@
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>C501_HH_CPS_Case_Status__c</fullName>
+        <description>HH Referral: &quot;Status of CPS case&quot;</description>
+        <externalId>false</externalId>
+        <label>CPS Case Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_HH_CPS_Referral_Date__c</fullName>
+        <description>HH Referral: &quot;Date of CPS referral&quot;</description>
+        <externalId>false</externalId>
+        <label>CPS Referral Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Child_Aged_0_1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>HH Eligibility: &quot;Child named in referral is aged 0-1&quot;</description>
+        <externalId>false</externalId>
+        <label>Child Aged 0-1</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Child_Release_Date__c</fullName>
+        <description>HH Referral: &quot;Child release date from hospital&quot;</description>
+        <externalId>false</externalId>
+        <label>Child Release Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Eligible__c</fullName>
+        <description>HH Eligibility: 
+&quot;Child named in referral is aged 0-8
+Child is impacted by substance abuse
+Family defined as low-income&quot;
+OR
+&quot;Child named in referral is aged 0-1
+Opiates are impacting infant
+Family defined as low-income&quot;</description>
+        <externalId>false</externalId>
+        <formula>/* Eligibility criteria for HH, 2019.11.07 */
+
+/*family is low income, AND */
+AND (C501_Low_Income_Family__c,
+
+/* EITHER an infant is affected by opiates, OR a child age 0-8 is affected by substance abuse */
+     OR (AND (C501_HH_Child_Aged_0_1__c, C501_HH_Opiates_Impact_Infant__c),
+            AND (C501_Child_Aged_0_8__c, C501_HH_Substance_Abuse_Impacts_Child__c)
+          )
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>HH Eligible</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Insurance_Info__c</fullName>
+        <description>HH Referral: &quot;Insurance Information&quot;</description>
+        <externalId>false</externalId>
+        <label>Insurance Info</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Mother_Child_Hospitalized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>HH Referral: &quot;Mother-child currently in the hospital&quot;</description>
+        <externalId>false</externalId>
+        <label>Mother-Child Hospitalized</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Mother_Release_Date__c</fullName>
+        <description>HH Referral: &quot;Mother release date from hospital&quot;</description>
+        <externalId>false</externalId>
+        <label>Mother Release Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Opiates_Impact_Infant__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>HH Eligibility: &quot;Opiates are impacting infant&quot;</description>
+        <externalId>false</externalId>
+        <label>Opiates Impact Infant</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_HH_Substance_Abuse_Impacts_Child__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>HH Eligibility: &quot;Child is impacted by substance abuse&quot;</description>
+        <externalId>false</externalId>
+        <label>Substance Abuse Impacts Child</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_ISA_Chronically_Absent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>ISA Eligibility: &quot;The child is chronically absent from school or childcare (A child who misses 18 days; which is 10% or more of their school or childcare day. This can mean just two days a month, for any reason. A tardy over 30 minutes counts as an absence).&quot;</description>
+        <externalId>false</externalId>
+        <label>Chronically Absent</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_ISA_ECEAP_or_Tomorrows_Hope__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>ISA Eligibility: &quot;A child attending Everett Public Schools Early Childhood Education and Assistance Program (ECEAP) or Tomorrow&apos;s Hope Child Development Center&quot;</description>
+        <externalId>false</externalId>
+        <label>ECEAP or Tomorrow&apos;s Hope</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_ISA_Eligible__c</fullName>
+        <description>ISA Eligibility: &quot;Family meets each of the following eligibility criteria:
+The child is ages 0-8 years old and is one of the following:
+*Enrolled in Everett Public Schools
+*School age and moving into Everett Public Schools attendance boundaries
+*School age and disconnected from school and living within Everett Public Schools attendance boundaries
+*A child attending Everett Public Schools Early Childhood Education and Assistance Program (ECEAP) or *Tomorrow&apos;s Hope Child Development Center
+The child is chronically absent from school or childcare (A child who misses 18 days; which is 10% or more of their school or childcare day. This can mean just two days a month, for any reason. A tardy over 30 minutes counts as an absence).
+The family has an income below 250% of the federal poverty level (FPL), or eligible for state assistance with food, cash or medical needs. *see attached chart
+The family meets the McKinney-Vento definition of homeless. *see attached definition&quot;</description>
+        <externalId>false</externalId>
+        <formula>/* ISA Eligibility - 2019.11.07 
+
+Child is aged 0-8 AND */
+AND( C501_Child_Aged_0_8__c,
+
+/*is enrolled, moving to, or living in EPS District, or enrolled in ECEAP or Tomorrow&apos;s Hope, AND */
+       OR(C501_ISA_Enrolled_Everett_Public_Schools__c,    
+             C501_ISA_Moving_to_Everett_PS_District__c,
+             C501_ISA_Living_in_Everett_PS_District__c,
+             C501_ISA_ECEAP_or_Tomorrows_Hope__c),
+  
+  /* child is chronically absent, family is low income and family is homeless*/     
+        C501_ISA_Chronically_Absent__c,
+        C501_Low_Income_Family__c,
+        C501_ISA_Meets_McKinney_Vento_Criteria__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ISA Eligible</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_ISA_Enrolled_Everett_Public_Schools__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>ISA Eligibility: &quot;Enrolled in Everett Public Schools&quot;</description>
+        <externalId>false</externalId>
+        <label>Enrolled in Everett Public Schools</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_ISA_Living_in_Everett_PS_District__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>ISA Eligibility: &quot;School age and disconnected from school and living within Everett Public Schools attendance boundaries&quot;</description>
+        <externalId>false</externalId>
+        <label>Living in Everett PS District</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_ISA_Meets_McKinney_Vento_Criteria__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>ISA Eligibility: &quot;The family meets the McKinney-Vento definition of homeless. *see attached definition&quot;</description>
+        <externalId>false</externalId>
+        <label>Meets McKinney-Vento Criteria</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_ISA_Moving_to_Everett_PS_District__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>ISA Eligibility: &quot;School age and moving into Everett Public Schools attendance boundaries&quot;</description>
+        <externalId>false</externalId>
+        <label>Moving to Everett PS District</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Adults__c</fullName>
+        <externalId>false</externalId>
+        <label>Adults</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Children__c</fullName>
+        <externalId>false</externalId>
+        <label>Children</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Commodity_Usage_JSON__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>JSON data that records the total usage of commodities in the month of the most recent visit.</inlineHelpText>
+        <label>Commodity Usage JSON</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Current_Points_Remaining__c</fullName>
+        <description>Total points remaining in the month of the most recent visit.</description>
+        <externalId>false</externalId>
+        <formula>C501_IS_Monthly_Points_Available__c - C501_IS_Current_Points_Used__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Total points remaining in the month of the most recent visit.</inlineHelpText>
+        <label>Current Points Remaining</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Current_Points_Used__c</fullName>
+        <description>Total number of points used in month of most recent visit.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total number of points used in month of most recent visit.</inlineHelpText>
+        <label>Current Points Used</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_IS_External_Created_Date__c</fullName>
+        <description>Store the date the external entry was created.</description>
+        <externalId>false</externalId>
+        <label>External Created Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C501_IS_External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>C501_IS_First_Visit__c</fullName>
+        <externalId>false</externalId>
+        <label>First Visit</label>
+        <summarizedField>Client_Visit__c.C501_IS_Visit_Date__c</summarizedField>
+        <summaryForeignKey>Client_Visit__c.C501_IS_Household__c</summaryForeignKey>
+        <summaryOperation>min</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Homeless__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Homeless</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Inactive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Inactive</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Infant_Card_Expires__c</fullName>
+        <externalId>false</externalId>
+        <label>Infant Card Expires</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Infants__c</fullName>
+        <externalId>false</externalId>
+        <label>Infants</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Monthly_Points_Available__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of points allowed per month, set automatically based on intake services settings.</inlineHelpText>
+        <label>Monthly Points Available</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Most_Recent_Visit__c</fullName>
+        <externalId>false</externalId>
+        <label>Most Recent Visit</label>
+        <summarizedField>Client_Visit__c.C501_IS_Visit_Date__c</summarizedField>
+        <summaryForeignKey>Client_Visit__c.C501_IS_Household__c</summaryForeignKey>
+        <summaryOperation>max</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>4096</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Out_Of_Area__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Out of Area</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Pending_Commodity_Usage_JSON__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>JSON data that records the pending usage of commodities related to checkin queue.</inlineHelpText>
+        <label>Pending Commodity Usage JSON</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Pending_Notes__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Pending notes related to checkin queue.</inlineHelpText>
+        <label>Notes</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Proof_of_Address_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Proof of Address Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Proof_of_Address__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of address proof provided and/or initials of user who verified the address</inlineHelpText>
+        <label>Proof of Address</label>
+        <length>50</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Seniors__c</fullName>
+        <externalId>false</externalId>
+        <label>Seniors</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Source</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Source</fullName>
+                    <default>false</default>
+                    <label>Source</label>
+                </value>
+                <value>
+                    <fullName>Referred by agency (identify in Notes)</fullName>
+                    <default>false</default>
+                    <label>Referred by agency (identify in Notes)</label>
+                </value>
+                <value>
+                    <fullName>Referred by individual</fullName>
+                    <default>false</default>
+                    <label>Referred by individual</label>
+                </value>
+                <value>
+                    <fullName>Newspaper, radio, TV, internet</fullName>
+                    <default>false</default>
+                    <label>Newspaper, radio, TV, internet</label>
+                </value>
+                <value>
+                    <fullName>Poster</fullName>
+                    <default>false</default>
+                    <label>Poster</label>
+                </value>
+                <value>
+                    <fullName>Doesn&apos;t know or won&apos;t say</fullName>
+                    <default>false</default>
+                    <label>Doesn&apos;t know or won&apos;t say</label>
+                </value>
+                <value>
+                    <fullName>Phone book</fullName>
+                    <default>false</default>
+                    <label>Phone book</label>
+                </value>
+                <value>
+                    <fullName>Walk-in</fullName>
+                    <default>false</default>
+                    <label>Walk-in</label>
+                </value>
+                <value>
+                    <fullName>Other (Identify in Notes)</fullName>
+                    <default>false</default>
+                    <label>Other (Identify in Notes)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Staff_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Staff Notes</label>
+        <length>4096</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Tag_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Tag Notes</label>
+        <length>4096</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Tags__c</fullName>
+        <externalId>false</externalId>
+        <label>Tags</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No Cook</fullName>
+                    <default>false</default>
+                    <label>No Cook</label>
+                </value>
+                <value>
+                    <fullName>Special Diet</fullName>
+                    <default>false</default>
+                    <label>Special Diet</label>
+                </value>
+                <value>
+                    <fullName>Spanish</fullName>
+                    <default>false</default>
+                    <label>Spanish</label>
+                </value>
+                <value>
+                    <fullName>Vietnamese</fullName>
+                    <default>false</default>
+                    <label>Vietnamese</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>C501_IS_Total_Visits__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Visits</label>
+        <summaryForeignKey>Client_Visit__c.C501_IS_Household__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <type>Summary</type>
+    </fields>
+    <fields>
         <fullName>C501_Is_Eligible__c</fullName>
         <defaultValue>false</defaultValue>
         <description>Does family meet eligibility requirements out determined by the collaboration? Field populated by Mass Action Scheduler and Flow.</description>
         <externalId>false</externalId>
         <label>Is Eligible</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Latino_or_Hispanic__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>UWSC - racial / ethnic identity options; question: Identify as Hispanic or Latino?</description>
+        <externalId>false</externalId>
+        <label>Latino or Hispanic</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>C501_Low_Income_Family__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>HH Eligibility: &quot;Family defined as low-income&quot;; ISA Eligibility: &quot;The family has an income below 250% of the federal poverty level (FPL), or eligible for state assistance with food, cash or medical needs. *see attached chart&quot;;</description>
+        <externalId>false</externalId>
+        <label>Low Income Family</label>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <type>Checkbox</type>
@@ -350,26 +976,6 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>C501_Referral_Date__c</fullName>
-        <description>HH Referral: &quot;Today&apos;s Date&quot;; ISA Referral: &quot;Date&quot;</description>
-        <externalId>false</externalId>
-        <label>Referral Date</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Date</type>
-    </fields>
-    <fields>
-        <fullName>C501_White__c</fullName>
-        <defaultValue>false</defaultValue>
-        <description>MLW; Part of a group - What races are included in this family?</description>
-        <externalId>false</externalId>
-        <label>White</label>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Checkbox</type>
-    </fields>
-    <fields>
         <fullName>Collaborative__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
@@ -439,988 +1045,17 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Priority__c</fullName>
+        <fullName>Level__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Sample Level field for use with Level feature. May be deleted or edited as needed.</description>
         <externalId>false</externalId>
-        <label>Priority</label>
-        <precision>3</precision>
+        <label>Level</label>
+        <referenceTo>npsp__Level__c</referenceTo>
+        <relationshipLabel>Households</relationshipLabel>
+        <relationshipName>Accounts</relationshipName>
         <required>false</required>
-        <scale>0</scale>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
-        <type>Number</type>
-        <unique>false</unique>
+        <type>Lookup</type>
     </fields>
-    <listViews>
-        <fullName>Household_Accounts</fullName>
-        <columns>ACCOUNT.NAME</columns>
-        <columns>npe01__One2OneContact__c</columns>
-        <columns>Priority__c</columns>
-        <columns>C501_Primary_Languages__c</columns>
-        <columns>C501_Family_Status__c</columns>
-        <filterScope>Everything</filterScope>
-        <filters>
-            <field>ACCOUNT.RECORDTYPE</field>
-            <operation>equals</operation>
-            <value>Account.HH_Account</value>
-        </filters>
-        <label>Families</label>
-    </listViews>
-    <recordTypes>
-        <fullName>Collaborative</fullName>
-        <active>true</active>
-        <compactLayoutAssignment>C501_CORE_Org_Layout</compactLayoutAssignment>
-        <label>Collaborative</label>
-        <picklistValues>
-            <picklist>AccountSource</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone Inquiry</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Collab_Abbrev__c</picklist>
-            <values>
-                <fullName>CCR</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>HH</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ISA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MLW</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NCCC</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Collaborative_Status__c</picklist>
-            <values>
-                <fullName>Active</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Assessment</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Goals</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Family_Status__c</picklist>
-            <values>
-                <fullName>Case Management</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exited</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Intake</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Partner_Status__c</picklist>
-            <values>
-                <fullName>Active</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Assessment</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Exit_Reason__c</picklist>
-            <values>
-                <fullName>Completed Goals</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Didn%27t Complete Goals</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Family Dropped</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other %28refer to notes%29</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Industry</picklist>
-            <values>
-                <fullName>Agriculture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Apparel</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Banking</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Biotechnology</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Chemicals</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Communications</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Construction</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Consulting</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Education</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Electronics</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Energy</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Engineering</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Entertainment</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Environmental</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Finance</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Food %26 Beverage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Government</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Healthcare</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hospitality</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Insurance</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Machinery</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Manufacturing</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Media</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Not For Profit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Recreation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Retail</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Shipping</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Technology</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Telecommunications</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transportation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Utilities</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Ownership</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Private</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Public</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Subsidiary</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Rating</picklist>
-            <values>
-                <fullName>Cold</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hot</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Warm</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Channel Partner %2F Reseller</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Corporate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Customer - Channel</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Customer - Direct</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Foundation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Government</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Household</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Individual</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Installation Partner</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Nonprofit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Prospect</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Technology Partner</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>HH_Account</fullName>
-        <active>true</active>
-        <compactLayoutAssignment>C501_CORE_Family</compactLayoutAssignment>
-        <description>An Account representing a Household containing one or more individuals</description>
-        <label>Family</label>
-        <picklistValues>
-            <picklist>AccountSource</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone Inquiry</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Collab_Abbrev__c</picklist>
-            <values>
-                <fullName>CCR</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>HH</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ISA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MLW</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NCCC</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Collaborative_Status__c</picklist>
-            <values>
-                <fullName>Active</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Assessment</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Goals</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Family_Status__c</picklist>
-            <values>
-                <fullName>Case Management</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exited</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Intake</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Wait list</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Partner_Status__c</picklist>
-            <values>
-                <fullName>Active</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Assessment</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Exit_Reason__c</picklist>
-            <values>
-                <fullName>Completed Goals</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Didn%27t Complete Goals</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Family Dropped</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other %28refer to notes%29</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Industry</picklist>
-            <values>
-                <fullName>Agriculture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Apparel</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Banking</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Biotechnology</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Chemicals</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Communications</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Construction</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Consulting</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Education</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Electronics</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Energy</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Engineering</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Entertainment</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Environmental</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Finance</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Food %26 Beverage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Government</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Healthcare</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hospitality</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Insurance</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Machinery</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Manufacturing</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Media</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Not For Profit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Recreation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Retail</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Shipping</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Technology</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Telecommunications</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transportation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Utilities</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Ownership</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Private</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Public</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Subsidiary</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Rating</picklist>
-            <values>
-                <fullName>Cold</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hot</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Warm</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Household</fullName>
-                <default>true</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>Organization</fullName>
-        <active>true</active>
-        <compactLayoutAssignment>C501_CORE_Org_Layout</compactLayoutAssignment>
-        <description>An Account representing an organization</description>
-        <label>Partner</label>
-        <picklistValues>
-            <picklist>AccountSource</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Partner Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Phone Inquiry</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Purchased List</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Collab_Abbrev__c</picklist>
-            <values>
-                <fullName>CCR</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>HH</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ISA</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>MLW</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>NCCC</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Collaborative_Status__c</picklist>
-            <values>
-                <fullName>Active</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Assessment</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Goals</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Family_Status__c</picklist>
-            <values>
-                <fullName>Case Management</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exited</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Intake</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Partner_Status__c</picklist>
-            <values>
-                <fullName>Active</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Assessment</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Exit_Reason__c</picklist>
-            <values>
-                <fullName>Completed Goals</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Didn%27t Complete Goals</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Family Dropped</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other %28refer to notes%29</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Industry</picklist>
-            <values>
-                <fullName>Agriculture</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Apparel</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Banking</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Biotechnology</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Chemicals</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Communications</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Construction</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Consulting</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Education</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Electronics</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Energy</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Engineering</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Entertainment</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Environmental</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Finance</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Food %26 Beverage</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Government</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Healthcare</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hospitality</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Insurance</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Machinery</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Manufacturing</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Media</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Not For Profit</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Recreation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Retail</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Shipping</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Technology</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Telecommunications</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Transportation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Utilities</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Ownership</picklist>
-            <values>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Private</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Public</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Subsidiary</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Rating</picklist>
-            <values>
-                <fullName>Cold</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Hot</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Warm</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>Type</picklist>
-            <values>
-                <fullName>Corporate</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Foundation</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Government</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Nonprofit</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
 </CustomObject>

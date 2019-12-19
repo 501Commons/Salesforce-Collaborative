@@ -6,7 +6,7 @@
         <visible>true</visible>
     </applicationVisibilities>
     <custom>true</custom>
-    <description>Internal user who manages CORE program; can view and manage CORE Community data</description>
+    <description>Used by CORE staff who may access all client info</description>
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.C501_American_Indian_or_Alaska_Native__c</field>
@@ -679,7 +679,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Account.Collaborative</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
@@ -735,7 +735,7 @@
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Goal__c.Collaborative</recordType>
-        <visible>true</visible>
+        <visible>false</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
@@ -866,7 +866,7 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageReportsInPubFolders</name>
+        <name>ManagePvtRptsAndDashbds</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -883,10 +883,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>RunReports</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SandboxTestingInCommunityApp</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -907,6 +903,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ShowCompanyNameAsUserBadge</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>SubmitMacrosAllowed</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -935,10 +935,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewHelpLink</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ViewPublicReports</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

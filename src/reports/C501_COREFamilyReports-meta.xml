@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>db.uwsnoc@501commons.org</sharedTo>
+        <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>Manage</accessLevel>
+        <sharedTo>Collaborative_Director</sharedTo>
+        <sharedToType>Role</sharedToType>
+    </folderShares>
+    <name>CORE Family Reports</name>
+</ReportFolder>

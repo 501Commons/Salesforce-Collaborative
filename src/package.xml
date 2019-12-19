@@ -24,12 +24,14 @@
         <members>Account.C501_Collab_Abbrev__c</members>
         <members>Account.C501_Collaborative_Status__c</members>
         <members>Account.C501_Eligibility_Mass_Action_Config__c</members>
+        <members>Account.C501_Eligibility_last_evaluated__c</members>
         <members>Account.C501_Exit_Successfully__c</members>
         <members>Account.C501_Family_Size__c</members>
         <members>Account.C501_Family_Status__c</members>
         <members>Account.C501_Federal_Poverty_Level__c</members>
         <members>Account.C501_Female_Single_HH__c</members>
         <members>Account.C501_Hispanic_or_Latino__c</members>
+        <members>Account.C501_Is_Eligible__c</members>
         <members>Account.C501_Native_Hawaiian_Pacific_Islander__c</members>
         <members>Account.C501_Needs_Interpreter__c</members>
         <members>Account.C501_Number_of_Goals_Completed__c</members>
@@ -44,8 +46,6 @@
         <members>Account.Exit_Reason__c</members>
         <members>Account.FPL_Updated__c</members>
         <members>Account.Priority__c</members>
-        <members>Account.C501_Is_Eligible__c</members>
-        <members>Account.C501_Eligibility_last_evaluated__c</members>
         <members>Assessment__c.Account__c</members>
         <members>Assessment__c.C501_CCR_Affordable_Healthcare__c</members>
         <members>Assessment__c.C501_CCR_Child_Developing__c</members>
@@ -121,12 +121,14 @@
         <members>C501_Fault_Email_Address.Intakebh</members>
         <members>C501_Fault_Email_Address.UwscMaster</members>
         <members>C501_Fault_Email_Address.UwscProduction</members>
+        <members>C501_Federal_Poverty_Level.C501_FPL_2019</members>
         <name>CustomMetadata</name>
     </types>
     <types>
         <members>Assessment__c</members>
         <members>C501_Collaborative_User__c</members>
         <members>C501_Fault_Email_Address__mdt</members>
+        <members>C501_Federal_Poverty_Level__mdt</members>
         <members>C501_Partnership__c</members>
         <members>Goal__c</members>
         <members>Release__c</members>
@@ -147,6 +149,7 @@
         <members>C501_Assessment_Record_Page</members>
         <members>C501_CORE_Contact_Page</members>
         <members>C501_CORE_Family_Page</members>
+        <members>C501_Goal_Record_Page</members>
         <members>CORE_UtilityBar</members>
         <members>CORE_UtilityBar1</members>
         <members>Goal_Record_Page</members>
@@ -155,12 +158,13 @@
         <name>FlexiPage</name>
     </types>
     <types>
-        <members>C501_Assessment_CCR_AFAR_Self_Assessment</members>
-        <members>C501_Assessment_CORE_Family_Screen_Flow</members>
-        <members>C501_Assessment_HH_Domain_Scores</members>
-        <members>C501_Assessment_ISA_General_Assessment</members>
-        <members>C501_Assessment_MLW_Bridge_Scores</members>
-        <members>C501_Assessment_NCCC_General_Assessment</members>
+        <members>Account_Auto_Fill_Collaborative_FLOW</members>
+        <members>Account_Federal_Poverty_Level_FLOW</members>
+        <members>Account_Process</members>
+        <members>Account_Update_Collaborative</members>
+        <members>C501_Account_Is_Eligible_FLOW</members>
+        <members>C501_Account_Launch_Eligibility_Mass_Action_Screenflow_FLOW</members>
+        <members>C501_Account_on_Create_Edit_via_Process_Builder</members>
         <members>C501_Contact_Process</members>
         <members>C501_TEMPLATE_ScreenFlowForSpecificAssessment</members>
         <members>Send_Flow_Fault_Email</members>
@@ -168,6 +172,9 @@
     </types>
     <types>
         <members>C501_Collabs</members>
+        <members>C501_Y_N</members>
+        <members>Domains</members>
+        <members>Family_Status</members>
         <name>GlobalValueSet</name>
     </types>
     <types>
@@ -180,6 +187,7 @@
         <name>GlobalValueSet</name>
     </types>
     <types>
+        <members>Account-Admin Family Lightning Layout</members>
         <members>Account-Collaborative Lightning Layout</members>
         <members>Account-Family Lightning Layout</members>
         <members>Account-Partner Lightning Layout</members>
@@ -188,9 +196,16 @@
         <members>Assessment__c-HH%3A Domain Assessment</members>
         <members>Assessment__c-ISA%3A General Assessment</members>
         <members>Assessment__c-MLW%3A Bridge Scores</members>
-        <members>Assessment__c-NCCC%3A General Assessment</members>
+        <members>Assessment__c-NCCC%3A Fenn Jorstad Self Sufficiency Matrix</members>
+        <members>C501_Collaborative_User__c-Collaborative User Layout</members>
         <members>C501_Fault_Email_Address__mdt-Fault Email Address Layout</members>
+        <members>C501_Federal_Poverty_Level__mdt-Federal Poverty Level Layout</members>
+        <members>C501_Partnership__c-Partner - Collab Layout</members>
+        <members>C501_Partnership__c-Partner - Family Layout</members>
+        <members>C501_Service_Household__c-Service Household Layout</members>
         <members>Contact-CORE Client Contact</members>
+        <members>Contact-Collaboration Contact Layout</members>
+        <members>Global-CORE Global Layout</members>
         <members>Goal__c-Collaborative Goal Layout</members>
         <members>Goal__c-Family Goal Layout</members>
         <members>Goal__c-Goal Layout</members>
@@ -214,21 +229,34 @@
         <name>PathAssistant</name>
     </types>
     <types>
-        <members>CORE Program Staff</members>
         <members>CORE Admin</members>
+        <members>CORE Program Staff</members>
+        <members>CORE Staff (TB Deleted)</members>
         <name>Profile</name>
     </types>
     <types>
+        <members>CORE_New_Client_Contact</members>
         <members>Account.C501_CCR_AFAR_Self_Assessment</members>
         <members>Account.C501_CORE_Family_Update</members>
+        <members>Account.C501_CORE_New_Family_Contact</members>
+        <members>Account.C501_Check_Eligibility</members>
+        <members>Account.C501_HH_Eligibility</members>
         <members>Account.C501_CORE_New_Client_Contact</members>
         <members>Account.C501_HH_Domain_Needs_Assessment</members>
+        <members>Account.C501_Request_Delete</members>
         <members>Contact.C501_CORE_Update_Client_Contact</members>
-        <members>NewContact</members>
-        <members>NewTask</members>
-        <members>New_Household_Account</members>
-        <members>SendEmail</members>
         <name>QuickAction</name>
+    </types>
+    <types>
+        <members>C501_COREFamilyReports</members>
+        <members>C501_COREFamilyReports/All_Accounts_with_Goals_Report_Vac</members>
+        <members>C501_COREFamilyReports/All_Contacts_Accounts_Report_ie7</members>
+        <members>C501_COREFamilyReports/All_Families_and_Case_Notes_Report_yQ6</members>
+        <members>C501_COREFamilyReports/All_Families_by_Status</members>
+        <members>C501_COREFamilyReports/All_Inactive_Families</members>
+        <members>CasinoRoadPartnerFolder</members>
+        <members>CasinoRoadPartnerFolder/Casino_Road_Users_ZrZ</members>
+        <name>Report</name>
     </types>
     <types>
         <members>Account.Collaborative</members>
