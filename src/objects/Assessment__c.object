@@ -155,9 +155,20 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fieldSets>
         <fullName>C501_CCR_AFAR_Self_Assessment</fullName>
-        <description>CCR: All Families Are Ready; Use for Assessment Quick Create</description>
+        <description>CCR: All Families Are Ready - AFAR Self Assessment</description>
+        <displayedFields>
+            <field>C501_Assessment_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_Next_Assessment_Due_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
         <displayedFields>
             <field>C501_CCR_Supportive_People__c</field>
             <isFieldManaged>false</isFieldManaged>
@@ -242,7 +253,17 @@
     </fieldSets>
     <fieldSets>
         <fullName>C501_HH_Domain_Needs_Assessment</fullName>
-        <description>Homeward House; Use for Assessment Quick Create</description>
+        <description>Homeward House - Five Domains Needs Assessment</description>
+        <displayedFields>
+            <field>C501_Assessment_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_Next_Assessment_Due_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
         <displayedFields>
             <field>C501_HH_Health_Wellbeing__c</field>
             <isFieldManaged>false</isFieldManaged>
@@ -268,7 +289,192 @@
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
-        <label>Domain Needs Assessment</label>
+        <label>HH Domain Needs Assessment</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>C501_ISA_Assessment</fullName>
+        <description>Improving School Attendance - Assessment</description>
+        <displayedFields>
+            <field>C501_Assessment_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_Next_Assessment_Due_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_ISA_Health_Wellbeing__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_ISA_Literacy__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_ISA_Math__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>ISA Assessment</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>C501_MLW_Bridge_Scores</fullName>
+        <description>Making Life Work - Bridge Assessment</description>
+        <displayedFields>
+            <field>C501_Assessment_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_Next_Assessment_Due_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_MLW_Daycare__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_MLW_Debts__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_MLW_Earning_Levels__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_MLW_Education__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_MLW_Health__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_MLW_Housing__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_MLW_Networks__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_MLW_Saving__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_MLW_Transport__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>MLW Bridge Scores</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>C501_NCCC_Assessment</fullName>
+        <description>North Counties Community Collaborative - Needs Assessment</description>
+        <displayedFields>
+            <field>C501_Assessment_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_Next_Assessment_Due_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Childcare__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Children_s_Education__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Daily_Functioning__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Employment__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_English_Literacy_Comprehension__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Financial_Income__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Food__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Healthcare__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Housing__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Legal_Civil__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Legal_Criminal__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Mental_Health__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Security__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Substance_Abuse__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Support__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_NCCC_Transportation__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>NCCC Assessment</label>
     </fieldSets>
     <fields>
         <fullName>Account__c</fullName>
@@ -292,6 +498,17 @@
         <trackTrending>false</trackTrending>
         <type>MasterDetail</type>
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>C501_Assessment_Date__c</fullName>
+        <description>For all Collabs - the date on which the Assessment was done</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the date the Assessment was done</inlineHelpText>
+        <label>Assessment Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>C501_CCR_Affordable_Healthcare__c</fullName>
@@ -747,6 +964,149 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>C501_NCCC_Childcare__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Childcare&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Childcare&quot;</inlineHelpText>
+        <label>Childcare</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Children_s_Education__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Children&apos;s Education&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Children&apos;s Education&quot;</inlineHelpText>
+        <label>Children&apos;s Education</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Daily_Functioning__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Skills for Daily Functioning&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Skills for Daily Functioning&quot;</inlineHelpText>
+        <label>Daily Functioning</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Employment__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Employment&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Employment&quot;</inlineHelpText>
+        <label>Employment</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_English_Literacy_Comprehension__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A: &quot;English Literacy &amp; Comprehension&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A: &quot;English Literacy &amp; Comprehension&quot;</inlineHelpText>
+        <label>English Literacy &amp; Comprehension</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Financial_Income__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Financial/Income&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Financial/Income&quot;</inlineHelpText>
+        <label>Financial/Income</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Food__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Food&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Food&quot;</inlineHelpText>
+        <label>Food</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Healthcare__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Healthcare&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Healthcare&quot;</inlineHelpText>
+        <label>Healthcare</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Housing__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Housing&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Housing&quot;</inlineHelpText>
+        <label>Housing</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Legal_Civil__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Legal -- Civil&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Legal -- Civil&quot;</inlineHelpText>
+        <label>Legal-Civil</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Legal_Criminal__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Legal -- Criminal&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Legal -- Criminal&quot;</inlineHelpText>
+        <label>Legal-Criminal</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>C501_NCCC_Measure_1__c</fullName>
         <description>Placeholder - NCCC. Scale 1-5: &quot;Measure 1&quot;</description>
         <externalId>false</externalId>
@@ -787,6 +1147,82 @@
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Mental_Health__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Mental Health&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Mental Health&quot;</inlineHelpText>
+        <label>Mental Health</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Security__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Security&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Security&quot;</inlineHelpText>
+        <label>Security</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Substance_Abuse__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Substance Abuse&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Substance Abuse&quot;</inlineHelpText>
+        <label>Substance Abuse</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Support__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Social and/or Family Support&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Social and/or Family Support&quot;</inlineHelpText>
+        <label>Support</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_NCCC_Transportation__c</fullName>
+        <description>NCCC. Scale of 1-4 or N/A. &quot;Transportation&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>NCCC. Scale of 1-4 or N/A. &quot;Transportation&quot;</inlineHelpText>
+        <label>Transportation</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Next_Assessment_Due_Date__c</fullName>
+        <description>For all Collabs - the date when this assessment is due to be re-done</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the date this assessment should be re-done</inlineHelpText>
+        <label>Next Assessment Due Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>Next_Assessment__c</fullName>
@@ -937,8 +1373,8 @@
     <recordTypes>
         <fullName>C501_NCCC_General_Assessment</fullName>
         <active>true</active>
-        <description>Displays fields relevant to North Counties Community Collaborative&apos;s General Assessment</description>
-        <label>NCCC: General Assessment</label>
+        <description>Displays fields relevant to North Counties Community Collaborative&apos;s Fenn Jorstad Self Sufficiency Matrix</description>
+        <label>NCCC: Fenn Jorstad Self Sufficiency Matrix</label>
         <picklistValues>
             <picklist>Type__c</picklist>
             <values>

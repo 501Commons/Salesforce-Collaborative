@@ -53,7 +53,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.HH_Account</recordType>
         <type>Flexipage</type>
-        <profile>CORE Program Staff</profile>
+        <profile>CORE Staff (TB Deleted)</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -71,7 +71,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Collaborative</recordType>
         <type>Flexipage</type>
-        <profile>CORE Program Staff</profile>
+        <profile>CORE Staff (TB Deleted)</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -89,7 +89,7 @@
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Organization</recordType>
         <type>Flexipage</type>
-        <profile>CORE Program Staff</profile>
+        <profile>CORE Staff (TB Deleted)</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -101,6 +101,7 @@
         <profile>Admin</profile>
     </profileActionOverrides>
     <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
     <tabs>Intake_Services_App</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>

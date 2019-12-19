@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <description>Collects data specific to Improving School Attendance&apos; general assessment for Literacy, Math and Health &amp; Wellbeing; moved flow fault lookup to subflow</description>
-    <dynamicChoiceSets>
-        <name>Type_Picklist</name>
-        <dataType>Picklist</dataType>
-        <displayField xsi:nil="true"/>
-        <object xsi:nil="true"/>
-        <picklistField>Type__c</picklistField>
-        <picklistObject>Assessment__c</picklistObject>
-    </dynamicChoiceSets>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Collects data specific to Improving School Attendance&apos; general assessment for Literacy, Math and Health &amp; Wellbeing; Updated score entry screen to hide header</description>
     <formulas>
         <description>Create the Assessment&apos;s Name</description>
         <name>C501_buildThisAssessmentName</name>
@@ -76,12 +68,6 @@
                 <elementReference>C501_thisAssessmentsRecordTypeId</elementReference>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <field>Type__c</field>
-            <value>
-                <elementReference>Type</elementReference>
-            </value>
-        </inputAssignments>
         <object>Assessment__c</object>
     </recordCreates>
     <recordLookups>
@@ -132,17 +118,14 @@
             <targetReference>C501_Get_Assessment_Record_Type_Id</targetReference>
         </connector>
         <fields>
-            <name>ISA_Assessment_Instructions</name>
-            <fieldText>&lt;p&gt;Please enter comments for each portion of the assessment.&lt;/p&gt;</fieldText>
+            <name>HEADING_General_Assessment</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;General Assessment&lt;/b&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>Type</name>
-            <choiceReferences>Type_Picklist</choiceReferences>
-            <dataType>String</dataType>
-            <fieldText>Type</fieldText>
-            <fieldType>DropdownBox</fieldType>
-            <isRequired>true</isRequired>
+            <name>ISA_Assessment_Instructions</name>
+            <fieldText>&lt;p&gt;Please enter comments for each portion of the assessment.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>C501_ISA_Literacy</name>
@@ -166,10 +149,10 @@
             <isRequired>false</isRequired>
         </fields>
         <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
+        <showHeader>false</showHeader>
     </screens>
     <startElementReference>C501_ISA_General_Assessment</startElementReference>
-    <status>Obsolete</status>
+    <status>Active</status>
     <subflows>
         <description>send email if the flow goes belly up</description>
         <name>C501_Send_Fault_Email</name>
@@ -177,6 +160,12 @@
         <locationX>587</locationX>
         <locationY>242</locationY>
         <flowName>Send_Flow_Fault_Email</flowName>
+        <inputAssignments>
+            <name>C501_varFaultyFlowErrorMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
         <inputAssignments>
             <name>C501_varFaultyFlowName</name>
             <value>

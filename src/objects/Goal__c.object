@@ -163,6 +163,7 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>Account__c</fullName>
         <externalId>false</externalId>
@@ -189,6 +190,31 @@
             <restricted>true</restricted>
             <valueSetName>Benchmarks</valueSetName>
         </valueSet>
+    </fields>
+    <fields>
+        <fullName>C501_Contact__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Optional lookup to the specific family member associated with this goal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>(Optional) Find and link the specific family member associated with this goal</inlineHelpText>
+        <label>Contact</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.AccountId</field>
+                <operation>equals</operation>
+                <valueField>$Source.Account__c</valueField>
+            </filterItems>
+            <infoMessage>The family member associated with this goal must be part of the family&apos;s household.</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Goals</relationshipLabel>
+        <relationshipName>Goals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Domain__c</fullName>
@@ -378,23 +404,23 @@
         <picklistValues>
             <picklist>Domain__c</picklist>
             <values>
-                <fullName>Adult%2Fs health and mental well-being are strengthened</fullName>
+                <fullName>Early Childhood</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Adult%2Fs pursue post-secondary education and climb the career ladder</fullName>
+                <fullName>Economic Assets</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Children are ready for school and take charge of their learning</fullName>
+                <fullName>Health %26 Well-Being</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Families are connected with economic%2C social and%2For other supports</fullName>
+                <fullName>Post-Secondary %26 Employment</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Families are financially stable</fullName>
+                <fullName>Social Capital</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -472,23 +498,23 @@
         <picklistValues>
             <picklist>Domain__c</picklist>
             <values>
-                <fullName>Adult%2Fs health and mental well-being are strengthened</fullName>
+                <fullName>Early Childhood</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Adult%2Fs pursue post-secondary education and climb the career ladder</fullName>
+                <fullName>Economic Assets</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Children are ready for school and take charge of their learning</fullName>
+                <fullName>Health %26 Well-Being</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Families are connected with economic%2C social and%2For other supports</fullName>
+                <fullName>Post-Secondary %26 Employment</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Families are financially stable</fullName>
+                <fullName>Social Capital</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

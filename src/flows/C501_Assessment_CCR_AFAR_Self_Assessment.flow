@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Flow xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <description>Collects data specific to Connect Casino Road&apos;s All Families Are Ready Self Assessment; moved flow fault lookup to subflow</description>
-    <dynamicChoiceSets>
-        <name>Type_Picklist</name>
-        <dataType>Picklist</dataType>
-        <displayField xsi:nil="true"/>
-        <object xsi:nil="true"/>
-        <picklistField>Type__c</picklistField>
-        <picklistObject>Assessment__c</picklistObject>
-    </dynamicChoiceSets>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Collects data specific to Connect Casino Road&apos;s All Families Are Ready Self Assessment; Updated score entry screen to hide header</description>
     <formulas>
         <description>Create the Assessment&apos;s Name</description>
         <name>C501_buildThisAssessmentName</name>
@@ -154,12 +146,6 @@
                 <elementReference>C501_thisAssessmentsRecordTypeId</elementReference>
             </value>
         </inputAssignments>
-        <inputAssignments>
-            <field>Type__c</field>
-            <value>
-                <elementReference>Type</elementReference>
-            </value>
-        </inputAssignments>
         <object>Assessment__c</object>
     </recordCreates>
     <recordLookups>
@@ -210,17 +196,14 @@
             <targetReference>C501_Get_Assessment_Record_Type_Id</targetReference>
         </connector>
         <fields>
-            <name>C501_AFAR_Self_Assessment_Instructions</name>
-            <fieldText>&lt;p&gt;Please enter scores from the family&apos;s Self Assessment, on a scale of 1-5&lt;/p&gt;</fieldText>
+            <name>HEADING_AFAR_Self_Assessment</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;AFAR Self Assessment&lt;/b&gt;&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
-            <name>Type</name>
-            <choiceReferences>Type_Picklist</choiceReferences>
-            <dataType>String</dataType>
-            <fieldText>Type</fieldText>
-            <fieldType>DropdownBox</fieldType>
-            <isRequired>true</isRequired>
+            <name>C501_AFAR_Self_Assessment_Instructions</name>
+            <fieldText>&lt;p&gt;Please enter the family&apos;s scores on a scale of 1-5 where 1 is &quot;Not True&quot; and 5 is &quot;Very True&quot;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
         </fields>
         <fields>
             <name>C501_CCR_Supportive_People</name>
@@ -351,10 +334,10 @@
             <scale>0</scale>
         </fields>
         <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
+        <showHeader>false</showHeader>
     </screens>
     <startElementReference>C501_AFAR_Self_Assessment_Scores</startElementReference>
-    <status>Obsolete</status>
+    <status>Active</status>
     <subflows>
         <description>Launch the &quot;send flow fault email&quot; subflow if the record create fails</description>
         <name>C501_InsertFail_Send_Fault_Email</name>

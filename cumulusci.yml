@@ -7,6 +7,9 @@ project:
         api_version: '46.0'
     dependencies:
         - github: 'https://github.com/SalesforceFoundation/Cumulus'
+        - github: 'https://github.com/501Commons/Salesforce-Collaborative-CaseManagement'
+        - github: 'https://github.com/501Commons/Salesforce-Collaborative-Code'
+        - github: 'https://github.com/501Commons/Salesforce-Service-Management'
     source_format: sfdx
 
 tasks:

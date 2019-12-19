@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <decisions>
-        <description>Determine which subflow to run based on the name of the Collaborative working with the family.</description>
+        <description>Determine which subflow to run based on the hidden picklist field C501_Collab_Abbrev__c on the record for the Collaborative working with the family. CCR: Connect Casino Road; HH: Homeward House; ISA: Improving School Attendance; MLW: Making Life Work; NCCC: North Counties&apos; Community Collaborative</description>
         <name>C501_Which_Collab</name>
         <label>Which Collab</label>
         <locationX>312</locationX>
@@ -17,7 +17,7 @@
                 <leftValueReference>ThisAccountsCollabName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Connect Casino Road</stringValue>
+                    <stringValue>CCR</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -32,7 +32,7 @@
                 <leftValueReference>ThisAccountsCollabName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Homeward House</stringValue>
+                    <stringValue>HH</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -47,7 +47,7 @@
                 <leftValueReference>ThisAccountsCollabName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Improving School Attendance</stringValue>
+                    <stringValue>ISA</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -62,7 +62,7 @@
                 <leftValueReference>ThisAccountsCollabName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Making Life Work</stringValue>
+                    <stringValue>MLW</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -77,7 +77,7 @@
                 <leftValueReference>ThisAccountsCollabName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>North Counties&apos; Community Collaborative</stringValue>
+                    <stringValue>NCCC</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -90,12 +90,12 @@
 
 Significant Dependencies:
 * Requires AccountId as an input variable
-* Requires Collab identification to select the correct subflow; Collab is identified by matching a formula field on Account (C501_CollabName__c) to plain text for each Collab record&apos;s name
+* Requires Collab identification to select the correct subflow; Collab is identified by matching a formula field on Account (C501_CollabName__c, based on a hidden picklist field C501_Collab_Abbrev__c) 
 * Subflows call Send Flow Fault Email flow if they error, which is dependent on C501_Fault_Email_Address__mdt to function correctly
 
 Future Updates to Consider:
 * Make this flow available as an override to the New button on Assessments related lists
-* Improve Collab identification to select the correct subflow - perhaps match on a custom MDT or a hidden field on the Collab record
+* Improve Collab identification to select the correct subflow - perhaps match on a custom MDT 
 * Improve the Assessment Record Id lookup - do that lookup once in the main flow and pass the correct variable to the subflow</description>
     <interviewLabel>Assessment: CORE Family Screen Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Assessment: CORE Family Screen Flow</label>

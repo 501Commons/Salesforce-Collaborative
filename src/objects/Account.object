@@ -4,7 +4,9 @@
         <fullName>C501_CORE_Family</fullName>
         <fields>Name</fields>
         <fields>npe01__One2OneContact__c</fields>
-        <fields>npo02__HouseholdPhone__c</fields>
+        <fields>C501_Primary_Email__c</fields>
+        <fields>C501_Primary_Phone__c</fields>
+        <fields>C501_Best_Contact_Time_Method__c</fields>
         <fields>C501_Primary_Languages__c</fields>
         <fields>C501_Needs_Interpreter__c</fields>
         <fields>OwnerId</fields>
@@ -42,11 +44,13 @@
     </fields>
     <fields>
         <fullName>C501_CollabName__c</fullName>
-        <description>Displays the name of the related Collaborative, if there is one; Not on page layouts - used in Assessment Screen Flow</description>
+        <description>Displays the value of the Collab Abbrev field on the related Collaborative, if there is one; Not on page layouts - used in Assessment Screen Flow</description>
         <externalId>false</externalId>
-        <formula>IF ( NOT ( ISBLANK(Collaborative__c)), Collaborative__r.Name, null)</formula>
+        <formula>IF ( NOT ( ISBLANK(Collaborative__c)), 
+				TEXT(Collaborative__r.C501_Collab_Abbrev__c), 
+				null)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>Displays the name of the related Collaborative, if there is one; Not on page layouts - used in Assessment Screen Flow</inlineHelpText>
+        <inlineHelpText>Displays the value of the Collab Abbrev field on the related Collaborative, if there is one; Not on page layouts - used in Assessment Screen Flow</inlineHelpText>
         <label>C501_CollabName</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -113,7 +117,7 @@
     </fields>
     <fields>
         <fullName>C501_Family_Status__c</fullName>
-        <defaultValue>IF($RecordType.DeveloperName = &quot;HH_Account&quot;, &quot;Intake&quot;, null)</defaultValue>
+        <defaultValue>IF($RecordType.DeveloperName = &quot;HH_Account&quot;, &quot;Referral&quot;, null)</defaultValue>
         <description>Used in CORE Family Kan Ban</description>
         <externalId>false</externalId>
         <inlineHelpText>Select the family&apos;s program status</inlineHelpText>
@@ -141,17 +145,14 @@
     </fields>
     <fields>
         <fullName>C501_Female_Single_HH__c</fullName>
+        <defaultValue>false</defaultValue>
         <description>UWSC - question: Female Single Head of Household?</description>
         <externalId>false</externalId>
+        <inlineHelpText>Check the box if this family is headed by a single female</inlineHelpText>
         <label>Female Single HH</label>
-        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>C501_Y_N</valueSetName>
-        </valueSet>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>C501_Native_Hawaiian_Pacific_Islander__c</fullName>
@@ -165,18 +166,14 @@
     </fields>
     <fields>
         <fullName>C501_Needs_Interpreter__c</fullName>
-        <description>HH, ISA, MLW, NCC</description>
+        <defaultValue>false</defaultValue>
+        <description>HH, ISA, MLW, NCCC</description>
         <externalId>false</externalId>
-        <inlineHelpText>Does the family need an interpreter to communicate with English speakers?</inlineHelpText>
+        <inlineHelpText>Check the box if this family needs an interpreter to communicate with English speakers</inlineHelpText>
         <label>Needs Interpreter</label>
-        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>C501_Y_N</valueSetName>
-        </valueSet>
+        <type>Checkbox</type>
     </fields>
     <fields>
         <fullName>C501_Number_of_Goals_Completed__c</fullName>
@@ -283,7 +280,8 @@
     <listViews>
         <fullName>Household_Accounts</fullName>
         <columns>ACCOUNT.NAME</columns>
-        <columns>Collaborative__c</columns>
+        <columns>npe01__One2OneContact__c</columns>
+        <columns>Priority__c</columns>
         <columns>C501_Primary_Languages__c</columns>
         <columns>C501_Family_Status__c</columns>
         <filterScope>Everything</filterScope>
@@ -344,10 +342,6 @@
         <picklistValues>
             <picklist>C501_Family_Status__c</picklist>
             <values>
-                <fullName>Assessments</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Case Management</fullName>
                 <default>false</default>
             </values>
@@ -356,41 +350,11 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Goals</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Inactive</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Intake</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ROIs</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Female_Single_HH__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Needs_Interpreter__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -681,19 +645,11 @@
         <picklistValues>
             <picklist>C501_Family_Status__c</picklist>
             <values>
-                <fullName>Assessments</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Case Management</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Exited</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Goals</fullName>
                 <default>false</default>
             </values>
             <values>
@@ -705,29 +661,11 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>ROIs</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Female_Single_HH__c</picklist>
-            <values>
-                <fullName>No</fullName>
+                <fullName>Referral</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Needs_Interpreter__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
+                <fullName>Wait list</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -978,41 +916,11 @@
                 <default>false</default>
             </values>
             <values>
-                <fullName>Goals</fullName>
-                <default>false</default>
-            </values>
-            <values>
                 <fullName>Inactive</fullName>
                 <default>false</default>
             </values>
             <values>
                 <fullName>Intake</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>ROIs</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Female_Single_HH__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Needs_Interpreter__c</picklist>
-            <values>
-                <fullName>No</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Yes</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

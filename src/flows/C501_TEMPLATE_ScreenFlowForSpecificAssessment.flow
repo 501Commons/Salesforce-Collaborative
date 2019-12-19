@@ -124,6 +124,11 @@
             <targetReference>C501_Get_Assessment_Record_Type_Id</targetReference>
         </connector>
         <fields>
+            <name>HEADING_Assessment_Name</name>
+            <fieldText>&lt;p&gt;&lt;b style=&quot;font-size: 16px;&quot;&gt;Assessment Name Here&lt;/b&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
             <name>C501_Assessment_Instructions</name>
             <fieldText>&lt;p&gt;Please enter comments for each portion of the assessment.&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
@@ -150,7 +155,7 @@
             <isRequired>false</isRequired>
         </fields>
         <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
+        <showHeader>false</showHeader>
     </screens>
     <startElementReference>C501_General_Assessment</startElementReference>
     <status>Draft</status>
@@ -161,6 +166,9 @@
         <locationX>583</locationX>
         <locationY>234</locationY>
         <flowName>Send_Flow_Fault_Email</flowName>
+        <inputAssignments>
+            <name>C501_varFaultyFlowErrorMessage</name>
+        </inputAssignments>
         <inputAssignments>
             <name>C501_varFaultyFlowName</name>
             <value>
