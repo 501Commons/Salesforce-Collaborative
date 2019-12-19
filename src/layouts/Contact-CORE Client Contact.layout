@@ -5,7 +5,6 @@
     <excludeButtons>Clone</excludeButtons>
     <excludeButtons>CreateCallList</excludeButtons>
     <excludeButtons>CreateSurveyInvitation</excludeButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
     <excludeButtons>Delete</excludeButtons>
     <excludeButtons>DisableCustomerPortal</excludeButtons>
     <excludeButtons>DisablePartnerPortal</excludeButtons>
@@ -14,6 +13,7 @@
     <excludeButtons>EnablePrmSuperUser</excludeButtons>
     <excludeButtons>EnableSelfService</excludeButtons>
     <excludeButtons>RequestUpdate</excludeButtons>
+    <excludeButtons>RequestUseSfdc</excludeButtons>
     <excludeButtons>Share</excludeButtons>
     <excludeButtons>Submit</excludeButtons>
     <excludeButtons>ViewPartnerPortalUser</excludeButtons>
@@ -40,10 +40,6 @@
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>npsp__Primary_Contact__c</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>npsp__Deceased__c</field>
             </layoutItems>
@@ -66,6 +62,25 @@
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
+    </layoutSections>
+    <layoutSections>
+        <customLabel>true</customLabel>
+        <detailHeading>true</detailHeading>
+        <editHeading>true</editHeading>
+        <label>Account Primary Contact</label>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Set_As_Account_Primary_Contact__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>npsp__Primary_Contact__c</field>
+            </layoutItems>
+        </layoutColumns>
+        <style>TwoColumnsLeftToRight</style>
     </layoutSections>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -134,7 +149,7 @@
         <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>C501_Hispanic_or_Latino__c</field>
+                <field>C501_Latino_or_Hispanic__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -253,7 +268,6 @@
     <miniLayout>
         <fields>Name</fields>
         <fields>AccountId</fields>
-        <fields>MailingAddress</fields>
     </miniLayout>
     <platformActionList>
         <actionListContext>Record</actionListContext>
@@ -268,19 +282,14 @@
             <sortOrder>1</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Contact.npsp__New_Affiliation</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>2</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>ChangeOwnerOne</actionName>
             <actionType>StandardButton</actionType>
-            <sortOrder>3</sortOrder>
+            <sortOrder>2</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>npe4__Relationships_Viewer</actionName>
             <actionType>CustomButton</actionType>
-            <sortOrder>4</sortOrder>
+            <sortOrder>3</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>
@@ -294,19 +303,7 @@
             <quickActionName>Contact.npsp__New_Relationship</quickActionName>
         </quickActionListItems>
         <quickActionListItems>
-            <quickActionName>Contact.npsp__New_Affiliation</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
             <quickActionName>FeedItem.ContentPost</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
-            <quickActionName>npsp__LogACall</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
-            <quickActionName>npsp__NewTask</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
-            <quickActionName>SendEmail</quickActionName>
         </quickActionListItems>
     </quickActionList>
     <relatedContent>
@@ -329,20 +326,28 @@
         <fields>npe4__Type__c</fields>
         <fields>npe4__Relationship_Explanation__c</fields>
         <fields>npe4__Status__c</fields>
-        <fields>npsp__Related_Opportunity_Contact_Role__c</fields>
         <relatedList>npe4__Relationship__c.npe4__Contact__c</relatedList>
+        <sortField>NAME</sortField>
+        <sortOrder>Asc</sortOrder>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Account.NAME</fields>
-        <fields>npe5__Role__c</fields>
-        <fields>npe5__Status__c</fields>
-        <fields>npe5__StartDate__c</fields>
-        <fields>npe5__EndDate__c</fields>
-        <relatedList>npe5__Affiliation__c.npe5__Contact__c</relatedList>
+        <fields>Status__c</fields>
+        <fields>Domain__c</fields>
+        <fields>CREATED_DATE</fields>
+        <relatedList>Goal__c.C501_Contact__c</relatedList>
+        <sortField>NAME</sortField>
+        <sortOrder>Asc</sortOrder>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedContentNoteList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <relatedList>RelatedFileList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>Release__c.Contact__c</relatedList>
     </relatedLists>
     <relatedObjects>AccountId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>
@@ -351,7 +356,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h0j000000RPpz</masterLabel>
+        <masterLabel>00h1U0000062w2E</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

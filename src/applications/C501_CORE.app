@@ -3,11 +3,38 @@
     <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>C501_CORE_Contact_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Contact</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>C501_CORE_Family_Page</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
         <pageOrSobjectType>Account</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>C501_Goal_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Goal__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Release_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Release__c</pageOrSobjectType>
     </actionOverrides>
     <brand>
         <headerColor>#0070D2</headerColor>
@@ -21,45 +48,12 @@
     <navType>Standard</navType>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>C501_CORE_Contact_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Contact</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>CORE Program Staff</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>C501_CORE_Contact_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Contact</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>C501_CORE_Contact_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Contact</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>[test] CORE Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
         <content>C501_CORE_Family_Page</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.HH_Account</recordType>
         <type>Flexipage</type>
-        <profile>CORE Program Staff</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>C501_CORE_Family_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.HH_Account</recordType>
-        <type>Flexipage</type>
-        <profile>[test] CORE Admin</profile>
+        <profile>CORE Staff (TB Deleted)</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -70,12 +64,47 @@
         <type>Flexipage</type>
         <profile>Admin</profile>
     </profileActionOverrides>
-    <tabs>standard-home</tabs>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>C501_CORE_Org_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Collaborative</recordType>
+        <type>Flexipage</type>
+        <profile>CORE Staff (TB Deleted)</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>C501_CORE_Org_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Collaborative</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>C501_CORE_Org_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Organization</recordType>
+        <type>Flexipage</type>
+        <profile>CORE Staff (TB Deleted)</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>C501_CORE_Org_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Organization</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
     <tabs>standard-Account</tabs>
-    <tabs>Goal__c</tabs>
-    <tabs>Step__c</tabs>
-    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>Intake_Services_App</tabs>
     <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>CORE_UtilityBar</utilityBar>
+    <utilityBar>CORE_UtilityBar1</utilityBar>
 </CustomApplication>

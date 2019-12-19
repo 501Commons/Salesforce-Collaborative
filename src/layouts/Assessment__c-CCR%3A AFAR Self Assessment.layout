@@ -16,6 +16,10 @@
                 <behavior>Required</behavior>
                 <field>Account__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>C501_Assessment_Date__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -25,6 +29,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Notify_When_Next_Assessment_Due__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>C501_Next_Assessment_Due_Date__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -174,9 +182,7 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Measurable__c.NAME</fields>
-        <fields>Value__c</fields>
-        <relatedList>Measurement__c.Assessment__c</relatedList>
+        <relatedList>Goal__c.Target_Assessment__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
@@ -184,7 +190,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h55000000WIIJ</masterLabel>
+        <masterLabel>00h1U0000062w29</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>

@@ -8,6 +8,10 @@
                 <value>false</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
+                <name>hideChatterActions</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>numVisibleActions</name>
                 <value>3</value>
             </componentInstanceProperties>
@@ -30,6 +34,14 @@
     <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>Contacts</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
                 <name>relatedListComponentOverride</name>
                 <value>ADVGRID</value>
             </componentInstanceProperties>
@@ -41,7 +53,53 @@
                 <name>showActionBar</name>
                 <value>true</value>
             </componentInstanceProperties>
-            <componentName>force:relatedListContainer</componentName>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>AttachedContentNotes</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>ADVGRID</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>rowsToDisplay</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showActionBar</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>npsp__Addresses__r</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>ADVGRID</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>rowsToDisplay</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showActionBar</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
         </componentInstances>
         <name>facet-d4b86ab1-47a9-41b2-bba4-2e135720eda4</name>
         <type>Facet</type>
@@ -51,6 +109,33 @@
             <componentName>force:detailPanel</componentName>
         </componentInstances>
         <name>facet-e86694fc-02ce-4cd3-8d32-0983cd030cbf</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>Releases__r</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>rowsToDisplay</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showActionBar</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <name>Facet-c8145012-c2c2-47ab-887c-1ae1b2fa1d5b</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -117,29 +202,6 @@
     <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
-                <name>height</name>
-                <value>600</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>label</name>
-                <value>Case Managment</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>pageName</name>
-                <value>IntakeServicesApp</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>showLabel</name>
-                <value>false</value>
-            </componentInstanceProperties>
-            <componentName>flexipage:visualforcePage</componentName>
-        </componentInstances>
-        <name>Facet-tf35m6a6ev</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <componentInstances>
-            <componentInstanceProperties>
                 <name>active</name>
                 <value>false</value>
             </componentInstanceProperties>
@@ -171,11 +233,22 @@
         <componentInstances>
             <componentInstanceProperties>
                 <name>body</name>
+                <value>Facet-c8145012-c2c2-47ab-887c-1ae1b2fa1d5b</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>title</name>
+                <value>Manage ROIs</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:tab</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>body</name>
                 <value>Facet-2d0acca5-4096-4f70-8917-eb2857250f84</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>title</name>
-                <value>Assessments</value>
+                <value>Manage Assessments</value>
             </componentInstanceProperties>
             <componentName>flexipage:tab</componentName>
         </componentInstances>
@@ -186,18 +259,7 @@
             </componentInstanceProperties>
             <componentInstanceProperties>
                 <name>title</name>
-                <value>Goals</value>
-            </componentInstanceProperties>
-            <componentName>flexipage:tab</componentName>
-        </componentInstances>
-        <componentInstances>
-            <componentInstanceProperties>
-                <name>body</name>
-                <value>Facet-tf35m6a6ev</value>
-            </componentInstanceProperties>
-            <componentInstanceProperties>
-                <name>title</name>
-                <value>Case Management</value>
+                <value>Manage Goals</value>
             </componentInstanceProperties>
             <componentName>flexipage:tab</componentName>
         </componentInstances>
@@ -218,29 +280,75 @@
     <flexiPageRegions>
         <componentInstances>
             <componentInstanceProperties>
-                <name>hideHeader</name>
-                <value>false</value>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
             </componentInstanceProperties>
-            <componentName>force:relatedListQuickLinksContainer</componentName>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>AttachedContentDocuments</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>ADVGRID</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>rowsToDisplay</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showActionBar</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
         </componentInstances>
         <componentInstances>
             <componentInstanceProperties>
-                <name>createQuickActionName</name>
-                <value>C501_NewClientContact</value>
+                <name>parentFieldApiName</name>
+                <value>Account.Id</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
-                <name>lookupFieldName</name>
-                <value>npe01__One2OneContact__c</value>
+                <name>relatedListApiName</name>
+                <value>Contacts</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
-                <name>titleFieldName</name>
-                <value>Family&apos;s Primary Contact</value>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
             </componentInstanceProperties>
             <componentInstanceProperties>
-                <name>updateQuickActionName</name>
-                <value>Contact.C501_CORE_Update_Client_Contact</value>
+                <name>rowsToDisplay</name>
+                <value>10</value>
             </componentInstanceProperties>
-            <componentName>console:relatedRecord</componentName>
+            <componentInstanceProperties>
+                <name>showActionBar</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>parentFieldApiName</name>
+                <value>Account.npe01__One2OneContact__c</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListApiName</name>
+                <value>npe4__Relationships__r</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>relatedListComponentOverride</name>
+                <value>NONE</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>rowsToDisplay</name>
+                <value>10</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showActionBar</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>force:relatedListSingleContainer</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentName>runtime_sales_activities:activityPanel</componentName>
         </componentInstances>
         <name>sidebar</name>
         <type>Region</type>

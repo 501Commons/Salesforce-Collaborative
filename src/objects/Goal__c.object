@@ -129,7 +129,7 @@
     <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>C501_Goal_Record_Page</content>
+        <content>Goal_Record_Page</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
@@ -145,8 +145,16 @@
     </actionOverrides>
     <allowInChatterGroups>true</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>C501_CORE_Goal_CL</fullName>
+        <fields>Name</fields>
+        <fields>Account__c</fields>
+        <fields>Status__c</fields>
+        <fields>Domain__c</fields>
+        <label>CORE Goal CL</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>true</enableActivities>
+    <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
@@ -184,17 +192,29 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>Complete__c</fullName>
+        <fullName>C501_Contact__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Optional lookup to the specific family member associated with this goal</description>
         <externalId>false</externalId>
-        <formula>0</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Complete</label>
-        <precision>18</precision>
+        <inlineHelpText>(Optional) Find and link the specific family member associated with this goal</inlineHelpText>
+        <label>Contact</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.AccountId</field>
+                <operation>equals</operation>
+                <valueField>$Source.Account__c</valueField>
+            </filterItems>
+            <infoMessage>The family member associated with this goal must be part of the family&apos;s household.</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Goals</relationshipLabel>
+        <relationshipName>Goals</relationshipName>
         <required>false</required>
-        <scale>2</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Percent</type>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Domain__c</fullName>
@@ -210,30 +230,6 @@
         </valueSet>
     </fields>
     <fields>
-        <fullName>Measurable_Goal__c</fullName>
-        <externalId>false</externalId>
-        <label>Measurable Goal</label>
-        <length>128</length>
-        <required>true</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Measurable__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Measurable</label>
-        <referenceTo>Measurable__c</referenceTo>
-        <relationshipLabel>Goals</relationshipLabel>
-        <relationshipName>Goals</relationshipName>
-        <required>true</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
-    </fields>
-    <fields>
         <fullName>Status__c</fullName>
         <externalId>false</externalId>
         <label>Status</label>
@@ -247,12 +243,12 @@
                 <sorted>false</sorted>
                 <value>
                     <fullName>Planned</fullName>
-                    <default>false</default>
+                    <default>true</default>
                     <label>Planned</label>
                 </value>
                 <value>
                     <fullName>In Progress</fullName>
-                    <default>true</default>
+                    <default>false</default>
                     <label>In Progress</label>
                 </value>
                 <value>
@@ -282,6 +278,28 @@
         <trackTrending>false</trackTrending>
         <type>Html</type>
         <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Target_Assessment__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Target Assessment</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Assessment__c.Type__c</field>
+                <operation>equals</operation>
+                <value>Target</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Assessment__c</referenceTo>
+        <relationshipLabel>Goals</relationshipLabel>
+        <relationshipName>Goals</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Term__c</fullName>
@@ -336,7 +354,6 @@
         <columns>NAME</columns>
         <columns>Account__c</columns>
         <columns>Term__c</columns>
-        <columns>Complete__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>Type__c</field>
@@ -355,6 +372,7 @@
     <recordTypes>
         <fullName>Collaborative</fullName>
         <active>true</active>
+        <compactLayoutAssignment>C501_CORE_Goal_CL</compactLayoutAssignment>
         <label>Collaborative</label>
         <picklistValues>
             <picklist>Benchmark__c</picklist>
@@ -386,23 +404,23 @@
         <picklistValues>
             <picklist>Domain__c</picklist>
             <values>
-                <fullName>Adult%2Fs health and mental well-being are strengthened</fullName>
+                <fullName>Early Childhood</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Adult%2Fs pursue post-secondary education and climb the career ladder</fullName>
+                <fullName>Economic Assets</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Children are ready for school and take charge of their learning</fullName>
+                <fullName>Health %26 Well-Being</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Families are connected with economic%2C social and%2For other supports</fullName>
+                <fullName>Post-Secondary %26 Employment</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Families are financially stable</fullName>
+                <fullName>Social Capital</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -418,7 +436,7 @@
             </values>
             <values>
                 <fullName>In Progress</fullName>
-                <default>true</default>
+                <default>false</default>
             </values>
             <values>
                 <fullName>On Hold</fullName>
@@ -426,7 +444,7 @@
             </values>
             <values>
                 <fullName>Planned</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
         </picklistValues>
         <picklistValues>
@@ -448,6 +466,7 @@
     <recordTypes>
         <fullName>Family</fullName>
         <active>true</active>
+        <compactLayoutAssignment>C501_CORE_Goal_CL</compactLayoutAssignment>
         <label>Family</label>
         <picklistValues>
             <picklist>Benchmark__c</picklist>
@@ -479,23 +498,23 @@
         <picklistValues>
             <picklist>Domain__c</picklist>
             <values>
-                <fullName>Adult%2Fs health and mental well-being are strengthened</fullName>
+                <fullName>Early Childhood</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Adult%2Fs pursue post-secondary education and climb the career ladder</fullName>
+                <fullName>Economic Assets</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Children are ready for school and take charge of their learning</fullName>
+                <fullName>Health %26 Well-Being</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Families are connected with economic%2C social and%2For other supports</fullName>
+                <fullName>Post-Secondary %26 Employment</fullName>
                 <default>false</default>
             </values>
             <values>
-                <fullName>Families are financially stable</fullName>
+                <fullName>Social Capital</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -511,7 +530,7 @@
             </values>
             <values>
                 <fullName>In Progress</fullName>
-                <default>true</default>
+                <default>false</default>
             </values>
             <values>
                 <fullName>On Hold</fullName>
@@ -519,7 +538,7 @@
             </values>
             <values>
                 <fullName>Planned</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
         </picklistValues>
         <picklistValues>
