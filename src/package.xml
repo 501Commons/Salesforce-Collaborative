@@ -311,6 +311,10 @@
         <name>PathAssistant</name>
     </types>
     <types>
+        <members>Case_Management</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
         <members>CORE Admin</members>
         <members>CORE Program Staff</members>
         <name>Profile</name>
