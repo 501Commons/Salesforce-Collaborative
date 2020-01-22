@@ -157,15 +157,25 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fieldSets>
-        <fullName>C501_CCR_AFAR_Self_Assessment</fullName>
+        <fullName>CCR_AFAR_Self_Assessment</fullName>
         <description>CCR: All Families Are Ready - AFAR Self Assessment</description>
         <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
             <field>C501_Assessment_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_Next_Assessment_Due_Date__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>C501_Next_Assessment_Due_Date__c</field>
+            <field>Notify_When_Next_Assessment_Due__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -252,15 +262,25 @@
         <label>AFAR Self Assessment</label>
     </fieldSets>
     <fieldSets>
-        <fullName>C501_HH_Domain_Needs_Assessment</fullName>
+        <fullName>HH_Domain_Needs_Assessment</fullName>
         <description>Homeward House - Five Domains Needs Assessment</description>
         <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
             <field>C501_Assessment_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_Next_Assessment_Due_Date__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>C501_Next_Assessment_Due_Date__c</field>
+            <field>Notify_When_Next_Assessment_Due__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -292,15 +312,25 @@
         <label>HH Domain Needs Assessment</label>
     </fieldSets>
     <fieldSets>
-        <fullName>C501_ISA_Assessment</fullName>
+        <fullName>ISA_Assessment</fullName>
         <description>Improving School Attendance - Assessment</description>
         <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
             <field>C501_Assessment_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_Next_Assessment_Due_Date__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>C501_Next_Assessment_Due_Date__c</field>
+            <field>Notify_When_Next_Assessment_Due__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -322,15 +352,25 @@
         <label>ISA Assessment</label>
     </fieldSets>
     <fieldSets>
-        <fullName>C501_MLW_Bridge_Scores</fullName>
+        <fullName>MLW_Bridge_Scores</fullName>
         <description>Making Life Work - Bridge Assessment</description>
         <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
             <field>C501_Assessment_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_Next_Assessment_Due_Date__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>C501_Next_Assessment_Due_Date__c</field>
+            <field>Notify_When_Next_Assessment_Due__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -382,15 +422,25 @@
         <label>MLW Bridge Scores</label>
     </fieldSets>
     <fieldSets>
-        <fullName>C501_NCCC_Assessment</fullName>
+        <fullName>NCCC_Assessment</fullName>
         <description>North Counties Community Collaborative - Needs Assessment</description>
         <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
             <field>C501_Assessment_Date__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>C501_Next_Assessment_Due_Date__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
         <displayedFields>
-            <field>C501_Next_Assessment_Due_Date__c</field>
+            <field>Notify_When_Next_Assessment_Due__c</field>
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </displayedFields>
@@ -1225,6 +1275,30 @@
         <type>Date</type>
     </fields>
     <fields>
+        <fullName>Family_Member__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Optional lookup to the specific family member who is being assessed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If this assessment applies to one specific family member, link it to their contact record</inlineHelpText>
+        <label>Family Member</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Contact.AccountId</field>
+                <operation>equals</operation>
+                <valueField>$Source.Account__c</valueField>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Assessments</relationshipLabel>
+        <relationshipName>Assessments</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Next_Assessment__c</fullName>
         <defaultValue>90</defaultValue>
         <description>Days until next assessment</description>
@@ -1284,109 +1358,6 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Assessments</pluralLabel>
-    <recordTypeTrackHistory>false</recordTypeTrackHistory>
-    <recordTypes>
-        <fullName>C501_Assessment_Default</fullName>
-        <active>true</active>
-        <description>Displays fields relevant to all CORE assessment fields</description>
-        <label>Assessment Default</label>
-        <picklistValues>
-            <picklist>Type__c</picklist>
-            <values>
-                <fullName>Actual</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Target</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>C501_CCR_AFAR_Self_Assessment</fullName>
-        <active>true</active>
-        <description>Displays fields relevant to Connect Casino Road&apos;s AFAR Self Assessment</description>
-        <label>CCR: AFAR Self Assessment</label>
-        <picklistValues>
-            <picklist>Type__c</picklist>
-            <values>
-                <fullName>Actual</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Target</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>C501_HH_Domain_Assessment</fullName>
-        <active>true</active>
-        <description>Displays fields relevant to Homeward House&apos;s Domain Assessment</description>
-        <label>HH: Domain Assessment</label>
-        <picklistValues>
-            <picklist>Type__c</picklist>
-            <values>
-                <fullName>Actual</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Target</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>C501_ISA_General_Assessment</fullName>
-        <active>true</active>
-        <description>Displays fields relevant to Improving School Attendance&apos;s General Assessment</description>
-        <label>ISA: General Assessment</label>
-        <picklistValues>
-            <picklist>Type__c</picklist>
-            <values>
-                <fullName>Actual</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Target</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>C501_MLW_Bridge_Scores</fullName>
-        <active>true</active>
-        <description>Displays fields relevant to Making Life Work&apos;s Bridge Scores</description>
-        <label>MLW: Bridge Scores</label>
-        <picklistValues>
-            <picklist>Type__c</picklist>
-            <values>
-                <fullName>Actual</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Target</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
-    <recordTypes>
-        <fullName>C501_NCCC_General_Assessment</fullName>
-        <active>true</active>
-        <description>Displays fields relevant to North Counties Community Collaborative&apos;s Fenn Jorstad Self Sufficiency Matrix</description>
-        <label>NCCC: Fenn Jorstad Self Sufficiency Matrix</label>
-        <picklistValues>
-            <picklist>Type__c</picklist>
-            <values>
-                <fullName>Actual</fullName>
-                <default>true</default>
-            </values>
-            <values>
-                <fullName>Target</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-    </recordTypes>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>

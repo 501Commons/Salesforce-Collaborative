@@ -3,6 +3,7 @@
     <compactLayouts>
         <fullName>C501_CORE_Family</fullName>
         <fields>Name</fields>
+        <fields>Family_Status__c</fields>
         <fields>npe01__One2OneContact__c</fields>
         <fields>C501_Primary_Email__c</fields>
         <fields>C501_Primary_Phone__c</fields>
@@ -229,22 +230,6 @@
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>C501_Family_Status__c</fullName>
-        <defaultValue>IF($RecordType.DeveloperName = &quot;HH_Account&quot;, &quot;Referral&quot;, null)</defaultValue>
-        <description>Used in CORE Family Kan Ban</description>
-        <externalId>false</externalId>
-        <inlineHelpText>Select the family&apos;s program status</inlineHelpText>
-        <label>Family Status</label>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetName>Family_Status</valueSetName>
-        </valueSet>
     </fields>
     <fields>
         <fullName>C501_Federal_Poverty_Level__c</fullName>
@@ -556,7 +541,9 @@ AND( C501_Child_Aged_0_8__c,
     <fields>
         <fullName>C501_IS_External_Id__c</fullName>
         <caseSensitive>false</caseSensitive>
+        <description>Custom for Improving School Attendance</description>
         <externalId>true</externalId>
+        <inlineHelpText>Custom for Improving School Attendance</inlineHelpText>
         <label>External Id</label>
         <length>20</length>
         <required>false</required>
@@ -1025,9 +1012,14 @@ AND( C501_Child_Aged_0_8__c,
                     <label>Family Dropped</label>
                 </value>
                 <value>
-                    <fullName>Other (refer to notes)</fullName>
+                    <fullName>Ineligible</fullName>
                     <default>false</default>
-                    <label>Other (refer to notes)</label>
+                    <label>Ineligible</label>
+                </value>
+                <value>
+                    <fullName>Other (refer to case notes)</fullName>
+                    <default>false</default>
+                    <label>Other (refer to case notes)</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -1058,24 +1050,13 @@ AND( C501_Child_Aged_0_8__c,
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
-    <fields>
-        <fullName>Priority__c</fullName>
-        <externalId>false</externalId>
-        <label>Priority</label>
-        <precision>3</precision>
-        <required>false</required>
-        <scale>0</scale>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <type>Number</type>
-        <unique>false</unique>
-    </fields>
     <listViews>
         <fullName>Household_Accounts</fullName>
         <columns>ACCOUNT.NAME</columns>
         <columns>npe01__One2OneContact__c</columns>
+        <columns>Kanban_Custom__c</columns>
         <columns>C501_Primary_Languages__c</columns>
-        <columns>C501_Family_Status__c</columns>
+        <columns>Family_Status__c</columns>
         <filterScope>Everything</filterScope>
         <filters>
             <field>ACCOUNT.RECORDTYPE</field>
@@ -1151,25 +1132,6 @@ AND( C501_Child_Aged_0_8__c,
             </values>
             <values>
                 <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
-            <picklist>C501_Family_Status__c</picklist>
-            <values>
-                <fullName>Case Management</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exited</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Intake</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1261,7 +1223,7 @@ AND( C501_Child_Aged_0_8__c,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Other %28refer to notes%29</fullName>
+                <fullName>Other %28refer to case notes%29</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1558,33 +1520,6 @@ AND( C501_Child_Aged_0_8__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>C501_Family_Status__c</picklist>
-            <values>
-                <fullName>Case Management</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exited</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Intake</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Referral</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Wait list</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>C501_IS_Source__c</picklist>
             <values>
                 <fullName>Doesn%27t know or won%27t say</fullName>
@@ -1672,7 +1607,11 @@ AND( C501_Child_Aged_0_8__c,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Other %28refer to notes%29</fullName>
+                <fullName>Ineligible</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other %28refer to case notes%29</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1921,25 +1860,6 @@ AND( C501_Child_Aged_0_8__c,
             </values>
         </picklistValues>
         <picklistValues>
-            <picklist>C501_Family_Status__c</picklist>
-            <values>
-                <fullName>Case Management</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Exited</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Inactive</fullName>
-                <default>false</default>
-            </values>
-            <values>
-                <fullName>Intake</fullName>
-                <default>false</default>
-            </values>
-        </picklistValues>
-        <picklistValues>
             <picklist>C501_IS_Source__c</picklist>
             <values>
                 <fullName>Doesn%27t know or won%27t say</fullName>
@@ -2027,7 +1947,7 @@ AND( C501_Child_Aged_0_8__c,
                 <default>false</default>
             </values>
             <values>
-                <fullName>Other %28refer to notes%29</fullName>
+                <fullName>Other %28refer to case notes%29</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

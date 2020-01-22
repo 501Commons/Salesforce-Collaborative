@@ -32,6 +32,10 @@
                 <behavior>Edit</behavior>
                 <field>C501_Next_Assessment_Due_Date__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Family_Member__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>

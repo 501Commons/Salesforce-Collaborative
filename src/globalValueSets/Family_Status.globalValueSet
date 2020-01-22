@@ -30,24 +30,6 @@
         <default>false</default>
         <label>Exited</label>
     </customValue>
-    <customValue>
-        <fullName>Goals</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Goals</label>
-    </customValue>
-    <customValue>
-        <fullName>Assessments</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>Assessments</label>
-    </customValue>
-    <customValue>
-        <fullName>ROIs</fullName>
-        <default>false</default>
-        <isActive>false</isActive>
-        <label>ROIs</label>
-    </customValue>
     <masterLabel>Family Status</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>

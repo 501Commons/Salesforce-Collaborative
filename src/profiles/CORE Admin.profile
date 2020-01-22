@@ -89,11 +89,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.C501_Family_Status__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Account.C501_Federal_Poverty_Level__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -394,11 +389,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Account.Priority__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Assessment__c.C501_Assessment_Date__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -669,6 +659,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Assessment__c.Family_Member__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Assessment__c.Notify_When_Next_Assessment_Due__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -838,11 +833,6 @@
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
-        <editable>false</editable>
-        <field>Goal__c.Complete__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
         <editable>true</editable>
         <field>Goal__c.Domain__c</field>
         <readable>true</readable>
@@ -899,38 +889,14 @@
     </fieldPermissions>
     <layoutAssignments>
         <layout>Account-Collaborative Lightning Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Account-Collaborative Lightning Layout</layout>
         <recordType>Account.Collaborative</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Account-Partner Lightning Layout</layout>
         <recordType>Account.Organization</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Assessment__c-Assessment Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Assessment__c-Assessment Layout</layout>
-        <recordType>Assessment__c.C501_Assessment_Default</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Assessment__c-CCR%3A AFAR Self Assessment</layout>
-        <recordType>Assessment__c.C501_CCR_AFAR_Self_Assessment</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Assessment__c-HH%3A Domain Assessment</layout>
-        <recordType>Assessment__c.C501_HH_Domain_Assessment</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Assessment__c-ISA%3A General Assessment</layout>
-        <recordType>Assessment__c.C501_ISA_General_Assessment</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Assessment__c-MLW%3A Bridge Scores</layout>
-        <recordType>Assessment__c.C501_MLW_Bridge_Scores</recordType>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>Assessment__c-NCCC%3A Fenn Jorstad Self Sufficiency Matrix</layout>
-        <recordType>Assessment__c.C501_NCCC_General_Assessment</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>C501_Collaborative_User__c-Collaborative User Layout</layout>
@@ -1016,42 +982,13 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
         <recordType>Account.HH_Account</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>false</default>
         <recordType>Account.Organization</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>true</default>
-        <recordType>Assessment__c.C501_Assessment_Default</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Assessment__c.C501_CCR_AFAR_Self_Assessment</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Assessment__c.C501_HH_Domain_Assessment</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Assessment__c.C501_ISA_General_Assessment</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Assessment__c.C501_MLW_Bridge_Scores</recordType>
-        <visible>true</visible>
-    </recordTypeVisibilities>
-    <recordTypeVisibilities>
-        <default>false</default>
-        <recordType>Assessment__c.C501_NCCC_General_Assessment</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
     <recordTypeVisibilities>
@@ -1071,6 +1008,7 @@
     </recordTypeVisibilities>
     <recordTypeVisibilities>
         <default>true</default>
+        <personAccountDefault>true</personAccountDefault>
         <recordType>Goal__c.Family</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
@@ -1089,10 +1027,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>AddDirectMessageMembers</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ApexRestServices</name>
     </userPermissions>
     <userPermissions>
@@ -1102,10 +1036,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>AssignTopics</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ChatterEditOwnPost</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -1122,14 +1052,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ChatterOwnGroups</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ContentWorkspaces</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ConvertLeads</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -1169,10 +1091,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>EditOppLineItemUnitPrice</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>EditTask</name>
     </userPermissions>
     <userPermissions>
@@ -1189,19 +1107,11 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>EnableCommunityAppLauncher</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>EnableNotifications</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>ExportReport</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>ImportPersonal</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -1225,6 +1135,10 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>ManagePartners</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>ManageReportsInPubFolders</name>
     </userPermissions>
     <userPermissions>
@@ -1234,10 +1148,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>NewReportBuilder</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>RemoveDirectMessageMembers</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -1270,10 +1180,6 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ShowCompanyNameAsUserBadge</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
-        <name>SubmitMacrosAllowed</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

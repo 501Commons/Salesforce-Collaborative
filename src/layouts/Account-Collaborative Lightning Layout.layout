@@ -4,8 +4,7 @@
     <excludeButtons>AccountHierarchy</excludeButtons>
     <excludeButtons>CreateCallList</excludeButtons>
     <excludeButtons>CreateSurveyInvitation</excludeButtons>
-    <excludeButtons>DataDotComAccountInsights</excludeButtons>
-    <excludeButtons>DataDotComClean</excludeButtons>
+    <excludeButtons>DataDotComCompanyHierarchy</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
     <excludeButtons>PartnerScorecard</excludeButtons>
     <excludeButtons>Share</excludeButtons>
@@ -98,6 +97,10 @@
                 <behavior>Edit</behavior>
                 <field>Description</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>C501_Description_Rich__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
     </layoutSections>
@@ -141,16 +144,6 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
-            <actionName>Delete</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>6</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>EnableAsPartner</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>7</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>Edit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>0</sortOrder>
@@ -180,6 +173,16 @@
             <actionType>StandardButton</actionType>
             <sortOrder>5</sortOrder>
         </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Delete</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>6</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>EnableAsPartner</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>7</sortOrder>
+        </platformActionListItems>
     </platformActionList>
     <relatedContent>
         <relatedContentItems>
@@ -195,6 +198,13 @@
         <fields>CONTACT.EMAIL</fields>
         <fields>CONTACT.PHONE1</fields>
         <relatedList>RelatedContactList</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>FULL_NAME</fields>
+        <fields>CORE.USERS.EMAIL</fields>
+        <fields>CORE.USERS.TITLE</fields>
+        <fields>CORE.USERS.ACTIVE</fields>
+        <relatedList>CommunityMembers</relatedList>
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
@@ -242,11 +252,6 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Expiration__c</fields>
-        <relatedList>Release__c.Account__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
         <fields>C501_Partner__c</fields>
         <fields>C501_Start_Date__c</fields>
         <fields>C501_End_Date__c</fields>
@@ -258,8 +263,11 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>User__c</fields>
-        <relatedList>C501_Collaborative_User__c.Collaborative__c</relatedList>
+        <fields>C501_Name_Term__c</fields>
+        <fields>C501_Active__c</fields>
+        <fields>C501_Domain__c</fields>
+        <fields>C501_Term__c</fields>
+        <relatedList>C501_Collaborative_Outcome__c.C501_Collaborative__c</relatedList>
     </relatedLists>
     <relatedObjects>ParentId</relatedObjects>
     <showEmailCheckbox>false</showEmailCheckbox>

@@ -193,17 +193,18 @@
     </fields>
     <fields>
         <fullName>C501_Contact__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
+        <deleteConstraint>SetNull</deleteConstraint>
         <description>Optional lookup to the specific family member associated with this goal</description>
         <externalId>false</externalId>
         <inlineHelpText>(Optional) Find and link the specific family member associated with this goal</inlineHelpText>
         <label>Contact</label>
         <lookupFilter>
             <active>true</active>
+            <errorMessage>The family member associated with this goal must be part of the family&apos;s household.</errorMessage>
             <filterItems>
-                <field>Contact.AccountId</field>
+                <field>$Source.Account__c</field>
                 <operation>equals</operation>
-                <valueField>$Source.Account__c</valueField>
+                <valueField>Contact.AccountId</valueField>
             </filterItems>
             <infoMessage>The family member associated with this goal must be part of the family&apos;s household.</infoMessage>
             <isOptional>false</isOptional>
@@ -217,19 +218,6 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>Complete__c</fullName>
-        <externalId>false</externalId>
-        <formula>0</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Complete</label>
-        <precision>18</precision>
-        <required>false</required>
-        <scale>2</scale>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Percent</type>
-    </fields>
-    <fields>
         <fullName>Domain__c</fullName>
         <externalId>false</externalId>
         <label>Domain</label>
@@ -241,30 +229,6 @@
             <restricted>true</restricted>
             <valueSetName>Domains</valueSetName>
         </valueSet>
-    </fields>
-    <fields>
-        <fullName>Measurable_Goal__c</fullName>
-        <externalId>false</externalId>
-        <label>Measurable Goal</label>
-        <length>128</length>
-        <required>true</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Measurable__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Measurable</label>
-        <referenceTo>Measurable__c</referenceTo>
-        <relationshipLabel>Goals</relationshipLabel>
-        <relationshipName>Goals</relationshipName>
-        <required>true</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Status__c</fullName>
