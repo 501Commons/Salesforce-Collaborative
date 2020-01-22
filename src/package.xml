@@ -226,6 +226,10 @@
         <name>CustomField</name>
     </types>
     <types>
+        <members>Collab_labelReferralTitle</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
         <members>C501_Fault_Email_Address.Intakebh</members>
         <members>C501_Fault_Email_Address.UwscMaster</members>
         <members>C501_Fault_Email_Address.UwscProduction</members>
@@ -345,6 +349,7 @@
         <members>Account.C501_HH_Eligibility</members>
         <members>CORE_New_Client_Contact</members>
         <members>Contact.C501_CORE_Update_Client_Contact</members>
+        <members>Contact.C501_Delete_Contact</members>
         <name>QuickAction</name>
     </types>
     <types>
