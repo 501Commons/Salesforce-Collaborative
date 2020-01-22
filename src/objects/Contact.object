@@ -87,6 +87,35 @@ IF( NOT( ISBLANK( Birthdate ) ) ,
         <type>Checkbox</type>
     </fields>
     <fields>
+        <fullName>C501_Disabling_condition__c</fullName>
+        <externalId>false</externalId>
+        <label>Disabling condition</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>Don&apos;t know</fullName>
+                    <default>false</default>
+                    <label>Don&apos;t know</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>C501_IS_Age_Entry_Date__c</fullName>
         <description>Store this date so you can increment ages automatically even when you have no actual birthdate.</description>
         <externalId>false</externalId>

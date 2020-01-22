@@ -5,6 +5,11 @@
         <name>ApexPage</name>
     </types>
     <types>
+        <members>C501_Disability_Definitions</members>
+        <members>Collab_Referral</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
         <members>Account.C501_CORE_Family</members>
         <members>Account.C501_CORE_Org_Layout</members>
         <members>Contact.C501_CORE_Client_Contact</members>
@@ -27,10 +32,12 @@
         <members>Account.C501_CollabName__c</members>
         <members>Account.C501_Collab_Abbrev__c</members>
         <members>Account.C501_Collaborative_Status__c</members>
+        <members>Account.C501_Description_Rich__c</members>
         <members>Account.C501_Eligibility_Mass_Action_Config__c</members>
         <members>Account.C501_Eligibility_last_evaluated__c</members>
         <members>Account.C501_Exit_Successfully__c</members>
         <members>Account.C501_Family_Size__c</members>
+        <members>Account.C501_Family_Status_Old__c</members>
         <members>Account.C501_Family_Status__c</members>
         <members>Account.C501_Federal_Poverty_Level__c</members>
         <members>Account.C501_Female_Single_HH__c</members>
@@ -91,6 +98,9 @@
         <members>Account.Collaborative__c</members>
         <members>Account.Exit_Reason__c</members>
         <members>Account.FPL_Updated__c</members>
+        <members>Account.Family_Rank__c</members>
+        <members>Account.Family_Status__c</members>
+        <members>Account.Kanban_Custom__c</members>
         <members>Account.Level__c</members>
         <members>Account.Priority__c</members>
         <members>Assessment__c.Account__c</members>
@@ -151,6 +161,7 @@
         <members>Assessment__c.Next_Assessment__c</members>
         <members>Assessment__c.Notify_When_Next_Assessment_Due__c</members>
         <members>Assessment__c.Type__c</members>
+        <members>C501_Collaborative_Outcome__c.C501_Collaborative__c</members>
         <members>C501_Collaborative_User__c.Collaborative__c</members>
         <members>C501_Collaborative_User__c.User__c</members>
         <members>C501_Fault_Email_Address__mdt.C501_Org_Name__c</members>
@@ -162,6 +173,8 @@
         <members>C501_Federal_Poverty_Level__mdt.C501_Increment_AK__c</members>
         <members>C501_Federal_Poverty_Level__mdt.C501_Increment_HI__c</members>
         <members>C501_Federal_Poverty_Level__mdt.C501_Increment_Lower_48__c</members>
+        <members>C501_Goal_Outcome__c.C501_Goal__c</members>
+        <members>C501_Goal_Outcome__c.C501_Goal__c</members>
         <members>C501_Partnership__c.C501_Brief_Description__c</members>
         <members>C501_Partnership__c.C501_Collaborative__c</members>
         <members>C501_Partnership__c.C501_End_Date__c</members>
@@ -175,6 +188,7 @@
         <members>Contact.C501_Best_Contact_Time_Method__c</members>
         <members>Contact.C501_Birth_Year_est__c</members>
         <members>Contact.C501_Black_or_African_American__c</members>
+        <members>Contact.C501_Disabling_condition__c</members>
         <members>Contact.C501_IS_Age_Entry_Date__c</members>
         <members>Contact.C501_IS_Age_Group__c</members>
         <members>Contact.C501_IS_Age__c</members>
@@ -195,6 +209,7 @@
         <members>Goal__c.Account__c</members>
         <members>Goal__c.Benchmark__c</members>
         <members>Goal__c.C501_Contact__c</members>
+        <members>Goal__c.Complete__c</members>
         <members>Goal__c.Domain__c</members>
         <members>Goal__c.Status__c</members>
         <members>Goal__c.Steps__c</members>
@@ -219,9 +234,11 @@
     </types>
     <types>
         <members>Assessment__c</members>
+        <members>C501_Collaborative_Outcome__c</members>
         <members>C501_Collaborative_User__c</members>
         <members>C501_Fault_Email_Address__mdt</members>
         <members>C501_Federal_Poverty_Level__mdt</members>
+        <members>C501_Goal_Outcome__c</members>
         <members>C501_Partnership__c</members>
         <members>Goal__c</members>
         <members>Release__c</members>

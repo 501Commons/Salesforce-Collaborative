@@ -184,6 +184,17 @@
         </valueSet>
     </fields>
     <fields>
+        <fullName>C501_Description_Rich__c</fullName>
+        <description>Used for Collaboratives to house descriptions that will be publicly displayed.</description>
+        <externalId>false</externalId>
+        <label>Description (Rich)</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
         <fullName>C501_Eligibility_Mass_Action_Config__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <description>Mass Action Configuration to manually run when evaluating eligibility.</description>
@@ -230,6 +241,22 @@
         <trackHistory>false</trackHistory>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>C501_Family_Status_Old__c</fullName>
+        <defaultValue>IF($RecordType.DeveloperName = &quot;HH_Account&quot;, &quot;Referral&quot;, null)</defaultValue>
+        <description>Used in CORE Family Kan Ban</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the family&apos;s program status</inlineHelpText>
+        <label>Family Status Old</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Family_Status</valueSetName>
+        </valueSet>
     </fields>
     <fields>
         <fullName>C501_Federal_Poverty_Level__c</fullName>
@@ -1037,6 +1064,76 @@ AND( C501_Child_Aged_0_8__c,
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Family_Rank__c</fullName>
+        <description>Family rank generally used in ranking families in the wait list</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Family rank generally used in ranking families in the wait list</inlineHelpText>
+        <label>Family Rank</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Family_Status__c</fullName>
+        <defaultValue>&quot;Referral&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Family Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Referral</fullName>
+                    <default>true</default>
+                    <label>Referral</label>
+                </value>
+                <value>
+                    <fullName>Wait list</fullName>
+                    <default>false</default>
+                    <label>Wait list</label>
+                </value>
+                <value>
+                    <fullName>Intake</fullName>
+                    <default>false</default>
+                    <label>Intake</label>
+                </value>
+                <value>
+                    <fullName>Case Management</fullName>
+                    <default>false</default>
+                    <label>Case Management</label>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Kanban_Custom__c</fullName>
+        <description>Displays the value of a single custom field per collab; Shown only on the Families Kanban view; Currently dependent on Collab name</description>
+        <externalId>false</externalId>
+        <formula>IF (RecordType.DeveloperName = &quot;HH_Account&quot;, 
+   IF ( Collaborative__r.Name = &quot;Improving School Attendance&quot;, C501_IS_External_Id__c,
+         IF (Collaborative__r.Name = &quot;Making Life Work&quot;, TEXT (Family_Rank__c),
+         null
+        )), null)</formula>
+        <inlineHelpText>Formula - this field displays the value of a custom field, depending on which collab the family is associated with. ISA: External Id; MLW: Priority</inlineHelpText>
+        <label>Kanban Custom</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Level__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <description>Sample Level field for use with Level feature. May be deleted or edited as needed.</description>
@@ -1136,6 +1233,21 @@ AND( C501_Child_Aged_0_8__c,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>C501_Family_Status_Old__c</picklist>
+            <values>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intake</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>C501_IS_Source__c</picklist>
             <values>
                 <fullName>Doesn%27t know or won%27t say</fullName>
@@ -1224,6 +1336,29 @@ AND( C501_Child_Aged_0_8__c,
             </values>
             <values>
                 <fullName>Other %28refer to case notes%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Family_Status__c</picklist>
+            <values>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intake</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wait list</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1520,6 +1655,29 @@ AND( C501_Child_Aged_0_8__c,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>C501_Family_Status_Old__c</picklist>
+            <values>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intake</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wait list</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>C501_IS_Source__c</picklist>
             <values>
                 <fullName>Doesn%27t know or won%27t say</fullName>
@@ -1612,6 +1770,29 @@ AND( C501_Child_Aged_0_8__c,
             </values>
             <values>
                 <fullName>Other %28refer to case notes%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Family_Status__c</picklist>
+            <values>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intake</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wait list</fullName>
                 <default>false</default>
             </values>
         </picklistValues>
@@ -1860,6 +2041,21 @@ AND( C501_Child_Aged_0_8__c,
             </values>
         </picklistValues>
         <picklistValues>
+            <picklist>C501_Family_Status_Old__c</picklist>
+            <values>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intake</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
             <picklist>C501_IS_Source__c</picklist>
             <values>
                 <fullName>Doesn%27t know or won%27t say</fullName>
@@ -1948,6 +2144,29 @@ AND( C501_Child_Aged_0_8__c,
             </values>
             <values>
                 <fullName>Other %28refer to case notes%29</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Family_Status__c</picklist>
+            <values>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intake</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wait list</fullName>
                 <default>false</default>
             </values>
         </picklistValues>

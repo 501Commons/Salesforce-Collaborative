@@ -1,0 +1,19 @@
+<apex:page standardController="Contact" >
+<style>
+
+        .body,html .brandQuaternaryBgr{ 
+            background-color:white !important;
+        }
+</style>
+
+<h3>Definition of Disability</h3>
+<ul><li><strong>Hearing difficulty:</strong>  Deaf or having serious difficulty hearing (DEAR).
+</li><li>
+<strong>Vision difficulty:</strong>  Blind or having serious difficulty seeing, even when wearing glasses (DEYE).</li><li>
+<strong>Cognitive difficulty:</strong>  Because of a physical, mental, or emotional problem, having difficulty remembering, concentrating, or making decisions (DREM).</li><li>
+<strong>Ambulatory difficulty:</strong>  Having serious difficulty walking or climbing stairs (DPHY).</li><li>
+<strong>Self-care difficulty:</strong>  Having difficulty bathing or dressing (DDRS).</li><li>
+<strong>Independent living difficulty:</strong>  Because of a physical, mental, or emotional problem, having difficulty doing errands alone such as visiting a doctor’s office or shopping (DOUT).</li>
+ </ul>
+
+</apex:page>
